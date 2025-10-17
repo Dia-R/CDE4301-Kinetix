@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CDE4301 Design Report</title>
+  <title>CDE4301 Kinetix</title>
   <style>
     body {
       font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
@@ -25,6 +25,11 @@
     }
 
     header h2 {
+      font-weight: 400;
+      color: #555;
+      margin-top: 0;
+    }
+    header h4 {
       font-weight: 400;
       color: #555;
       margin-top: 0;
@@ -85,6 +90,9 @@
     p, li {
       font-size: 1rem;
       margin-bottom: 0.75rem;
+      text-align: justify;
+      line-height: 2;
+
     }
 
     table {
@@ -125,41 +133,103 @@
       font-size: 0.9rem;
       color: #666;
     }
+    .team-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.member {
+  text-align: center;
+  max-width: 160px;
+}
+
+.member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member .name {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.member .role {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
   </style>
 </head>
 <body>
   <header>
-    <h1>CDE4301 Design Report</h1>
-    <h2>Modern Professional Academic Layout</h2>
+    <h1>CDE4301 Report - Kinetix</h1>
+    <h2>Post-Stroke Robotics-Assisted Lower Limb Rehabilation Device</h2>
   </header>
 
   <main>
     <nav>
       <h3>Table of Contents</h3>
       <ul>
-        <li><a href="#introduction">1. Introduction</a></li>
-        <li><a href="#concept">2. Concept Development</a></li>
+        <li><a href="#team">1. Project Team</a></li>
+        <li><a href="#introduction">2. Introduction</a></li>
         <li><a href="#evaluation">3. Evaluation</a></li>
         <li><a href="#conclusion">4. Conclusion</a></li>
       </ul>
     </nav>
 
-    <section id="introduction">
-      <h3>1. Introduction</h3>
-      <p>Provide a concise overview of your design project, including objectives, motivation, and key problems addressed.</p>
+    <section id="team">
+      <h3>1. Project Team</h3>
+      <p>
+        Kinetix is headed by a group of four from CDE.
+      </p>
+    
+      <div class="team-gallery">
+        <div class="member">
+          <img src="images/profile/Introduction/profile/Seb.png" alt="Seb" />
+          <p class="name">Seb</p>
+          <p class="role">Electrical Engineering</p>
+        </div>
+        <div class="member">
+          <img src="images/profile/Introduction/profile/Nadia.png" alt="Anna" />
+          <p class="name">Nadia</p>
+          <p class="role">Electrical Engineering</p>
+        </div>
+        <div class="member">
+          <img src="images/profile/Ron.png" alt="Marcus" />
+          <p class="name">Ron</p>
+          <p class="role">Electrical Engineering</p>
+        </div>
+        <div class="member">
+          <img src="images/profile/Rizqi.png" alt="Lucas" />
+          <p class="name">Rizqi</p>
+          <p class="role">Electrical Engineering</p>
+        </div>
+      </div>
     </section>
-
-    <section id="concept">
-      <h3>2. Concept Development</h3>
-      <p>Explain your ideation and design process, including early sketches, concept selection, and user insights.</p>
+    
+    <section id="introduction">
+      <h3>2. Introduction</h3>
+      <h4>2.1 Abstract</h4>
+      <p>In Singapore, stroke is the fourth leading cause of death and the seventh leading cause of adult disability (World Stroke Organisation, 2017). This project involves the development of the robotic rehabilitation device, Kinetix, aimed at supporting motor recovery in stroke clients, with a focus on supine (Semi-fowler) position rehabilitation. Kinetix combines mechanical actuation with sensor feedback to assist joint movement, monitor performance, and adapt to individual client needs. It also features an app-based interface for user interaction and progress tracking for both the client and therapist. Control strategies and feedback mechanisms are explored to encourage active engagement to promote recovery. </p>
+      <h4>2.2 Background</h4> 
+      <p>Strokes occur due to either ischaemic or hemorrhagic in nature. Ischemic stroke occurs when a blood vessel is blocked due to embolism or thrombosis, depriving a region of the brain of blood flow. Hemorrhagic stroke, on the other hand, involves bleeding in the brain due to a ruptured blood vessel. (Stroke Services Improvement, 2017).</p>
       <figure>
-        <img src="example-image.jpg" alt="Concept Sketch" width="80%">
+        <img src="images/profile/Introduction/embolism_thrombosis.png" alt="Stroke Types" width="80%">
         <figcaption>Figure 1. Early design concept sketch.</figcaption>
       </figure>
     </section>
 
     <section id="evaluation">
       <h3>3. Evaluation</h3>
+      
       <p>Summarize findings from usability testing and prototype evaluations. Highlight key observations and improvements.</p>
       <table>
         <thead>
