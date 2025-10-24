@@ -178,10 +178,13 @@
     <nav>
       <h3>Table of Contents</h3>
       <ul>
-        <li><a href="#team">1. Project Team</a></li>
-        <li><a href="#introduction">2. Introduction</a></li>
-        <li><a href="#evaluation">3. Evaluation</a></li>
-        <li><a href="#conclusion">4. Conclusion</a></li>
+        <li><a href="#team">Project Team</a></li>
+        <li><a href="#introduction">1. Introduction</a></li>
+        <li><a href="#evaluation">2. Literature Review</a></li>
+        <li><a href="#conclusion">3. Demographic and Anthropomorphic Data</a></li>
+        <li><a href="#conclusion">4. Concept Development</a></li>
+        <li><a href="#conclusion">5. Testing and Evaluation</a></li>
+        <li><a href="#conclusion">6. Testing and Evaluation</a></li>
       </ul>
     </nav>
 
@@ -216,42 +219,53 @@
     </section>
     
     <section id="introduction">
-      <h3>2. Introduction</h3>
-      <h4>2.1 Abstract</h4>
+      <h3>1. Introduction</h3>
+      <h4>1.1 Abstract</h4>
       <p>In Singapore, stroke is the fourth leading cause of death and the seventh leading cause of adult disability (World Stroke Organisation, 2017). This project involves the development of the robotic rehabilitation device, Kinetix, aimed at supporting motor recovery in stroke clients, with a focus on supine (Semi-fowler) position rehabilitation. Kinetix combines mechanical actuation with sensor feedback to assist joint movement, monitor performance, and adapt to individual client needs. It also features an app-based interface for user interaction and progress tracking for both the client and therapist. Control strategies and feedback mechanisms are explored to encourage active engagement to promote recovery. </p>
-      <h4>2.2 Background</h4> 
+      <h4>1.2 Background</h4>
+      <h4>1.2.1 Types of Strokes</h4>  
       <p>Strokes occur due to either ischaemic or hemorrhagic in nature. Ischemic stroke occurs when a blood vessel is blocked due to embolism or thrombosis, depriving a region of the brain of blood flow. Hemorrhagic stroke, on the other hand, involves bleeding in the brain due to a ruptured blood vessel. (Stroke Services Improvement, 2017).</p>
       <figure>
         <img src="images/profile/Introduction/embolism_thrombosis.png" alt="Stroke Types" width="80%">
-        <figcaption>Figure 1. Early design concept sketch.</figcaption>
+        <figcaption>Fig 1. (a) Examples of blood clots due to embolism and thrombosis. (b) Example of a ruptured blood vessel in the brain.</figcaption>
+      </figure>
+      <h4>1.2.2 Clinical Features of Stroke      </h4> 
+      <p>Clinical features of stroke include strength deficits, sensory-motor impairment, spasticity, incoordination, and postural dysfunction (Darak, 2020). Impaired motor control and weakness of extremities after stroke not only reduce muscular force generation but also affect the inter-limb coordination of functional movements, or synergies (Darak, 2020). The table below summarises the clinical features.
+      </p>
+      <figure>
+        <img src="images/profile/Introduction/Table1.png" alt="Table 1" width="80%">
+        <figcaption>Table 1</figcaption>
+      </figure>
+      <h4>1.2.3 Stroke Recovery Phases and Assessment
+      </h4>
+      <p>The diagram below references Marek et al. (2024), showing the phases of post-stroke rehabilitation. To regain Neuroplasticity, the “golden time” for rehabilitation is between seven days to 6 months, which spans across the acute and late subacute phase.
+      </p>
+      <figure>
+
+        <img src="images/profile/Introduction/NeuroPlasticity.png" alt = "Neuroplasticity and Rehab" width = "80%">
+        <figcaption>Figure 2</figcaption> 
       </figure>
     </section>
 
     <section id="evaluation">
-      <h3>3. Evaluation</h3>
+      <h3>2. Literature Review</h3>
       
-      <p>Summarize findings from usability testing and prototype evaluations. Highlight key observations and improvements.</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Criterion</th>
-            <th>Observation</th>
-            <th>Improvement</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Usability</td>
-            <td>Interface is intuitive for most users.</td>
-            <td>Increase contrast and icon size.</td>
-          </tr>
-          <tr>
-            <td>Accessibility</td>
-            <td>Font size readable, but colors need enhancement.</td>
-            <td>Adopt WCAG-compliant color palette.</td>
-          </tr>
-        </tbody>
-      </table>
+      <p>This literature review aims to provide a comprehensive overview of the existing approaches to lower extremity rehabilitation in stroke clients, including both traditional and device-assisted rehabilitation, for the purpose of identifying a value proposition, user needs and determining the design concept of a novel rehabilitation device. 
+      </p>
+      <h4>2.1 Challenges in Stroke Rehabilitation of Lower Extremities
+      </h4>
+      <p>Fatigue is a common outcome post-stroke; the robot rehabilitation device aims to reduce mental load and encourage recovery (Sithamparapillai, 2022). Lower extremity rehabilitation, especially for gait recovery, can require significant time and physical effort from physiotherapists. Physiotherapists also report high rates of burnout due to long hours and proximity to clients, an area in which the device can address (Nair, 2023). Another study examining challenges faced by physiotherapists during lower limb prosthesis rehabilitation reported that 81.5% of physiotherapists encountered "high physical demand" as a major challenge (Chi, 2022).
+      </p>
+      <h4>2.2 Rehabilitation Methods
+      </h4>
+      <p>
+        Proprioceptive Neuromuscular Facilitation (PNF) is a manual therapy widely used to improve balance and mobility in stroke clients, particularly effective during the acute and subacute recovery phases for neuromuscular re-education and motor function restoration (Li, 2022; Nguyen, 2022). It involves therapist-guided, multi-planar movements that mimic functional tasks. In contrast, robotic rehabilitation systems—including exoskeletons, BWSTT with DGOs, and end-effector devices—focus on gait restoration but are typically applied only during late subacute and chronic stages of recovery.
+
+      </p>
+      <figure> 
+        <img src = "images/profile/Introduction/BWSTT.png" width = "80%">
+        <figcaption> Figure 3</figcaption>
+      </figure>
     </section>
 
     <section id="conclusion">
