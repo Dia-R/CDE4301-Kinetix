@@ -1,173 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CDE4301 Kinetix</title>
-  <style>
-    body {
-      font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-      background-color: #f8f9fc;
-      color: #222;
-      line-height: 1.6;
-      margin: 0;
-      padding: 2rem;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDE4301 Kinetix</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
 
-    header h1 {
-      font-size: 2rem;
-      margin: 0.5rem 0;
-    }
-
-    header h2 {
-      font-weight: 400;
-      color: #555;
-      margin-top: 0;
-    }
-    header h4 {
-      font-weight: 400;
-      color: #555;
-      margin-top: 0;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      padding: 2rem 3rem;
-    }
-
-    nav {
-      margin-bottom: 2rem;
-      border-left: 4px solid #3056d3;
-      background: #f0f3fa;
-      padding: 1rem 1.5rem;
-      border-radius: 6px;
-    }
-
-    nav h3 {
-      margin-top: 0;
-      color: #1e2a78;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding-left: 1rem;
-    }
-
-    nav li {
-      margin: 0.3rem 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #3056d3;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    section h3 {
-      border-left: 4px solid #3056d3;
-      padding-left: 0.75rem;
-      color: #1e2a78;
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-
-    p, li {
-      font-size: 1rem;
-      margin-bottom: 0.75rem;
-      text-align: justify;
-      line-height: 2;
-
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-
-    th, td {
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-      padding: 0.75rem 1rem;
-    }
-
-    th {
-      background-color: #eef1f7;
-      color: #333;
-      font-weight: 600;
-    }
-
-    tr:hover {
-      background-color: #f5f7fb;
-    }
-
-    figure {
-      margin: 1.5rem 0;
-      text-align: center;
-    }
-
-    figcaption {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    .team-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.member {
-  text-align: center;
-  max-width: 160px;
-}
-
-.member img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.member .name {
-  font-weight: 600;
-  margin-top: 0.5rem;
-}
-
-.member .role {
-  color: #666;
-  font-size: 0.9rem;
-  margin-top: 0.2rem;
-}
-
-  </style>
-</head>
 <body>
   <header>
     <h1>CDE4301 Report - Kinetix</h1>
@@ -176,24 +16,23 @@
 
   <main>
     <nav>
-      <h3>Table of Contents</h3>
+      <h3>Table of Contents</h3> <!-- THIS IS A COMMENT, TRY NOT TO EDIT OTHER PPL'S FILES IN CASE WE NEED TO FORCE PUSH CHANGES -->
       <ul>
-        <li><a href="#team">Project Team</a></li>
-        <li><a href="#introduction">1. Introduction</a></li>
-        <li><a href="#evaluation">2. Literature Review</a></li>
-        <li><a href="#conclusion">3. Demographic and Anthropomorphic Data</a></li>
-        <li><a href="#conclusion">4. Concept Development</a></li>
-        <li><a href="#conclusion">5. Testing and Evaluation</a></li>
-        <li><a href="#conclusion">6. Testing and Evaluation</a></li>
+        <li><a href="introduction.html">1. Introduction</a></li>
+        <li><a href="lit-review.html">2. Literature Review</a></li>
+        <li><a href="demo-and-anthro.html">3. Demographic and Anthropomorphic Data</a></li>
+        <li><a href="concept-development.html">4. Concept Development</a></li>
+        <li><a href="testing-and-eval.html">5. Testing and Evaluation</a></li>
+        <li><a href="references.html">6. References</a></li>
       </ul>
-    </nav>
-
-    <section id="team">
-      <h3>1. Project Team</h3>
-      <p>
-        Kinetix is headed by a group of four from CDE.
-      </p>
+    </nav>    
     
+ 
+
+    <section id="evaluation">
+      <h3>Project Plan</h3>
+      <p>Kinetix is headed by a group of four from CDE.</p>
+
       <div class="team-gallery">
         <div class="member">
           <img src="images/profile/Introduction/profile/Seb.png" alt="Seb" />
@@ -201,7 +40,7 @@
           <p class="role">Electrical Engineering</p>
         </div>
         <div class="member">
-          <img src="images/profile/Introduction/profile/Nadia.png" alt="Anna" />
+          <img src="images/profile/Introduction/profile/Nadia.png" alt="Nadia" />
           <p class="name">Nadia</p>
           <p class="role">Electrical Engineering</p>
         </div>
@@ -211,67 +50,21 @@
           <p class="role">Biomedical Engineering</p>
         </div>
         <div class="member">
-          <img src="images/profile/Rizqi.png" alt="Lucas" />
+          <img src="images/profile/Introduction/profile/Rizqi.png" alt="Rizqi" />
           <p class="name">Rizqi</p>
-          <p class="role">Electrical Engineering</p>
+          <p class="role">Mechanical Engineering</p>
         </div>
       </div>
-    </section>
-    
-    <section id="introduction">
-      <h3>1. Introduction</h3>
-      <h4>1.1 Abstract</h4>
-      <p>In Singapore, stroke is the fourth leading cause of death and the seventh leading cause of adult disability (World Stroke Organisation, 2017). This project involves the development of the robotic rehabilitation device, Kinetix, aimed at supporting motor recovery in stroke clients, with a focus on supine (Semi-fowler) position rehabilitation. Kinetix combines mechanical actuation with sensor feedback to assist joint movement, monitor performance, and adapt to individual client needs. It also features an app-based interface for user interaction and progress tracking for both the client and therapist. Control strategies and feedback mechanisms are explored to encourage active engagement to promote recovery. </p>
-      <h4>1.2 Background</h4>
-      <h4>1.2.1 Types of Strokes</h4>  
-      <p>Strokes occur due to either ischaemic or hemorrhagic in nature. Ischemic stroke occurs when a blood vessel is blocked due to embolism or thrombosis, depriving a region of the brain of blood flow. Hemorrhagic stroke, on the other hand, involves bleeding in the brain due to a ruptured blood vessel. (Stroke Services Improvement, 2017).</p>
-      <figure>
-        <img src="images/profile/Introduction/embolism_thrombosis.png" alt="Stroke Types" width="80%">
-        <figcaption>Fig 1. (a) Examples of blood clots due to embolism and thrombosis. (b) Example of a ruptured blood vessel in the brain.</figcaption>
-      </figure>
-      <h4>1.2.2 Clinical Features of Stroke      </h4> 
-      <p>Clinical features of stroke include strength deficits, sensory-motor impairment, spasticity, incoordination, and postural dysfunction (Darak, 2020). Impaired motor control and weakness of extremities after stroke not only reduce muscular force generation but also affect the inter-limb coordination of functional movements, or synergies (Darak, 2020). The table below summarises the clinical features.
-      </p>
-      <figure>
-        <img src="images/profile/Introduction/Table1.png" alt="Table 1" width="80%">
-        <figcaption>Table 1</figcaption>
-      </figure>
-      <h4>1.2.3 Stroke Recovery Phases and Assessment
-      </h4>
-      <p>The diagram below references Marek et al. (2024), showing the phases of post-stroke rehabilitation. To regain Neuroplasticity, the “golden time” for rehabilitation is between seven days to 6 months, which spans across the acute and late subacute phase.
-      </p>
-      <figure>
 
-        <img src="images/profile/Introduction/NeuroPlasticity.png" alt = "Neuroplasticity and Rehab" width = "80%">
-        <figcaption>Figure 2</figcaption> 
-      </figure>
+      <h4>Gantt Chart</h4>
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb93F_kZhVp4jJ6fJUkOMiI3EhESqRkzdk-UJVtJRIZJRjjY_VEoH5kdRrLq6GBgNppUTPx2uOszc7/pubhtml?gid=1115838130&amp;single=true&amp;widget=true&amp;headers=false"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+      </iframe>
     </section>
 
-    <section id="evaluation">
-      <h3>2. Literature Review</h3>
-      
-      <p>This literature review aims to provide a comprehensive overview of the existing approaches to lower extremity rehabilitation in stroke clients, including both traditional and device-assisted rehabilitation, for the purpose of identifying a value proposition, user needs and determining the design concept of a novel rehabilitation device. 
-      </p>
-      <h4>2.1 Challenges in Stroke Rehabilitation of Lower Extremities
-      </h4>
-      <p>Fatigue is a common outcome post-stroke; the robot rehabilitation device aims to reduce mental load and encourage recovery (Sithamparapillai, 2022). Lower extremity rehabilitation, especially for gait recovery, can require significant time and physical effort from physiotherapists. Physiotherapists also report high rates of burnout due to long hours and proximity to clients, an area in which the device can address (Nair, 2023). Another study examining challenges faced by physiotherapists during lower limb prosthesis rehabilitation reported that 81.5% of physiotherapists encountered "high physical demand" as a major challenge (Chi, 2022).
-      </p>
-      <h4>2.2 Rehabilitation Methods
-      </h4>
-      <p>
-        Proprioceptive Neuromuscular Facilitation (PNF) is a manual therapy widely used to improve balance and mobility in stroke clients, particularly effective during the acute and subacute recovery phases for neuromuscular re-education and motor function restoration (Li, 2022; Nguyen, 2022). It involves therapist-guided, multi-planar movements that mimic functional tasks. In contrast, robotic rehabilitation systems—including exoskeletons, BWSTT with DGOs, and end-effector devices—focus on gait restoration but are typically applied only during late subacute and chronic stages of recovery.
-
-      </p>
-      <figure> 
-        <img src = "images/profile/Introduction/BWSTT.png" width = "80%">
-        <figcaption> Figure 3</figcaption>
-      </figure>
-    </section>
-
-    <section id="conclusion">
-      <h3>4. Conclusion</h3>
-      <p>Summarize final design outcomes, challenges encountered, and future improvements for subsequent iterations.</p>
-    </section>
   </main>
 
   <footer>
