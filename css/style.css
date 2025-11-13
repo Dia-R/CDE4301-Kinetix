@@ -82,6 +82,13 @@ p, li {
   line-height: 2;
 }
 
+b {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  text-align: justify;
+  line-height: 2;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -114,11 +121,29 @@ figcaption {
   color: #666;
 }
 
-footer {
+.site-footer {
   text-align: center;
   margin-top: 3rem;
+  padding-top: 1.5rem;
   font-size: 0.9rem;
   color: #666;
+  border-top: 1px solid #ddd;
+}
+
+.site-footer .footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.site-footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
 }
 
 .team-gallery {
@@ -152,4 +177,68 @@ footer {
   color: #666;
   font-size: 0.9rem;
   margin-top: 0.2rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.comparison-table th {
+  background: #f2f2f2;
+  padding: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #ccc;
+}
+
+.comparison-table td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.comparison-table td:first-child {
+  font-weight: 600;
+  width: 13rem;
+}
+
+.comparison-table td:nth-child(2) {
+  width: 18rem;
+}
+
+.test-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.test-table th {
+  background: #f2f2f2;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-bottom: 2px solid #ccc;
+  text-align: left;
+}
+
+.test-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.test-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.test-table td:first-child {
+  font-weight: 600;
+  width: 11rem;
 }
