@@ -13,30 +13,77 @@
         <header>
             <h2>CDE4301 – Kinetix</h2>
           </header>
-          <h3>2. Literature Review on Stroke Rehabilitation Background and Treatment Methods
+          <h3>2. Literature Review on Stroke Rehabilitation Background and Methods
           </h3>
       
-          <p>This section aims to provide a comprehensive overview of existing approaches to lower extremity rehabilitation in stroke patients, including both traditional and device-assisted rehabilitation, to identify a value proposition, user needs, and determine the design concept of a novel rehabilitation device.    </p>
+          <p>This section aims to provide a comprehensive overview of challenges, existing approaches to lower extremity rehabilitation in stroke patients, including both traditional and device-assisted rehabilitation, to identify a value proposition, user needs, and determine the design concept of a novel rehabilitation device. </p>
           <h4>2.1 Challenges in Stroke Rehabilitation of Lower Extremities
           </h4>
-          <p>Lower-limb rehabilitation places substantial physical and time demands on physiotherapists. This burden contributes to high levels of burnout, with physiotherapists reporting stress from long working hours and the physically intensive nature of hands-on therapy (Nair, 2023). 81.5% of physiotherapists identified “high physical demand” as a major challenge in their practice (Chi, 2022). These challenges highlight the need for assistive rehabilitation technologies that can reduce therapist workload while sustaining patient engagement and recovery outcomes.
+          <p>Lower-limb rehabilitation places substantial physical and time demands on physiotherapists. This burden contributes to high levels of burnout, with physiotherapists reporting stress from long working hours and the physically intensive nature of hands-on therapy (Nair, 2023). 
+            81.5% of physiotherapists identified “high physical demand” as a major challenge in their practice (Chi, 2022). These challenges highlight the need for assistive rehabilitation technologies that can reduce therapist workload while sustaining patient engagement and recovery outcomes.
           </p>
           <h4>2.2 Stroke Rehabilitation Methods
           </h4>
           <p>
-            Stroke rehabilitation typically integrates manual therapies and robotic-assisted systems across different stages of recovery. Proprioceptive Neuromuscular Facilitation (PNF) is a widely used manual technique that supports neuromuscular re-education through therapist-guided, multi-planar movements that mimic real functional tasks, making it particularly effective in the acute and subacute phases for improving balance, coordination, and mobility (Li, 2022; Nguyen, 2022). Continuous Passive Motion (CPM) machines are also implemented early in recovery to provide repetitive movement that promotes neuroplasticity and enhances post-stroke outcomes (Ripin, 2018).
-          </p>
-          <p> In contrast, robotic rehabilitation systems such as exoskeletons, Body Weight Supported Treadmill Training (BWSTT) with Device Guided Orthoses (DGO), and end-effector platforms are typically introduced in the late subacute to chronic stages. These systems deliver repetitive, task-specific movement training aimed at improving gait, walking performance, and overall functional independence.
-          </p>
+            Stroke rehabilitation typically integrates manual therapies and robotic-assisted systems across different stages of recovery.</p>
+          <p>Proprioceptive Neuromuscular Facilitation (PNF) is a widely used manual technique that:</p>
+            <ul>
+              <il>supports neuromuscular re-education</il>
+              <il>is therapist-guided, mimiking real functional task</il>
+              <il>is particularly effective in the acute to sub-acute phases (Li, 2022; Nguyen, 2022) </il>
+            </ul>
+          <p>Continuous Passive Motion (CPM) machines are also implemented early in recovery to:</p> 
+            <ul>
+              <il>provide repetitive movement that promotes neuroplasticity</il>
+              <il>enhances post-stroke outcomes (Ripin, 2018)</il>
+            </ul>
+          <p> In contrast, robotic rehabilitation systems such as Body Weight Supported Treadmill Training (BWSTT) are typically introduced in the late subacute to chronic stages to:</p>
+            <ul>
+              <il>Provide repetitive, task-specific movement training aimed at improving walking ability and functional independence.</il>
+            </ul>
           <figure> 
             <img src = "images/profile/Introduction/BWSTT.png" width = "80%">
             <figcaption> Figure 3</figcaption>
           </figure>
-          <h4>2.3 Shortcomings of current rehabilitation methods    </h4>
-          <p>Despite their benefits, manual, CPM, and robotic approaches all face notable limitations. Manual methods such as PNF, while effective, depend heavily on therapist skill and consistency, leading to variable treatment quality and limited standardised outcome tracking. This also restricts long-term progress monitoring.</p>
-          <p> CPM devices support neuroplasticity but lack active resistance motion (ARM), which is essential for muscle engagement and improving range of motion (Indrawati & Sajidin, 2018).
-          </p>
-          <p> BWSTT and DGO systems assist movement but still require substantial physiotherapist involvement during early rehabilitation, limiting scalability. End-effector robots show good outcomes when paired with conventional therapy but are less suitable for early-stage patients confined to supine or semi-Fowler positions, as they require partial body-weight support.</p>
+          <h4>2.3 Shortcomings of current rehabilitation methods </h4>
+          <p>Despite their benefits, manual, CPM, and robotic approaches all face notable limitations shown in Table 1.</p>
+          <figure>
+            <figcaption>Table 1</figcaption>
+            <table>
+              <thead>
+                <tr>
+                  <th>PNF</th>
+                  <th>CPM machines</th>
+                  <th>BWSTT</th>
+                </tr>
+              </thead>
+            
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>Lack standardised outcome tracking</li>
+                      <li>Depend strongly on therapist skill and consistency</li>
+                    </ul>
+                  </td>
+            
+                  <td>
+                    <ul>
+                      <li>Lacks active resistance motion (ARM) which stems from the engagement of muscles</li>
+                    </ul>
+                  </td>
+            
+                  <td>
+                    <ul>
+                      <li>Less suitable for patients in the early phases</li>
+                      <li>Require ability to support partial body-weight</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+          <p>End-effector robots show good outcomes when paired with conventional therapy but are less suitable for patients in the early phases which are confined to supine or semi-Fowler positions. Illustration of the two positions can be seen in Figure 4</p>
           <figure>
             <img src = "images/SFandSupinePositions.png" width = 80%>
             <figcaption> Figure 4</figcaption>
@@ -44,8 +91,10 @@
           <p>Across all modalities, there remains a need for accessible, standardised, data-integrated solutions that support acute to late-subacute recovery, reduce therapist workload, and enable meaningful progress tracking. Moreover, traditional rehabilitation is also increasingly unsustainable due to high workloads, especially high patient-to-physiotherapist ratios. </p>
       
      <h4>2.4 Interviews with stroke rehabilitation specialists </h4>
-     <p>We engaged a physiotherapist from the Stroke Support Station (S3) and an occupational therapist from Woodlands Health to understand rehabilitation workflows across acute to late sub-acute settings. An on-site visit to S3 further informed our understanding of the rehabilitation environment. Insights from these engagements were consolidated into a table outlining must-have and good-to-have device features. Features highlighted in green represent planned inclusions, while those in yellow indicate considerations for future development.</p>
+     <p>We engaged a physiotherapist from the Stroke Support Station (S3) and an occupational therapist from Woodlands Health to understand rehabilitation workflows across acute to late sub-acute settings. An on-site visit to S3 further informed our understanding of the rehabilitation environment. Insights from these engagements were consolidated into a table outlining must-have and good-to-have device features. 
+       In Table 2 and 3, features highlighted in green represent planned inclusions, while those in yellow indicate considerations for future development.</p>
       <figure>
+        <figcaption> Table 2 </figcaption>
         <table>
           <thead>
             <tr>
@@ -91,9 +140,9 @@
             </tr>
           </tbody>
         </table>
-        <figcaption> Table 1 </figcaption>
       </figure>
       <Figure>
+        <figcaption> Table 3 </figcaption>
         <table>
           <thead>
             <tr>
@@ -131,7 +180,6 @@
         
           </tbody>
         </table>
-        <figcaption> Table 2 </figcaption>
       </figure>
       <p> Below are some images from our site visit to S3.</p>
         <div class="img-row">
@@ -237,7 +285,8 @@
     
 </figure>
 <h4>2.5 Value Proposition </h4>
-<p>Kinetix offers a solution that supports both passive and active resistive exercises, including lateral hip movement, in supine and semi-Fowler positions with real-time angle and force tracking. It reduces therapists’ physical workload, improves treatment efficiency, and broadens exercise options. Its gamified tablet interface boosts patient engagement while providing adaptive feedback and useful clinical data. Designed for community rehab centres, Kinetix delivers scalable, high-quality therapy and can save hospitals an estimated S$25,000–30,000 per device annually through reduced manpower needs and increased treatment throughput (Appendix A).</p>
+<p>Kinetix offers a solution that supports both passive and active mode (ARM), including lateral hip movement, in supine and semi-Fowler positions with real-time angle and force tracking. 
+  It reduces therapists’ physical workload, improves treatment efficiency, and broadens exercise options. Its gamified tablet interface boosts patient engagement while providing adaptive feedback and useful clinical data. Designed for community rehab centres, Kinetix delivers scalable, high-quality therapy and can save hospitals an estimated S$25,000–30,000 per device annually through reduced manpower needs and increased treatment throughput (Appendix A).</p>
         
 <b>The value proposition is, therefore, a portable, data-driven rehabilitation solution that empowers therapists, motivates patients through interactive gamification, and supports comprehensive lower-limb recovery, offering both clinical and economic value to healthcare providers.</b>
 
@@ -246,7 +295,7 @@
 
     <footer class="site-footer">
       <div class="footer-nav">
-        <a href="index.html">← Back to Main Report</a>
+        <a href="introduction.html">← Previous Chapter</a>
         <a href="demo-and-anthro.html">Next Chapter →</a>
       </div>
       <p>&copy; 2025 NUS CDE4301 – Kinetix</p>
