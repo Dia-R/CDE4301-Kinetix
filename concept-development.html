@@ -44,32 +44,95 @@
       </figure>
 
       <h4>4.3 User Journey</h4> <!-- USE h4 FOR SUBHEADERS -->
-      <p>An in-person interview with a physiotherapist from S3 allowed us to map a detailed client–therapist user journey across the rehabilitation session. This helped us understand real clinical workflows and design the system to better fit the actual context of use, improving overall user experience.</p>
+      <p>
+        Following an in-person interview with a physiotherapist from the stroke support station (S3) we mapped out a user journey documenting actions done by both the client and physiotherapist at every stage of the rehabilitation session. The purpose of this user journey is to educate us on how we can design for the context of usage, promoting better user experience through purposeful designing. 
 
+      </p>
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-        <img src="images/user journey.png" width="80%" alt="">
+        <img src="images/Persona.png" width="100%" alt="">
         <figcaption>Figure 12</figcaption>
       </figure>
           
       <h4>4.4 Mechanical Design</h4> <!-- USE h4 FOR SUBHEADERS -->
 
       <h4><i>4.4.1 Design Inspiration</i></h4>
-      <p>The device uses a motor-driven ball screw to create linear motion along an aluminum profile, which is transferred through a linkage system to produce controlled angular movement of the footrest for simulating lower-limb flexion and extension. However, several issues were identified: many components are difficult to fabricate, custom rod assemblies limit part interchangeability, the frame lacks structural rigidity, and the CPM-based design only supports passive motion, preventing active or resistive rehabilitation.</p>            
+<p>
+  The device uses a motor-driven ball screw to create linear motion along an aluminum profile, which is transferred through a linkage system to produce controlled angular movement of the footrest for simulating lower-limb flexion and extension. However, several issues were identified: many components are difficult to fabricate, custom rod assemblies limit part interchangeability, the frame lacks structural rigidity, and the CPM-based design only supports passive motion, preventing active or resistive rehabilitation.
 
+</p>
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
         <img src="images/figure 13.png" width="80%" alt="">
         <figcaption>Figure 13</figcaption>
       </figure>
 
-      <p>With a clear concept of the device, we developed Version 0 of the prototype using OEM standard parts to support six exercise types. This design features a lower-limb actuation system driven by a linear actuator on a ball screw, where the moving carriage converts rotational motion into linear displacement. A parallel multi-link mechanism with rods and rotary joints transfers this motion to the foot interface, producing coordinated, smooth angular movement that mimics natural leg flexion and extension.</p>
 
-      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-        <img src="images/figure 14.png" width="80%" alt="">
-        <figcaption>Figure 14</figcaption>
-      </figure>
-
+  
       <h4><i>4.4.2 Design Concepts</i></h4>
-      <p>For the second prototype in Semester 2, interviews with physiotherapists indicated that the device should support both sitting and lying positions. Based on this, the team developed three design concepts reflecting these two modes of use.</p>        
+      <p>
+        Based on preliminary research from an SGH exercise video (SingHealth, 2011), we initially proposed three passive exercises shown below, covering a range of movements including hamstring stretches and medial-lateral rotations along the knee.
+
+      </p>
+  
+      <!-- Embed YouTube video -->
+<figure>
+  <iframe width="80%" height="450"
+          src="https://www.youtube.com/embed/BM0P-iLSlbs"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+  </iframe>
+  <figcaption>Video: Testing & Evaluation Overview</figcaption>
+</figure>
+<p>
+  However, after consulting with our industrial partner, we narrowed the exercise capabilities to focus on the 6 key movements that comprise the exercises in the SGH video, as shown below. This led to the development of an early conceptual design to visualise the device.
+</p>
+<div class="video-grid">
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1byuo8lR9mXkiXXoIuC-X1omv0CygJyMr/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Ankle Dorsiflexion</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1HjSYautXTm792hii8S8ZEc92CGySrwDT/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Ankle Plantarflexion</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1EDfMgtKVUvcwpJ6y0ox2jDtWXXHiSG9v/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Hip Abduction</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1tdzHYgM8UGj1qep8YmaXPybycXgtRXOi/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Hip Adduction</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1wGX1jGR2e_aYSfKhMKdYEPD3bRL2cI_k/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Hip and Knee Extension</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1TyieozSRi17GLyK6htss4pB_8h6AHOm9/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Hip and Knee Flexion</figcaption>
+  </figure>
+
+</div>
+
 
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
         <img src="images/figure 15.png" width="80%" alt="">
@@ -246,7 +309,7 @@
       <p>We adopted an arc rail mechanism to meet our design requirements, building on the initial concept developed by our UROP predecessor. To address shortcomings in their design, we repositioned the arc rail from above the linear nut to beneath the linear sub-assembly.</p>
 
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-        <img src="images/profile/Introduction/BWSTT.png" width="80%" alt="">
+        <img src="images/arcrail.png" width="80%" alt="">
         <figcaption>Figure 21</figcaption>
       </figure>
 
@@ -254,23 +317,25 @@
       <p>The lateral movement is driven by a Nema 23 motor mounted at the rear of the assembly, with a swappable placement for easy maintenance. Power is transmitted through a belt-and-pulley system, chosen for its light weight and ease of installation compared to gear or chain mechanisms.</p>
 
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-        <img src="images/cat.png" width="80%" alt="">
+        <img src="images/lateralmove.png" width="80%" alt="">
         <figcaption>Figure 22</figcaption>
       </figure>
 
       <h4>4.5 Sensing Design Concepts</h4>
-      <p>This section explains three different design concepts for the sensing subsystem in terms of their working principle and evaluation through a comparison matrix. All raw data will be transmitted to a processor, where signal noise will be filtered out for further analysis.</p>
+      <p>
+        This section explains three different design concepts for the sensing subsystem in terms of their working principle and evaluation through a comparison matrix.
 
+      </p>
       <h4><i>4.5.1 FIMU Design Concept</i></h4>
       <p>The IMU subsystem combines an accelerometer, gyroscope, and optionally a magnetometer to measure motion and angular velocity across three axes, enabling analysis of hip, knee, and ankle joint kinematics. This concept employs a four-IMU setup (lower back, thigh, shank, and foot).</p>
           
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-        <img src="images/profile/Introduction/BWSTT.png" width="80%" alt="">
+        <img src="images/forcesensorplacement.png" width="80%" alt="">
         <figcaption>Figure 31</figcaption>
       </figure>
 
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-        <img src="images/profile/Introduction/BWSTT.png" width="80%" alt="">
+        <img src="images/PlantarForcePlacement.png" width="80%" alt="">
         <figcaption>Figure 32</figcaption>
       </figure>
 
@@ -281,7 +346,7 @@
 
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
         
-        <img src="images/profile/Introduction/BWSTT.png" width="80%" alt="">
+        <img src="images/HFF.png" width="80%" alt="">
         <figcaption>Figure 33</figcaption>
       </figure>
 
@@ -289,7 +354,7 @@
       <p>A computer vision sensor uses an RGB camera and pose-estimation algorithms to track 3D joint positions (e.g., hip, knee, ankle) and compute joint angles from relative body segment orientations. Markers are placed on key joints (torso, hip, knee, ankle, and foot tip), and the client’s movements. The video is then processed using Tracker Software to determine marker positions and calculate joint angles.</p>
 
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-        <img src="images/profile/Introduction/BWSTT.png" width="80%" alt="">
+        <img src="images/computervision.png" width="80%" alt="">
         <figcaption>Find image</figcaption>
       </figure> 
 
@@ -522,12 +587,20 @@
         <figcaption>Figure 35</figcaption>
       </figure>
 
-      <h4>4.6 Mechanical Design</h4>
+      <h4>4.7 Electrical Design      </h4>
       <p>With mechanical subsystems finalised, the electrical design phase can begin. For motor selection, the maximum torque that the screw bar can resist before backdriving must be determined to guide motor choice (Collins, n.d.). Using a 150 kg load and a 10 mm screw lead, the calculated backdriving torque is 2.15 Nm. Hence, the selected motors must have a holding torque ≥ 2.15 Nm to ensure reliable operation.</p>
 
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-        <img src="images/profile/Introduction/BWSTT.png" width="80%" alt="">
-        <figcaption>Figure 36</figcaption>
+        <div class="equation">
+          <span class="symbol">T<sub>b</sub></span>
+          <span class="equals">=</span>
+          <span class="fraction">
+            <span class="numerator">(F · P · η<sub>2</sub>)</span>
+            <span class="denominator">2π</span>
+          </span>
+        </div>
+        
+        
       </figure>
 
       <h4>4.7.1 Motor Evaluation</h4>
@@ -584,62 +657,33 @@
         </table>
         <figcaption>Table</figcaption>
       </figure>
+      <p>The stepper motor was selected for its high torque at low speeds and ability to maintain stable fixed positions, ideal for active mode, where users must overcome a preset force threshold to move the motor without backdriving. Its simple open-loop control avoids issues like jitter found in closed-loop systems under static loads. The chosen motor, a Nema 23 Bipolar Stepper Motor, provides a holding torque of 3.0 Nm, exceeding the 2.15 Nm backdriving torque requirement.</p>
 
       <figure>
-        <table style="border-collapse: collapse;">
+        
+        <table >
           <thead>
             <tr>
-              <th>Types</th>
+              <th colspan="5">Motor Concept – Score Comparison</th>
+            </tr>
+            <tr>
+              <th>Criteria</th>
               <th>Brushed DC</th>
               <th>Brushless DC</th>
               <th>Stepper</th>
               <th>Servo</th>
             </tr>
           </thead>
+        
           <tbody>
-            <tr>
-              <td>Efficiency</td>
-              <td>-</td>
-              <td>Low</td>
-              <td>+</td>
-              <td>Medium</td>
-            </tr>
-            <tr>
-              <td>Torque Characteristics</td>
-              <td>-</td>
-              <td>Moderate torque at low speeds</td>
-              <td>High torque across RPM range</td>
-              <td>Moderate across RPM range</td>
-            </tr>
-            <tr>
-              <td>Torque/Weight Ratio</td>
-              <td>-</td>
-              <td>Low</td>
-              <td>0</td>
-              <td>High</td>
-            </tr>
-            <tr>
-              <td>Control Type</td>
-              <td>Closed-loop</td>
-              <td>Closed-loop</td>
-              <td>Open-loop</td>
-              <td>Closed-loop</td>
-            </tr>
-            <tr>
-              <td>Control Complexity</td>
-              <td>-</td>
-              <td>High</td>
-              <td>Low</td>
-              <td>High</td>
-            </tr>
-            <tr>
-              <td>Applications</td>
-              <td>Useful for moving moderate loads</td>
-              <td>Applicable for moving heavy loads continuously</td>
-              <td>Excellent for maintaining position under heavy load</td>
-              <td>Useful when precise control is needed over a range of motion</td>
-            </tr>
-            <tr>
+            <tr><td>Efficiency</td><td>0</td><td>+</td><td>0</td><td>0</td></tr>
+            <tr><td>Torque Characteristics</td><td>0</td><td>+</td><td>+</td><td>0</td></tr>
+            <tr><td>Torque/Weight Ratio</td><td>0</td><td>0</td><td>0</td><td>+</td></tr>
+            <tr><td>Control Type</td><td>0</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>Control Complexity</td><td>0</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>Applications</td><td>0</td><td>+</td><td>+</td><td>0</td></tr>
+        
+            <tr style="font-weight: bold; background-color: #f2f2f2;">
               <td>Total Grade</td>
               <td>-5</td>
               <td>0</td>
@@ -648,26 +692,92 @@
             </tr>
           </tbody>
         </table>
+        
+  
         <figcaption>Table</figcaption>            
       </figure>
 
-      <p>The stepper motor was selected for its high torque at low speeds and ability to maintain stable fixed positions, ideal for active mode, where users must overcome a preset force threshold to move the motor without backdriving. Its simple open-loop control avoids issues like jitter found in closed-loop systems under static loads. The chosen motor, a Nema 23 Bipolar Stepper Motor, provides a holding torque of 3.0 Nm, exceeding the 2.15 Nm backdriving torque requirement.</p>
 
       <h4>4.7.2 Microcontroller Selection</h4>
       <p>The Raspberry Pi Pico W2 was chosen as the device’s microcontroller unit (MCU) for its strong price-to-performance ratio, compact size, and built-in Wi-Fi and Bluetooth. Despite costing only S$9.62, it offers processing speed and memory comparable to higher-end options like the Teensy 4.1 (S$50–58). Its small footprint minimizes device size and leaves room for other components, while integrated wireless connectivity reduces costs and wiring complexity.</p>
     
       <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-        <img src="images/profile/Introduction/BWSTT.png" width="80%" alt="">
-        <figcaption>Figure 36</figcaption>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="5">MCU – Score Comparison</th>
+            </tr>
+            <tr>
+              <th>Criteria</th>
+              <th>Teensy 4.1</th>
+              <th>Arduino UNO R4 Wi-Fi</th>
+              <th>Raspberry Pi Pico W2</th>
+              <th>STM32F103RCT6</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <tr><td>Supply Voltage</td><td>0</td><td>0</td><td>+</td><td>+</td></tr>
+            <tr><td>Architecture</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>Clock Speed</td><td>+</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>Flash Memory Size</td><td>+</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>RAM Size</td><td>+</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>Network Protocol</td><td>0</td><td>+</td><td>+</td><td>0</td></tr>
+            <tr><td>Dimensions</td><td>0</td><td>0</td><td>+</td><td>+</td></tr>
+            <tr><td>Peripherals</td><td>+</td><td>0</td><td>0</td><td>+</td></tr>
+            <tr><td>Cost</td><td>0</td><td>0</td><td>+</td><td>+</td></tr>
+        
+            <tr style="font-weight: bold; background-color: #f2f2f2;">
+              <td>Total Grade</td>
+              <td>2</td>
+              <td>0</td>
+              <td>7</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        
       </figure>
 
       <h4>4.7.4 Simplified Electrical Schematic</h4>
+      <p>With the motor type and MCU selected, we can now create a simplified electrical schematic for the whole device.
+      </p>
+      <figure>
+        <img src="images/ElecScheP1.png" width="80%" alt="">
+
+        <figcaption>flowchart</figcaption>
+      </figure>
+      <figure>
+        <img src="images/ElecScheP2.png" width="80%" alt="">
+  
+        <figcaption>flowchart</figcaption>
+      </figure>
+      <figure>
+        <img src="images/ElecScheP3.png" width="80%" alt="">
+  
+        <figcaption>flowchart</figcaption>
+      </figure>
+      <p>
+        Figure 27 shows the first part of the simplified electrical schematic where the power source of the device originates from the wall plug with a 230 V and 50 Hz power rating. An AC to DC power adapter cable would then be used to rectify the power to DC for the motor in Figure 28. Meanwhile, for the other components, it will need to be stepped down to 5 V using a DC-DC Buck Converter for the MCU, and further stepped down to 3.3 V for the sensors as seen in Figure 29. In terms of communication protocol, only the IMU will utilise I2C, while the other peripherals will use the standard GPIO and analog-to-digital communication protocol.
+
+      </p>
+      <figure>
+        <img src="images/ElecScheP4.png" width="80%" alt="">
+  
+        <figcaption>flowchart</figcaption>
+      </figure> 
+      <p>Lastly, Figure 30 displays how the application in either the tablet or smartphone would be communicating to the KINETIX device via Wi-Fi, given that the MCU has an internal Wi-Fi component for easier interaction. This will be the main user interface that the physiotherapist will use to configure the patient’s exercise.
+      </p>
+
+   
 
       <h4>4.8 UI Design Concepts</h4>
-      <p>The first design concepts featured a two-view approach such that both physiotherapists and clients can use the User Interface, according to the first iteration of user flow diagram below.</p>
-
+      <p>
+        The first design concepts featured a two-view approach such that both physiotherapists and clients can use the User Interface, according to the first iteration of user flow diagram below. The aim was to be a central platform for configuration of the Kinetix device, tracking of patient recovery, and a companion ‘instructor’ for patients during rehabilitation.
+      </p>
       <figure>
-        <img src="images/userflow1.png" width="80%" alt="">
+        <img src="images/userflow1.png" width="40%" alt="">
         <iframe 
           src="https://drive.google.com/file/d/1CKNBzNZAG9j2k3KxoJ1JziohyvHkjHg0/preview" 
           width="100%" 
@@ -676,7 +786,7 @@
         </iframe>
         <figcaption>flowchart</figcaption>
       </figure>
-
+    
       <p>Feedback on the first UI showed the need for a therapist-focused interface, removal of unnecessary calendar/logging features, and inclusion of gamification to motivate clients. These insights informed a revised user flow with five clear stages and a rotated “During Session” display for client feedback and gamified elements.</p>
 
       <figure>
