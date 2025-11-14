@@ -5,185 +5,249 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Plan – Kinetix</title>
     <link rel="stylesheet" href="css/style.css"> <!-- IF WE MESS WITH THIS LINE, THE REPORT WILL LOOK UGLY -->
+
+    <!-- Load Chart.js once -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
+    <!-- Load MathJax once -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
   </head>
 
   <body>
 
     <main>
-        <header>
-            <h2>CDE4301 – Kinetix</h2> <!-- DO NOT EDIT HEADER-->
-          </header>
-          <h3>6.Testing & Evaluation</h3> <!-- REPLACE WITH CORRECT TITLE -->
-          <p> This section documents the coducted tests as well as any planned test. Through these tests, we idendified the shortcomings and how we plan to address them.</p><!-- USE PARAGRAPH TAG FOR TEXT -->
-          <h4>6.1 Mechanical Sub-System</h4>
-          <p> Table X provides an overview of the testing plan for the mechanical sub-system</p>
-          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES --><!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
-            <figcaption> Table X </figcaption>
-            <table>
-              <thead>
-                <tr>
-                  <th>Name of Test</th>
-                  <th>Purpose</th>
-                  <th>Pre-requisites</th>
-                  <th>Methodology</th>
-                  <th>User need code addressed</th>
-                  <th>Progress</th>
-                </tr>
-              </thead>
-            
-              <tbody>
-                <tr>
-                  <td><strong>1. Aluminium Tube Load Test</strong></td>
-                  <td>To determine the load-bearing capability of the aluminium tube</td>
-                  <td>Estimated lower limb segment weight</td>
-                  <td>Conduct a Finite Element Analysis (FEA) in SolidWorks to calculate stress distribution and determine the Factor of Safety</td>
-                  <td>D01</td>
-                  <td>Completed</td>
-                </tr>
-            
-                <tr>
-                  <td><strong>2. Lateral Stability Test</strong></td>
-                  <td>To assess the lateral stability of the device during side-to-side movement</td>
-                  <td>Fully assembled UROP device</td>
-                  <td>Place an actual lower limb on the device and measure vertical displacement using a ruler to evaluate structural stability</td>
-                  <td>D01</td>
-                  <td>Completed</td>
-                </tr>
-            
-                <tr>
-                  <td><strong>3. Range of Motion Verification Test</strong></td>
-                  <td>To verify that the device can achieve the required full range of motion</td>
-                  <td>Lower limb anthropometric dimensions to set supporting structure length</td>
-                  <td>Using the completed CAD model, place reference markers at the Hip, Knee and Ankle pivots and simulate the achievable joint angles</td>
-                  <td>D01</td>
-                  <td>Planned</td>
-                </tr>
-              </tbody>
-            </table>
-          </figure>
-          <h4>6.1.1 Test Results and Evaluation</h4>
-          <p> In the FEA simulation, the analysis was performed on the tube where the load is concentrated. Assuming the maximum leg weight of 20 kg, where the load is shared between two parallel tubes, therefore each tube supports 10 kg, corresponding to approximately 100N. 
-            The results show a minimum factor of safety of 28, indicating that the tube would require 28 times the applied load before it begins to deform.</p>
-          <figure>
-            <img src="images/FEA.png" width="80%">
-            <figcaption> Figure X </figcaption>
-          </figure>
-          <p> The arc rail test assessed structural stability under a 9.6 kg load and showed a displacement of 0.4 mm, indicating potential long-term deformation. The structure connected to the arc rail slider was also observed to be slanted, likely due to insufficient support or too small a contact surface, which may compromise stability.
-          </p>
-          <figure>
-            <img src="images/Deformation.png" width="80%">
-            <figcaption> Figure X </figcaption>
-          </figure>
-          <h4>6.1.2 Shortcomings and Proposal</h4>
-          <p> For the FEA, additional simulations will be run at different pivot points to further assess stress distribution and overall structural performance. 
-            After the initial lateral testing, we decided to have the arc rail shifted underneath the linear actuator and structure sub-assembly so that it eliminates the deformation. </p>
-          <h4>6.2 Sensing Sub-System</h4>
-          <p>Table X provides an overview of the testing plan for the sensing sub-system</p>
-          <figure>
-            <figcaption> Table X </figcaption>
-            <table>
-              <thead>
-                <tr>
-                  <th>Name of Test</th>
-                  <th>Purpose</th>
-                  <th>Pre-requisites</th>
-                  <th>Methodology</th>
-                  <th>User need code addressed</th>
-                  <th>Progress</th>
-                </tr>
-              </thead>
-            
-              <tbody>
-                <tr>
-                  <td><strong>1. Force Sensor Calibration Test</strong></td>
-                  <td>To calibrate each force sensor for mapping voltage readings to applied force</td>
-                  <td>A301 force sensor, known weights, Op-amp</td>
-                  <td>Apply a series of known weights to the force sensor and record corresponding voltage outputs. Plot the voltage–force relationship to derive calibration curves.</td>
-                  <td>R05, R06</td>
-                  <td>Completed</td>
-                </tr>
-            
-                <tr>
-                  <td><strong>2. IMU Orientation Response Test</strong></td>
-                  <td>To assess the IMU’s response to movement and changes in spatial orientation</td>
-                  <td>IMU module, microcontroller</td>
-                  <td>Secure the IMU to a mobile device and rotate it into six orthogonal directions. Record sensor outputs to evaluate accuracy and drift.</td>
-                  <td>R05, R06</td>
-                  <td>Planned</td>
-                </tr>
-            
-                <tr>
-                  <td><strong>3. Plantar Sensor Sub-system Test</strong></td>
-                  <td>To validate aggregate readings from grouped force sensors on the footplate</td>
-                  <td>Completed calibration for all sensors; footplate with force sensors arranged at targeted positions; multiplexer</td>
-                  <td>Apply load by standing or applying pressure on the footplate. The multiplexer samples readings from all 13 sensors to evaluate collective plantar pressure output.</td>
-                  <td>R05, R06</td>
-                  <td>Planned</td>
-                </tr>
-              </tbody>
-            </table>
-          </figure>
-          <h4>6.2.1 Test Results and Evaluation</h4>
-          <p>Table X shows the critical and target force readings we require based on a 100kg and 150kg load.</p>
-          <figure>
-            <figcaption> Table X </figcaption>
-            <table>
-              <thead>
-                <tr>
-                  <th>Sensors used</th>
-                  <th>Nested Subsystem</th>
-                  <th>Critical Weight (kg)</th>
-                  <th>Maximum Critical Force Per Sensor (N)</th>
-                  <th>Target Weight (kg)</th>
-                  <th>Maximum Target Force Per Sensor (N)</th>
-                </tr>
-              </thead>
-            
-              <tbody>
-                <tr>
-                  <td>13</td>
-                  <td>
-                    Plantar<br>
-                    Force<br>
-                    Sensing
-                  </td>
-                  <td>100</td>
-                  <td>75.4</td>
-                  <td>150</td>
-                  <td>113.2</td>
-                </tr>
-            
-                <tr>
-                  <td>2</td>
-                  <td>
-                    Medial–Lateral<br>
-                    Force<br>
-                    Sensing
-                  </td>
-                  <td>20</td>
-                  <td>98.1</td>
-                  <td>35</td>
-                  <td>147.2</td>
-                </tr>
-            
-                <tr>
-                  <td>2</td>
-                  <td>
-                    Thigh<br>
-                    Force<br>
-                    Sensing
-                  </td>
-                  <td>30</td>
-                  <td>147.2</td>
-                  <td>45</td>
-                  <td>220.7</td>
-                </tr>
-              </tbody>
-            </table>
-          </figure>
-      <p>Using a range of known weights, resistance was recorded and tabulated in Table X. The data indicate that resistance decreases exponentially as applied force increases, as shown in figure X. </p>
+      <header>
+        <h2>CDE4301 – Kinetix</h2> <!-- DO NOT EDIT HEADER-->
+      </header>
+
+      <h3>6.Testing & Evaluation</h3> <!-- REPLACE WITH CORRECT TITLE -->
+      <p>
+        This section documents the conducted tests as well as any planned test. Through these tests,
+        we identified the shortcomings and how we plan to address them.
+      </p>
+
+      <!-- 6.1 Mechanical Sub-System -->
+      <h4>6.1 Mechanical Sub-System</h4>
+      <p>Table X provides an overview of the testing plan for the mechanical sub-system.</p>
+
       <figure>
-        <figcaption> Table X </figcaption>
+        <figcaption>Table X</figcaption>
+        <table>
+          <thead>
+            <tr>
+              <th>Name of Test</th>
+              <th>Purpose</th>
+              <th>Pre-requisites</th>
+              <th>Methodology</th>
+              <th>User need code addressed</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><strong>1. Aluminium Tube Load Test</strong></td>
+              <td>To determine the load-bearing capability of the aluminium tube</td>
+              <td>Estimated lower limb segment weight</td>
+              <td>
+                Conduct a Finite Element Analysis (FEA) in SolidWorks to calculate stress distribution
+                and determine the Factor of Safety.
+              </td>
+              <td>D01</td>
+              <td>Completed</td>
+            </tr>
+
+            <tr>
+              <td><strong>2. Lateral Stability Test</strong></td>
+              <td>To assess the lateral stability of the device during side-to-side movement</td>
+              <td>Fully assembled UROP device</td>
+              <td>
+                Place an actual lower limb on the device and measure vertical displacement using a ruler
+                to evaluate structural stability.
+              </td>
+              <td>D01</td>
+              <td>Completed</td>
+            </tr>
+
+            <tr>
+              <td><strong>3. Range of Motion Verification Test</strong></td>
+              <td>To verify that the device can achieve the required full range of motion</td>
+              <td>Lower limb anthropometric dimensions to set supporting structure length</td>
+              <td>
+                Using the completed CAD model, place reference markers at the Hip, Knee and Ankle pivots
+                and simulate the achievable joint angles.
+              </td>
+              <td>D01</td>
+              <td>Planned</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <h4>6.1.1 Test Results and Evaluation</h4>
+      <p>
+        In the FEA simulation, the analysis was performed on the tube where the load is concentrated.
+        Assuming the maximum leg weight of 20 kg, where the load is shared between two parallel tubes,
+        each tube supports 10 kg, corresponding to approximately 100 N. The results show a minimum factor
+        of safety of 28, indicating that the tube would require 28 times the applied load before it begins
+        to deform.
+      </p>
+
+      <figure>
+        <img src="images/FEA.png" width="80%">
+        <figcaption>Figure X</figcaption>
+      </figure>
+
+      <p>
+        The arc rail test assessed structural stability under a 9.6 kg load and showed a displacement of
+        0.4 mm, indicating potential long-term deformation. The structure connected to the arc rail slider
+        was also observed to be slanted, likely due to insufficient support or too small a contact surface,
+        which may compromise stability.
+      </p>
+
+      <figure>
+        <img src="images/Deformation.png" width="80%">
+        <figcaption>Figure X</figcaption>
+      </figure>
+
+      <h4>6.1.2 Shortcomings and Proposal</h4>
+      <p>
+        For the FEA, additional simulations will be run at different pivot points to further assess stress
+        distribution and overall structural performance. After the initial lateral testing, we decided to
+        shift the arc rail underneath the linear actuator and structure sub-assembly so that it eliminates
+        the deformation.
+      </p>
+
+      <!-- 6.2 Sensing Sub-System -->
+      <h4>6.2 Sensing Sub-System</h4>
+      <p>Table X provides an overview of the testing plan for the sensing sub-system.</p>
+
+      <figure>
+        <figcaption>Table X</figcaption>
+        <table>
+          <thead>
+            <tr>
+              <th>Name of Test</th>
+              <th>Purpose</th>
+              <th>Pre-requisites</th>
+              <th>Methodology</th>
+              <th>User need code addressed</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><strong>1. Force Sensor Calibration Test</strong></td>
+              <td>To calibrate each force sensor for mapping voltage readings to applied force</td>
+              <td>A301 force sensor, known weights, Op-amp</td>
+              <td>
+                Apply a series of known weights to the force sensor and record corresponding voltage
+                outputs. Plot the voltage–force relationship to derive calibration curves.
+              </td>
+              <td>R05, R06</td>
+              <td>Completed</td>
+            </tr>
+
+            <tr>
+              <td><strong>2. IMU Orientation Response Test</strong></td>
+              <td>To assess the IMU’s response to movement and changes in spatial orientation</td>
+              <td>IMU module, microcontroller</td>
+              <td>
+                Secure the IMU to a mobile device and rotate it into six orthogonal directions. Record
+                sensor outputs to evaluate accuracy and drift.
+              </td>
+              <td>R05, R06</td>
+              <td>Planned</td>
+            </tr>
+
+            <tr>
+              <td><strong>3. Plantar Sensor Sub-system Test</strong></td>
+              <td>To validate aggregate readings from grouped force sensors on the footplate</td>
+              <td>
+                Completed calibration for all sensors; footplate with force sensors arranged at targeted
+                positions; multiplexer
+              </td>
+              <td>
+                Apply load by standing or applying pressure on the footplate. The multiplexer samples
+                readings from all 13 sensors to evaluate collective plantar pressure output.
+              </td>
+              <td>R05, R06</td>
+              <td>Planned</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <h4>6.2.1 Test Results and Evaluation</h4>
+      <p>
+        Table X shows the critical and target force readings we require based on a 100 kg and 150 kg load.
+      </p>
+
+      <figure>
+        <figcaption>Table X</figcaption>
+        <table>
+          <thead>
+            <tr>
+              <th>Sensors used</th>
+              <th>Nested Subsystem</th>
+              <th>Critical Weight (kg)</th>
+              <th>Maximum Critical Force Per Sensor (N)</th>
+              <th>Target Weight (kg)</th>
+              <th>Maximum Target Force Per Sensor (N)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>13</td>
+              <td>
+                Plantar<br>
+                Force<br>
+                Sensing
+              </td>
+              <td>100</td>
+              <td>75.4</td>
+              <td>150</td>
+              <td>113.2</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>
+                Medial–Lateral<br>
+                Force<br>
+                Sensing
+              </td>
+              <td>20</td>
+              <td>98.1</td>
+              <td>35</td>
+              <td>147.2</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>
+                Thigh<br>
+                Force<br>
+                Sensing
+              </td>
+              <td>30</td>
+              <td>147.2</td>
+              <td>45</td>
+              <td>220.7</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>
+        Using a range of known weights, resistance was recorded and tabulated in Table X. The data
+        indicate that resistance decreases exponentially as applied force increases, as shown in Figure X.
+      </p>
+
+      <figure>
+        <figcaption>Table X</figcaption>
         <table>
           <thead>
             <tr>
@@ -191,23 +255,23 @@
               <th>Resistance Force Sensor (Ω)</th>
             </tr>
           </thead>
-        
+
           <tbody>
             <tr>
               <td>341</td>
               <td>53000</td>
             </tr>
-        
+
             <tr>
               <td>682</td>
               <td>25000</td>
             </tr>
-        
+
             <tr>
               <td>1023</td>
               <td>16000</td>
             </tr>
-        
+
             <tr>
               <td>1364</td>
               <td>9000</td>
@@ -215,264 +279,144 @@
           </tbody>
         </table>
       </figure>
-      <!-- Load Chart.js -->
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <!-- Canvas container -->
+
+      <!-- Canvas for first graph -->
       <div style="max-width: 700px; margin: 30px auto;">
         <canvas id="weightResistanceChart"></canvas>
       </div>
-      
-      <script>
-        const ctx = document.getElementById('weightResistanceChart').getContext('2d');
-      
-        const data = {
-          labels: [341, 682, 1023, 1364],   // Weight (g)
-          datasets: [{
-            label: 'Resistance (Ω)',
-            data: [53000, 25000, 16000, 9000],
-            tension: 0.4,
-            borderColor: '#3056d3',
-            backgroundColor: 'rgba(48, 86, 211, 0.25)',
-            borderWidth: 3,
-            pointBackgroundColor: '#1e2a78',
-            pointBorderColor: '#fff',
-            pointRadius: 6,
-            pointHoverRadius: 8,
-            fill: true
-          }]
-        };
-      
-        const options = {
-          responsive: true,
-          plugins: {
-            legend: {
-              display: true,
-              labels: {
-                font: { size: 14 }
-              }
-            },
-            title: {
-              display: true,
-              text: 'Weight vs Resistance',
-              font: {
-                size: 20,
-                family: 'Inter, Segoe UI, sans-serif'
-              }
-            }
-          },
-          scales: {
-            x: {
-              title: {
-                display: true,
-                text: 'Weight (g)',
-                font: { size: 16 }
-              }
-            },
-            y: {
-              title: {
-                display: true,
-                text: 'Resistance (Ω)',
-                font: { size: 16 }
-              }
-            }
-          }
-        };
-      
-        new Chart(ctx, {
-          type: 'line',
-          data: data,
-          options: options
-        });
-      </script>
-      <p> An Op-Amp circuit was used for the calibration of each force sensor, as it was the recommended circuit by the manufacturer. The equations below are used to guide our chosen values for each component and the voltages.</p>
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      </head>
-      <body>
-      
+
       <p>
-      \[
-      V_{\text{ref}} = \frac{R_2}{R_1 + R_2} \times V_{ss}
-      \]
+        An Op-Amp circuit was used for the calibration of each force sensor, as it was the recommended
+        circuit by the manufacturer. The equations below are used to guide our chosen values for each
+        component and the voltages.
       </p>
-      
+
+      <!-- MathJax equations -->
       <p>
-      \[
-      V_{\text{out}} = \left( 1 + \frac{R_{\text{ref}}}{R_{\text{force sensor}}} \right) \times V_{\text{ref}}
-      \]
+        \[
+        V_{\text{ref}} = \frac{R_2}{R_1 + R_2} \times V_{ss}
+        \]
       </p>
-      
-      </body>
-      </html>
-      <p>The voltage supply is set to 4.5 V, with the LM324N output kept below 3.3 V for microcontroller compatibility. A reference voltage of 0.5 V is generated using a 1:9 voltage divider (R1 = 40 kΩ, R2 = 5 kΩ). Because the force sensor’s resistance decreases with applied force, a low feedback resistor of 2 kΩ is used to maintain sensitivity. The LM324N is expected to produce an output range of about 0.5 V to 3.0 V, providing a 2.5 V span for force measurement.</p>
+
+      <p>
+        \[
+        V_{\text{out}} = \left( 1 + \frac{R_{\text{ref}}}{R_{\text{force sensor}}} \right) \times V_{\text{ref}}
+        \]
+      </p>
+
+      <p>
+        The voltage supply is set to 4.5 V, with the LM324N output kept below 3.3 V for microcontroller
+        compatibility. A reference voltage of 0.5 V is generated using a 1:9 voltage divider (R1 = 40 kΩ,
+        R2 = 5 kΩ). Because the force sensor’s resistance decreases with applied force, a low feedback
+        resistor of 2 kΩ is used to maintain sensitivity. The LM324N is expected to produce an output
+        range of about 0.5 V to 3.0 V, providing a 2.5 V span for force measurement.
+      </p>
+
       <p>Figure X shows the circuit diagram for the force sensor.</p>
+
       <figure>
-        <img src = "images/Circuit Diagram.png" width ="80%">
-        <figcaption> Figure X </figcaption>
+        <img src="images/Circuit Diagram.png" width="80%">
+        <figcaption>Figure X</figcaption>
       </figure>
-      <p>Figure X shows an example of how the force sensor voltage output is captured when different weights are being applied.</p>
+
+      <p>
+        Figure X shows an example of how the force sensor voltage output is captured when different
+        weights are being applied.
+      </p>
+
       <figure>
-        <figcaption> Figure X </figcaption>
+        <figcaption>Figure X</figcaption>
         <div class="img-row">
-          <img src="images/200.png" width = 80%>
-          <img src="images/500.png" width = 80%>
+          <img src="images/200.png" width="80%">
+          <img src="images/500.png" width="80%">
         </div>
       </figure>
-      <p> The Voltage outputs corresponding to the respective weights can be seen in the table below. A graph is plotted, and a linear relationship can be seen along with the equation of the function. </p>
+
+      <p>
+        The voltage outputs corresponding to the respective weights can be seen in the table below. A
+        graph is plotted, and a linear relationship can be seen along with the equation of the function.
+      </p>
+
       <figure>
-        <figcaption> Table X </figcaption>
-      <table>
-        <thead>
-          <tr>
-            <th rowspan="2">Weight (g)</th>
-            <th colspan="4">Vout (V)</th>
-          </tr>
-          <tr>
-            <th>Reading 1</th>
-            <th>Reading 2</th>
-            <th>Reading 3</th>
-            <th>Average</th>
-          </tr>
-        </thead>
-      
-        <tbody>
-          <tr>
-            <td>200</td>
-            <td>0.51</td>
-            <td>0.51</td>
-            <td>0.52</td>
-            <td>0.51</td>
-          </tr>
-      
-          <tr>
-            <td>250</td>
-            <td>0.52</td>
-            <td>0.52</td>
-            <td>0.52</td>
-            <td>0.52</td>
-          </tr>
-      
-          <tr>
-            <td>500</td>
-            <td>0.54</td>
-            <td>0.54</td>
-            <td>0.54</td>
-            <td>0.54</td>
-          </tr>
-      
-          <tr>
-            <td>2268</td>
-            <td>0.66</td>
-            <td>0.66</td>
-            <td>0.67</td>
-            <td>0.66</td>
-          </tr>
-        </tbody>
-      </table>
-      </figure>
-            <!-- Load Chart.js -->
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      
-      <!-- Canvas for Graph -->
-      <canvas id="voutChart" width="600" height="350"></canvas>
-      
-      <script>
-      // Data from your table
-      const weight = [200, 250, 500, 2268];
-      const vout = [0.51, 0.52, 0.54, 0.66];
-      
-      // ---- Linear Regression Calculation ----
-      function linearRegression(x, y) {
-          const n = x.length;
-          const sumX = x.reduce((a, b) => a + b);
-          const sumY = y.reduce((a, b) => a + b);
-          const sumXY = x.map((xi, i) => xi * y[i]).reduce((a, b) => a + b);
-          const sumXX = x.map(xi => xi * xi).reduce((a, b) => a + b);
-      
-          const m = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
-          const c = (sumY - m * sumX) / n;
-      
-          return { m, c };
-      }
-      
-      const lr = linearRegression(weight, vout);
-      
-      // Generate regression line points
-      const regLineY = weight.map(x => lr.m * x + lr.c);
-      
-      // Format equation text
-      const equationText = `Vout = ${lr.m.toFixed(5)} × Weight + ${lr.c.toFixed(3)}`;
-      
-      // ---- Plot Graph ----
-      const ctx = document.getElementById('voutChart').getContext('2d');
-      
-      new Chart(ctx, {
-          type: 'scatter',
-          data: {
-              labels: weight,
-              datasets: [
-                  {
-                      label: 'Measured Data',
-                      data: vout,
-                      borderColor: '#1d6ae5',
-                      backgroundColor: '#1d6ae5',
-                      pointRadius: 5,
-                      showLine: false
-                  },
-                  {
-                      label: 'Linear Fit',
-                      data: regLineY,
-                      borderColor: '#d9534f',
-                      backgroundColor: '#d9534f',
-                      type: 'line',
-                      fill: false,
-                      tension: 0
-                  }
-              ]
-          },
-          options: {
-              plugins: {
-                  title: {
-                      display: true,
-                      text: 'Force Sensor Output vs Weight'
-                  },
-                  subtitle: {
-                      display: true,
-                      text: equationText,
-                      padding: 10
-                  }
-              },
-              scales: {
-                  x: {
-                      title: {
-                          display: true,
-                          text: 'Weight (g)'
-                      }
-                  },
-                  y: {
-                      title: {
-                          display: true,
-                          text: 'Vout (V)'
-                      },
-                      min: 0.45,
-                      max: 0.75
-                  }
-              }
-          }
-      });
-      </script>
-      <p>Upon knowing the equation of the linear function, we can extrapolate voltage readings for further weight values.</p>
-      <h4>6.2.2 Test Shortcomings and Proposals </h4>
-      <p>Because each A301 force sensor has a small sensing area, initial tests could only use limited weights, restricting the range of data for calibration. Future testing will involve the full set of plantar sensors on the foot plate, allowing a wider range of loads and improving accuracy. A planned test also includes simulating a stepping motion on the foot plate to better reflect real usage conditions.</p>
-      <h4>6.3 Electrical Sub-System</h4>
-      <p>Table X provides an overview of the testing plan for the electrical sub-system</p>
-      <figure>
-        <figcaption> Table X </figcaption>
-        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+        <figcaption>Table X</figcaption>
+        <table>
           <thead>
-            <tr style="background-color: #f2f2f2; text-align: left;">
+            <tr>
+              <th rowspan="2">Weight (g)</th>
+              <th colspan="4">Vout (V)</th>
+            </tr>
+            <tr>
+              <th>Reading 1</th>
+              <th>Reading 2</th>
+              <th>Reading 3</th>
+              <th>Average</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>200</td>
+              <td>0.51</td>
+              <td>0.51</td>
+              <td>0.52</td>
+              <td>0.51</td>
+            </tr>
+
+            <tr>
+              <td>250</td>
+              <td>0.52</td>
+              <td>0.52</td>
+              <td>0.52</td>
+              <td>0.52</td>
+            </tr>
+
+            <tr>
+              <td>500</td>
+              <td>0.54</td>
+              <td>0.54</td>
+              <td>0.54</td>
+              <td>0.54</td>
+            </tr>
+
+            <tr>
+              <td>2268</td>
+              <td>0.66</td>
+              <td>0.66</td>
+              <td>0.67</td>
+              <td>0.66</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <!-- Canvas for second graph -->
+      <div style="max-width: 700px; margin: 30px auto;">
+        <canvas id="voutChart" width="600" height="350"></canvas>
+      </div>
+
+      <p>
+        Upon knowing the equation of the linear function, we can extrapolate voltage readings for
+        further weight values.
+      </p>
+
+      <h4>6.2.2 Test Shortcomings and Proposals</h4>
+      <p>
+        Because each A301 force sensor has a small sensing area, initial tests could only use limited
+        weights, restricting the range of data for calibration. Future testing will involve the full set
+        of plantar sensors on the foot plate, allowing a wider range of loads and improving accuracy.
+        A planned test also includes simulating a stepping motion on the foot plate to better reflect
+        real usage conditions.
+      </p>
+
+      <!-- 6.3 Electrical Sub-System -->
+      <h4>6.3 Electrical Sub-System</h4>
+      <p>Table X provides an overview of the testing plan for the electrical sub-system.</p>
+
+      <figure>
+        <figcaption>Table X</figcaption>
+        <table>
+          <thead>
+            <tr>
               <th>Name of Test</th>
               <th>Purpose</th>
               <th>Pre-requisites</th>
@@ -481,25 +425,27 @@
               <th>Progress</th>
             </tr>
           </thead>
-        
+
           <tbody>
-        
             <tr>
               <td><strong>1. Voltage Output Verification Test</strong></td>
               <td>To verify that the voltage output of the DC power subsystem is within datasheet tolerance</td>
               <td>Multimeter, DC power supply, DC–DC buck converter, low dropout regulator</td>
               <td>
-                Perform 4-wire sensing using the multimeter. Take three readings, compute the mean value, and
-                compare it with the datasheet tolerance. Confirm that the measured voltage matches the
+                Perform 4-wire sensing using the multimeter. Take three readings, compute the mean value,
+                and compare it with the datasheet tolerance. Confirm that the measured voltage matches the
                 expected output.
               </td>
               <td>S01, R01–R07</td>
               <td>In progress</td>
             </tr>
-        
+
             <tr>
               <td><strong>2. Motor Functionality & Step-per-Revolution Test</strong></td>
-              <td>To validate Nema 23 stepper motor operation and determine step requirements for one complete revolution</td>
+              <td>
+                To validate Nema 23 stepper motor operation and determine step requirements for one complete
+                revolution
+              </td>
               <td>DC power supply, ultrasonic sensor, MCU, motor driver, Nema 23 stepper motor</td>
               <td>
                 Test multiple configurations for the motor. Use the serial monitor in Visual Studio Code to
@@ -509,7 +455,7 @@
               <td>S01, S04, R01–R05</td>
               <td>In progress</td>
             </tr>
-        
+
             <tr>
               <td><strong>3. Motor–Stage Angular Displacement Ratio Test</strong></td>
               <td>To determine the angular displacement ratio between the motor and the moving stage</td>
@@ -522,7 +468,7 @@
               <td>S01, S04, R01–R05</td>
               <td>Planned</td>
             </tr>
-        
+
             <tr>
               <td><strong>4. I2C Multiplexer Functionality Test</strong></td>
               <td>To verify correct switching and reading of IMU channels via the I2C multiplexer</td>
@@ -535,7 +481,7 @@
               <td>R06, R07</td>
               <td>Planned</td>
             </tr>
-        
+
             <tr>
               <td><strong>5. Wi-Fi Connectivity Validation Test</strong></td>
               <td>To confirm successful wireless communication with the MCU</td>
@@ -547,7 +493,7 @@
               <td>C01</td>
               <td>Planned</td>
             </tr>
-        
+
             <tr>
               <td><strong>6. Active & Passive Mode Performance Test</strong></td>
               <td>To evaluate motion performance in both active and passive rehabilitation modes</td>
@@ -560,7 +506,7 @@
               <td>S01, S04, R01–R07</td>
               <td>Planned</td>
             </tr>
-        
+
             <tr>
               <td><strong>7. Safety Override Functionality Test</strong></td>
               <td>To verify effectiveness of physical and software-based emergency stop functions</td>
@@ -572,12 +518,129 @@
               <td>S01, S02</td>
               <td>Planned</td>
             </tr>
-        
           </tbody>
         </table>
-
       </figure>
-      </section>
+
+      <!-- Charts script (runs after DOM is loaded; Chart.js already loaded with defer) -->
+      <script>
+        // ---- First chart: Weight vs Resistance (exponential-like) ----
+        const ctx1 = document.getElementById('weightResistanceChart').getContext('2d');
+
+        const weight1 = [341, 682, 1023, 1364];
+        const resistance = [53000, 25000, 16000, 9000];
+
+        new Chart(ctx1, {
+          type: 'line',
+          data: {
+            labels: weight1,
+            datasets: [{
+              label: 'Resistance (Ω)',
+              data: resistance,
+              tension: 0.4,
+              borderWidth: 3,
+              fill: false
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              title: {
+                display: true,
+                text: 'Weight vs Resistance'
+              }
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'Weight (g)'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Resistance (Ω)'
+                }
+              }
+            }
+          }
+        });
+
+        // ---- Second chart: Vout vs Weight with linear regression line ----
+        const ctx2 = document.getElementById('voutChart').getContext('2d');
+
+        const weight2 = [200, 250, 500, 2268];
+        const vout = [0.51, 0.52, 0.54, 0.66];
+
+        function linearRegression(x, y) {
+          const n = x.length;
+          const sumX = x.reduce((a, b) => a + b, 0);
+          const sumY = y.reduce((a, b) => a + b, 0);
+          const sumXY = x.map((xi, i) => xi * y[i]).reduce((a, b) => a + b, 0);
+          const sumXX = x.map(xi => xi * xi).reduce((a, b) => a + b, 0);
+
+          const m = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+          const c = (sumY - m * sumX) / n;
+          return { m, c };
+        }
+
+        const lr = linearRegression(weight2, vout);
+        const regLineY = weight2.map(x => lr.m * x + lr.c);
+        const equationText = `Vout = ${lr.m.toFixed(5)} × Weight + ${lr.c.toFixed(3)}`;
+
+        new Chart(ctx2, {
+          type: 'scatter',
+          data: {
+            labels: weight2,
+            datasets: [
+              {
+                label: 'Measured Data',
+                data: vout,
+                pointRadius: 5,
+                showLine: false
+              },
+              {
+                label: 'Linear Fit',
+                data: regLineY,
+                type: 'line',
+                fill: false,
+                tension: 0
+              }
+            ]
+          },
+          options: {
+            plugins: {
+              title: {
+                display: true,
+                text: 'Force Sensor Output vs Weight'
+              },
+              subtitle: {
+                display: true,
+                text: equationText,
+                padding: 10
+              }
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'Weight (g)'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Vout (V)'
+                },
+                min: 0.45,
+                max: 0.75
+              }
+            }
+          }
+        });
+      </script>
+
     </main>
 
     <footer class="site-footer">
@@ -587,6 +650,6 @@
       </div>
       <p>&copy; 2025 NUS CDE4301 – Kinetix</p>
     </footer>
-    
+
   </body>
 </html>
