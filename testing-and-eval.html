@@ -6,8 +6,8 @@
     <title>Project Plan – Kinetix</title>
     <link rel="stylesheet" href="css/style.css"> <!-- IF WE MESS WITH THIS LINE, THE REPORT WILL LOOK UGLY -->
 
-    <!-- Load Chart.js once -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <!-- Load Chart.js ONCE (no defer so Chart is ready before inline script) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Load MathJax once -->
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
@@ -325,11 +325,11 @@
       </p>
 
       <figure>
-        <figcaption>Figure X</figcaption>
         <div class="img-row">
           <img src="images/200g.png" width="80%">
           <img src="images/500g.png" width="80%">
         </div>
+        <figcaption>Figure X</figcaption>
       </figure>
 
       <p>
@@ -522,123 +522,127 @@
         </table>
       </figure>
 
-      <!-- Charts script (runs after DOM is loaded; Chart.js already loaded with defer) -->
+      <!-- Charts script (after canvases; Chart.js already loaded) -->
       <script>
-        // ---- First chart: Weight vs Resistance (exponential-like) ----
-        const ctx1 = document.getElementById('weightResistanceChart').getContext('2d');
+        // -------- First chart: Weight vs Resistance --------
+        const ctx1 = document.getElementById('weightResistanceChart');
+        if (ctx1) {
+          const weight1 = [341, 682, 1023, 1364];
+          const resistance = [53000, 25000, 16000, 9000];
 
-        const weight1 = [341, 682, 1023, 1364];
-        const resistance = [53000, 25000, 16000, 9000];
-
-        new Chart(ctx1, {
-          type: 'line',
-          data: {
-            labels: weight1,
-            datasets: [{
-              label: 'Resistance (Ω)',
-              data: resistance,
-              tension: 0.4,
-              borderWidth: 3,
-              fill: false
-            }]
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              title: {
-                display: true,
-                text: 'Weight vs Resistance'
-              }
+          new Chart(ctx1, {
+            type: 'line',
+            data: {
+              labels: weight1,
+              datasets: [{
+                label: 'Resistance (Ω)',
+                data: resistance,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: false
+              }]
             },
-            scales: {
-              x: {
+            options: {
+              responsive: true,
+              plugins: {
                 title: {
                   display: true,
-                  text: 'Weight (g)'
+                  text: 'Weight vs Resistance'
                 }
               },
-              y: {
-                title: {
-                  display: true,
-                  text: 'Resistance (Ω)'
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Weight (g)'
+                  }
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: 'Resistance (Ω)'
+                  }
                 }
               }
             }
-          }
-        });
-
-        // ---- Second chart: Vout vs Weight with linear regression line ----
-        const ctx2 = document.getElementById('voutChart').getContext('2d');
-
-        const weight2 = [200, 250, 500, 2268];
-        const vout = [0.51, 0.52, 0.54, 0.66];
-
-        function linearRegression(x, y) {
-          const n = x.length;
-          const sumX = x.reduce((a, b) => a + b, 0);
-          const sumY = y.reduce((a, b) => a + b, 0);
-          const sumXY = x.map((xi, i) => xi * y[i]).reduce((a, b) => a + b, 0);
-          const sumXX = x.map(xi => xi * xi).reduce((a, b) => a + b, 0);
-
-          const m = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
-          const c = (sumY - m * sumX) / n;
-          return { m, c };
+          });
         }
 
-        const lr = linearRegression(weight2, vout);
-        const regLineY = weight2.map(x => lr.m * x + lr.c);
-        const equationText = `Vout = ${lr.m.toFixed(5)} × Weight + ${lr.c.toFixed(3)}`;
+        // -------- Second chart: Vout vs Weight with linear regression --------
+        const ctx2 = document.getElementById('voutChart');
+        if (ctx2) {
+          const weight2 = [200, 250, 500, 2268];
+          const vout = [0.51, 0.52, 0.54, 0.66];
 
-        new Chart(ctx2, {
-          type: 'scatter',
-          data: {
-            labels: weight2,
-            datasets: [
-              {
-                label: 'Measured Data',
-                data: vout,
-                pointRadius: 5,
-                showLine: false
-              },
-              {
-                label: 'Linear Fit',
-                data: regLineY,
-                type: 'line',
-                fill: false,
-                tension: 0
-              }
-            ]
-          },
-          options: {
-            plugins: {
-              title: {
-                display: true,
-                text: 'Force Sensor Output vs Weight'
-              },
-              subtitle: {
-                display: true,
-                text: equationText,
-                padding: 10
-              }
+          function linearRegression(x, y) {
+            const n = x.length;
+            const sumX = x.reduce((a, b) => a + b, 0);
+            const sumY = y.reduce((a, b) => a + b, 0);
+            const sumXY = x.map((xi, i) => xi * y[i]).reduce((a, b) => a + b, 0);
+            const sumXX = x.map(xi => xi * xi).reduce((a, b) => a + b, 0);
+
+            const m = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+            const c = (sumY - m * sumX) / n;
+            return { m, c };
+          }
+
+          const lr = linearRegression(weight2, vout);
+          const regLineY = weight2.map(x => lr.m * x + lr.c);
+          const equationText = `Vout = ${lr.m.toFixed(5)} × Weight + ${lr.c.toFixed(3)}`;
+
+          new Chart(ctx2, {
+            data: {
+              datasets: [
+                {
+                  label: 'Measured Data',
+                  data: weight2.map((w, i) => ({ x: w, y: vout[i] })),
+                  pointRadius: 5,
+                  showLine: false,
+                  type: 'scatter'
+                },
+                {
+                  label: 'Linear Fit',
+                  data: weight2.map((w, i) => ({ x: w, y: regLineY[i] })),
+                  type: 'line',
+                  fill: false,
+                  tension: 0
+                }
+              ]
             },
-            scales: {
-              x: {
+            options: {
+              responsive: true,
+              plugins: {
                 title: {
                   display: true,
-                  text: 'Weight (g)'
+                  text: 'Force Sensor Output vs Weight'
+                },
+                subtitle: {
+                  display: true,
+                  text: equationText,
+                  padding: 10
                 }
               },
-              y: {
-                title: {
-                  display: true,
-                  text: 'Vout (V)'
+              scales: {
+                x: {
+                  type: 'linear',
+                  position: 'bottom',
+                  title: {
+                    display: true,
+                    text: 'Weight (g)'
+                  }
                 },
-                min: 0.45,
-                max: 0.75
+                y: {
+                  title: {
+                    display: true,
+                    text: 'Vout (V)'
+                  },
+                  min: 0.45,
+                  max: 0.75
+                }
               }
             }
-          }
-        });
+          });
+        }
       </script>
 
     </main>
