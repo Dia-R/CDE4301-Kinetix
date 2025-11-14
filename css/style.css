@@ -50,6 +50,11 @@ nav ul {
   padding-left: 1rem;
 }
 
+ul {
+  margin-left: 20px;
+  line-height: 1.5;
+}
+
 nav li {
   margin: 0.3rem 0;
 }
