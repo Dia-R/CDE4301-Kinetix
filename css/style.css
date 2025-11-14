@@ -277,16 +277,3 @@ figcaption {
   line-height: 1.4;
 }
 
-table {
-  table-layout: fixed;
-}
-
-table th:nth-child(1),
-table td:nth-child(1) {
-  width: 35%;   /* first column */
-}
-
-table th:nth-child(2),
-table td:nth-child(2) {
-  width: 65%;   /* second column */
-}
