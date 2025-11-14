@@ -25,7 +25,8 @@
         This section documents the conducted tests as well as any planned test. Through these tests,
         we identified the shortcomings and how we plan to address them.
       </p>
-
+      
+      <hr class="section-divider">
       <!-- 6.1 Mechanical Sub-System -->
       <h4>6.1 Mechanical Sub-System</h4>
       <p>Table X provides an overview of the testing plan for the mechanical sub-system.</p>
@@ -117,7 +118,8 @@
         shift the arc rail underneath the linear actuator and structure sub-assembly so that it eliminates
         the deformation.
       </p>
-
+      
+      <hr class="section-divider">
       <!-- 6.2 Sensing Sub-System -->
       <h4>6.2 Sensing Sub-System</h4>
       <p>Table X provides an overview of the testing plan for the sensing sub-system.</p>
@@ -413,6 +415,7 @@
         real usage conditions.
       </p>
 
+      <hr class="section-divider">
       <!-- 6.3 Electrical Sub-System -->
       <h4>6.3 Electrical Sub-System</h4>
       <p>Table X provides an overview of the testing plan for the electrical sub-system.</p>
@@ -653,7 +656,7 @@
     <p>Overall, there were two main tests that were conducted, which were the voltage output verification of the low dropout regulator (LDO) 
       and the motor functionality test for the Nema 23 Stepper Motor.</p>
     <figure>
-      <img src = "images/Low dropout regulator.png" width="80%">
+      <img src = "images/Low dropout regulator.png" width="50%">
       <figcaption> Figure X </figcaption>
     </figure>
     <p>The first experiment was set up with the positive terminal connected to the LDO input pin and the ground pin connected to the negative terminal of the DC power supply, 
@@ -712,7 +715,7 @@
     <p>Figure X shows that the LDO performed as expected, consistently outputting approximately 3.3 V with a mean deviation of 3.17 mV (0.096%). This aligns well with the datasheet minimum of 3.267 V, confirming that the LDO is operating correctly and is suitable for integration. 
       Figure X illustrates the setup used for the second experiment, which tests motor functionality. </p>
     <figure>
-      <img src = "images/Motor Functionality.png" width="80%">
+      <img src = "images/Motor Functionality.png" width="50%">
       <figcaption> Figure X </figcaption>
     </figure>
     <p>The DM556T motor driver was configured in a common-anode setup, with PUL+ and DIR+ connected to the MCU’s 3.3 V pin. 
@@ -741,8 +744,8 @@
         </figure>
     
     </div>
-    <p>Figure 49 shows how changing the steps per revolution affects the motor speed, where we can conclude that a lower steps per revolution will allow for a faster motor speed. 
-      Thus, allowing us to adjust the horizontal and lateral speed of the device.</p>
+    <p>The videos show how changing the steps per revolution affects the motor speed. We can conclude that a lower steps per revolution will allow for a faster motor speed, 
+      allowing us to adjust the horizontal and lateral speed of the device.</p>
     <h4>6.3.2 Test Shortcomings and Proposals</h4>
     <p>The initial round of testing revealed several limitations in both the circuit design and experimental setup, as summarised in Table X.</p>
     <figure>
@@ -803,7 +806,186 @@
         </tbody>
       </table>
     </figure>
-    <h4> UI Sub-System</h4>
+      
+    <hr class="section-divider">
+
+    <h4>6.4 UI Sub-System</h4>
+    <p>Table X provides an overview of the testing plan for the UI sub-system.</p>
+    <figure>
+      <figcaption>Table X</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Name of Test</th>
+            <th>Purpose</th>
+            <th>Pre-requisites</th>
+            <th>Methodology</th>
+            <th>User need code addressed</th>
+            <th>Progress</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+      
+          <tr>
+            <td><strong>1. UI Core Functionality Test</strong></td>
+            <td>To verify basic UI operability including buttons, navigation, and screen transitions</td>
+            <td>Prototype UI build; Firebase connected; checklist of UI states</td>
+            <td>Perform manual click-through of all buttons and navigation paths. Check screen transitions, error states, and data retrieval from Firebase.</td>
+            <td>UI01, UI02</td>
+            <td>Completed</td>
+          </tr>
+      
+          <tr>
+            <td><strong>2. Therapist Workflow Validation Test</strong></td>
+            <td>To validate the therapist-facing workflow across the five colour-coded stages</td>
+            <td>Full workflow prototype; mock session data; access to therapist dashboard</td>
+            <td>Conduct scenario-based walkthrough: set goals, configure session, monitor progress, and review summary. Record friction points at each stage.</td>
+            <td>UI01, UI03</td>
+            <td>Completed</td>
+          </tr>
+      
+          <tr>
+            <td><strong>3. Client-Facing Gamified Screen Test</strong></td>
+            <td>To assess clarity and engagement of the “During Session” gamified feedback view</td>
+            <td>Tablet running client view; mock repetition data</td>
+            <td>Rotate tablet to client view and observe visibility of targets, progress visuals, and feedback responsiveness during mock exercise repetitions.</td>
+            <td>UI02, UI04</td>
+            <td>Completed</td>
+          </tr>
+      
+          <tr>
+            <td><strong>4. Physiotherapist Usability Feedback Test</strong></td>
+            <td>To collect qualitative feedback on usability, relevance of features, and visual hierarchy</td>
+            <td>Physiotherapist A & B; semi-structured interview guide; prototype UI</td>
+            <td>Conduct think-aloud and semi-structured interviews. Gather suggestions on simplification, gamification, and readability of data displays.</td>
+            <td>UI01–UI04</td>
+            <td>Completed</td>
+          </tr>
+      
+          <tr>
+            <td><strong>5. System Integration Test</strong></td>
+            <td>To verify end-to-end integration of UI with Kinetix hardware and sensors</td>
+            <td>Functional linear + lateral motion modules; synced sensor outputs; mock therapy script</td>
+            <td>Run a full mock therapy session and evaluate real-time data display, rep logging, and accuracy of the progress summary.</td>
+            <td>UI01–UI05</td>
+            <td>Planned</td>
+          </tr>
+      
+        </tbody>
+      </table>
+    </figure>
+    <h4>6.4.1 Test Results and Evaluation</h4>
+    <figure>
+      <figcaption>Table X</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect Evaluated</th>
+            <th>Feedback from Iteration 1</th>
+            <th>Changes Implemented in Iteration 2</th>
+            <th>Outcome / Evaluation</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+      
+          <tr>
+            <td><strong>Interface Complexity</strong></td>
+            <td>Too many features; cluttered; not physiotherapist-friendly</td>
+            <td>Simplified layout; reduced menu depth; therapist-driven flow emphasised</td>
+            <td>Therapists reported clearer navigation and lower cognitive load</td>
+          </tr>
+      
+          <tr>
+            <td><strong>Gamification</strong></td>
+            <td>Suggested to improve client engagement</td>
+            <td>Added target-based animations, rep progress cues, and simple point system</td>
+            <td>Increased engagement and perceived motivation; animations understood easily</td>
+          </tr>
+      
+          <tr>
+            <td><strong>Session Logging/Calendar</strong></td>
+            <td>Unnecessary for clinical use</td>
+            <td>Removed; replaced with a goals/progress dashboard</td>
+            <td>Dashboard considered more relevant and clinically meaningful</td>
+          </tr>
+      
+          <tr>
+            <td><strong>User Journey Flow</strong></td>
+            <td>Lacked clarity on therapist–client role transitions</td>
+            <td>Created structured, color-coded 5-stage journey (Start / Decision / Pre / During / Post)</td>
+            <td>Improved consistency in operation</td>
+          </tr>
+      
+          <tr>
+            <td><strong>During-Session Interaction</strong></td>
+            <td>Clients not adequately considered in UI flow</td>
+            <td>Added tablet rotation during “During Session” phase + real-time visual cues</td>
+            <td>Clients found visuals intuitive; therapists liked dual-orientation design</td>
+          </tr>
+      
+          <tr>
+            <td><strong>Motivational Feedback</strong></td>
+            <td>Needed movement reinforcement mechanisms</td>
+            <td>Integrated point-based effort scoring and corrective cues</td>
+            <td>Encouraged effort-based participation, aligned with motor-learning studies</td>
+          </tr>
+      
+        </tbody>
+      </table>
+    </figure>
+    <h4>6.4.2 Test Shortcomings and Proposals</h4>
+    <p>Testing revealed several limitations in the current UI evaluation process. First, feedback was gathered using early prototypes and relied on a small number of physiotherapists, 
+      reducing the diversity of perspectives. Additionally, client-side interactions such as engagement with gamified elements and clarity of visual cues were tested in isolation rather 
+      than within a full session flow. To address these gaps, future testing should involve a larger pool of physiotherapists and clients together, incorporate real sensor data, and 
+      include full therapist–client mock sessions.</p>
+      
+    <hr class="section-divider">
+
+    <h4>6.5 Conclusion</h4>
+    <p>Overall, testing across all sub-systems has validated core functionality and revealed clear directions for improvement. The key outcomes achieved are:</p>
+    
+    <ul>
+      <li><strong>Mechanical Sub-System</strong>
+        <ul>
+          <li>FEA shows a high factor of safety (28) for load-bearing components.</li>
+          <li>Lateral testing confirms minimal displacement but indicates potential long-term deformation.</li>
+          <li>ROM simulations confirm that required joint angles are achievable.</li>
+          <li>Design improvement identified: repositioning the arc rail to eliminate deformation.</li>
+        </ul>
+      </li>
+    
+      <li><strong>Sensing Sub-System</strong>
+        <ul>
+          <li>Force sensor calibration successful; resistance decreases predictably with increasing load.</li>
+          <li>Voltage–weight testing establishes a clear linear model for force estimation.</li>
+          <li>Basic functionality of plantar sensors and IMUs validated.</li>
+          <li>Future tests will involve higher loads and dynamic stepping motions.</li>
+        </ul>
+      </li>
+    
+      <li><strong>Electrical Sub-System</strong>
+        <ul>
+          <li>LDO outputs within expected tolerance (0.096% deviation).</li>
+          <li>Nema 23 motor demonstrates stable operation and tunable speed.</li>
+          <li>Limitations identified: short test durations, no-load conditions, and non-recommended circuit setup.</li>
+          <li>Next steps include extended-duration tests, load testing, and proper datasheet-based circuits.</li>
+        </ul>
+      </li>
+    
+      <li><strong>UI Sub-System</strong>
+        <ul>
+          <li>Interface streamlined based on therapist feedback (reduced clutter, clearer flow).</li>
+          <li>Gamified client view improved engagement and visibility.</li>
+          <li>New 5-stage colour-coded workflow improves clarity and consistency.</li>
+          <li>Further testing to involve more therapists and clients with real sensor data.</li>
+        </ul>
+      </li>
+    </ul>
+    
+    <p><strong>Summary:</strong> Core functionality across mechanical, sensing, electrical, and UI systems has been validated. Risks have been reduced, and clear next steps have been defined to strengthen reliability, usability, and integration in the upcoming phase.</p>
+
     
     </main>
 
