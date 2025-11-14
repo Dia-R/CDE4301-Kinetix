@@ -394,3 +394,11 @@ figcaption {
 sub {
   font-size: 0.75em;
 }
+
+.section-divider {
+  border: 0;
+  height: 2px;
+  background: #ccc;
+  margin: 40px 0;
+}
+
