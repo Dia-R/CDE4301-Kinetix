@@ -13,18 +13,150 @@
         <header>
             <h2>CDE4301 – Kinetix</h2> <!-- DO NOT EDIT HEADER-->
           </header>
-          <h3>0. COPY PASTE CHAPTER TITLE FROM TABLE OF CONTENTS</h3> <!-- REPLACE WITH CORRECT TITLE -->
-      
-          <p> Lorem ipsum</p><!-- USE PARAGRAPH TAG FOR TEXT -->
-          <h4> LOREM
-          </h4> <!-- USE h4 FOR SUBHEADERS -->
-          <p> Lorem ipsum</p>
-     
+          <h3>6. Testing & Evaluation</h3> <!-- REPLACE WITH CORRECT TITLE -->
+
+          <h4>6.1 Mechanical Sub-System </h4> <!-- USE h4 FOR SUBHEADERS -->
+
+          <h4><i>6.1.1 Testing Methodology </i></h4> <!-- USE h4 FOR SUBHEADERS -->
           <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
-            <img src = "images/profile/Introduction/BWSTT.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
-            <figcaption> Figure X</figcaption>
+            <img src = "images/profile/Chapter 6/Test Method Table.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
           </figure>
-        
+
+          <h4><i>6.1.2 Testing Results and Evaluation </i></h4> <!-- USE h4 FOR SUBHEADERS -->
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/FEA analysis.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <p>In the FEA simulation, we take the tube where the load will be concentrated for our reference. The load acting on the simulation is 100 N, with the assumed maximum leg weight of 20 kg. Since the load is distributed into two parallel tubes, each tube will handle 10 kg. The result shows that the minimum Factor of Safety is 28. This means it would need 28 times the acting to load for the tube to start deforming.</p><!-- USE PARAGRAPH TAG FOR TEXT -->
+
+          <P>The arc rail test assessed structural stability under a 9.6 kg load and showed a displacement of 0.4 mm, indicating potential long-term deformation. The structure connected to the arc rail slider was also observed to be slanted, likely due to insufficient support or too small a contact surface, which may compromise stability.</P>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Lateral Measure 1.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Lateral Measure 2.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Lateral Measure 3.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <p>That is why we proposed to have the arc rail shifted underneath the linear actuator and structure sub-assembly.</p>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Prototype.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+
+          <h4><i>6.1.3 Test Shortcomings and Proposals</i></h4> <!-- USE h4 FOR SUBHEADERS -->
+          <p>The lateral testing should include a larger and more diverse group of participants to better represent the intended user demographic. Future tests will therefore involve a wider age range. For the FEA, additional simulations will be run at different pivot points to further assess stress distribution and overall structural performance.</p>
+
+          <h4>6.2 Sensing Sub-System </h4> <!-- USE h4 FOR SUBHEADERS -->
+
+          <h4><i>6.2.1 Testing Methodology</i></h4>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Test Method Table 2.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <h4><i>6.2.2 Test Results and Evaluation</i></h4>
+          <p>The table below shows the critical and target force readings we require based on a 100kg and 150kg payload.</p>
+
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Test Method Table 3.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <p>Using a range of known weights,  resistance was recorded and tabulated (Table 20). The data indicate that resistance decreases exponentially as applied force increases, as shown in the graph.</p>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Test Results Table.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Resistance-Weight Graph.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>       
+          <p>An Op-Amp circuit was used for the calibration of each force sensor, as it was the recommended circuit by the manufacturer. The equations below are used to guide our chosen values for each component and the voltages.</p>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Formula Image.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>  
+          <p>The voltage supply (Vss) is set to 4.5 V, as power will be drawn from a 5 V source. To ensure compatibility with the microcontroller, the output voltage of the LM324N must remain below 3.3 V. Therefore, the reference voltage (Vref) applied to the non-inverting terminal of the op-amp is set to 0.5 V. To obtain Vref = 0.5 V, the resistors in the voltage divider are configured with a 1:9 ratio, corresponding to R1 = 40 kΩ and R2 = 5 kΩ. Since the resistance of the force sensor decreases exponentially with increasing force, the feedback resistor (Rref) is kept relatively low at 2 kΩ to maintain sensitivity. Based on the LM324N’s specifications, the expected output voltage range is approximately 0.5 V to 3.0 V, providing a 2.5 V span to capture variations in voltage corresponding to applied force.</p>         
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Electric Circuit.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure> 
+          <p>The figure below shows an example of how the force sensor is tested when a weight is being applied.</p>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Resistance Experiment Set-Up.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure> 
+          <p>The voltage outputs corresponding to the respective weights can be seen in the table below. A graph is plotted, and a linear relationship can be seen along with the equation of the function.</p>        
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Voltage-Weight Table.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>             
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Voltage-Weight Graph.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>     
+          <p>Upon knowing the equation of the linear function, we can extrapolate voltage readings for further weight values.</p>  
+
+          <h4><i>6.2.3 Test Shortcomings and Proposals</i></h4>
+          <p>Because each A301 force sensor has a small sensing area, initial tests could only use limited weights, restricting the range of data for calibration. Future testing will involve the full set of plantar sensors on the foot plate, allowing a wider range of loads and improving accuracy. A planned test also includes simulating a stepping motion on the foot plate to better reflect real usage conditions.</p>
+
+          <h4>6.3 Electrical Sub-System</h4>
+
+          <h4><i>6.3.1 Testing Methodology</i></h4>
+          <p>The testing plan includes component-level and sub-system evaluations which can be seen here:</p>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Electrical Methodology Test Table.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure> 
+          <h4><i>6.3.2 Test Results and Evaluation</i></h4>
+          <p>Overall, there were two main tests that were conducted, which were the voltage output verification of the low dropout regulator (LDO) and the motor functionality test for the Nema 23 Stepper Motor.</p>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Electrical LDO Test Set-Up.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure> 
+          <p>The first experiment was set up as shown, where the positive terminal was connected to the input pin of the LDO and the ground pin was connected to the negative terminal of the DC power supply, which was also connected to the ground. A multimeter was then used to find the voltage drop between the output pin and the ground pin of the LDO.</p>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/LDO Test Result.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure> 
+          <p>Figure 47 shows that the LDO performed as expected, consistently outputting around 3.3 V with a mean deviation of only 3.17 mV (0.096%). This aligns closely with the datasheet, which reports a minimum output of 3.267 V, indicating that the LDO is functioning properly and suitable for integration. For the second experiment, the motor functionality setup is shown in Figure 48.</p>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Electrical Motor Set-Up.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <p>The DM556T motor driver was prepared in a common anode setup where the PUL+ and DIR+ connections of the motor driver were connected to the 3.3 V pin of the MCU. In contrast, the PUL- and DIR- connections of the motor driver were connected to the MCU GPIO 0 and 1 pins, respectively, while the voltage supply of the motor was connected to the 24 V DC power supply. </p>
+
+
+          <p>Figure 49 shows how changing the steps per revolution affects the motor speed, where we can conclude that a lower steps per revolution will allow for a faster motor speed. Thus, allowing us to adjust the horizontal and lateral speed of the device.</p>
+          <h4><i>6.3.3 Test Shortcomings and Proposals</i></h4>
+          <p>The initial round of testing revealed several limitations in both the circuit design and experimental setup, as summarised below.</p>
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/Test Shortcomings Table.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+
+          <h4>6.4 UI Testing</h4>   
+          <h4><i>6.4.1 Testing Methodology</i></h4>
+          <p>The following table outlines the tests conducted and to be conducted.</p>   
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/UI Testing Methodology Table.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>  
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/UI Testing Methodology Table 2.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <h4><i>6.4.2 Test Results and Evaluation</i></h4>  
+          <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+            <img src = "images/profile/Chapter 6/UI Test Results Table.png.png" width = "80%"> <!-- DO NOT CHANGE WIDTH UNLESS NECESSARY, UPLOAD IMAGES TO RELEVANT FOLDER AND RIGHT CLICK IMAGE FOR CORRECT RELATIVE PATH, THEN COPY PASTE-->
+            <figcaption>Fig. X</figcaption>
+          </figure>
+          <h4><i>6.4.3 Test Shortcomings and Proposals</i></h4>
+          <p>Testing revealed several limitations in the current UI evaluation process. First, feedback was gathered using early prototypes and relied on a small number of physiotherapists, reducing the diversity of perspectives. Additionally, client-side interactions such as engagement with gamified elements and clarity of visual cues were tested in isolation rather than within a full session flow. To address these gaps, future testing should involve a larger pool of physiotherapists and clients together, incorporate real sensor data, and include full therapist–client mock sessions.</p> 
       </section>
     </main>
 
