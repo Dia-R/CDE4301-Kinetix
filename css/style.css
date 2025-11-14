@@ -397,8 +397,10 @@ sub {
 
 .section-divider {
   border: 0;
-  height: 2px;
-  background: #ccc;
-  margin: 40px 0;
+  height: 5px;
+  background: linear-gradient(to right, #3056d3, #8fa8ff);
+  border-radius: 3px;
+  margin: 50px 0;
 }
+
 
