@@ -50,6 +50,11 @@ nav ul {
   padding-left: 1rem;
 }
 
+ul {
+  margin-left: 20px;
+  line-height: 1.5;
+}
+
 nav li {
   margin: 0.3rem 0;
 }
@@ -76,6 +81,13 @@ section h3 {
 }
 
 p, li {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  text-align: justify;
+  line-height: 2;
+}
+
+b {
   font-size: 1rem;
   margin-bottom: 0.75rem;
   text-align: justify;
@@ -114,11 +126,29 @@ figcaption {
   color: #666;
 }
 
-footer {
+.site-footer {
   text-align: center;
   margin-top: 3rem;
+  padding-top: 1.5rem;
   font-size: 0.9rem;
   color: #666;
+  border-top: 1px solid #ddd;
+}
+
+.site-footer .footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.site-footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
 }
 
 .team-gallery {
@@ -152,4 +182,163 @@ footer {
   color: #666;
   font-size: 0.9rem;
   margin-top: 0.2rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.comparison-table th {
+  background: #f2f2f2;
+  padding: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #ccc;
+}
+
+.comparison-table td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.comparison-table td:first-child {
+  font-weight: 600;
+  width: 13rem;
+}
+
+.comparison-table td:nth-child(2) {
+  width: 18rem;
+}
+
+.test-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.test-table th {
+  background: #f2f2f2;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-bottom: 2px solid #ccc;
+  text-align: left;
+}
+
+.test-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.test-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.test-table td:first-child {
+  font-weight: 600;
+  width: 11rem;
+}
+
+/* Image side-by-side layout */
+.img-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;        /* spacing between images */
+  margin: 2rem 0;
+  flex-wrap: wrap;  /* allows wrapping on small screens */
+}
+
+.img-row img {
+  width: 40%;       /* adjust size */
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;  /* optional */
+}
+
+.subsystem-list {
+  list-style-type: disc;
+  padding-left: 1.2rem;    /* Align bullets */
+  margin: 0.5rem 0 0 0;    /* Tight spacing */
+  text-align: left;        /* Ensure they align left under the card */
+}
+
+.subsystem-list li {
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+/* Make Table 2 & 3 share the same column widths */
+.requirements-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;        /* consistent layout for both tables */
+}
+
+/* First column (Must-Have / Good-to-Have) */
+.requirements-table th:nth-child(1),
+.requirements-table td:nth-child(1) {
+  width: 35%;
+}
+
+/* Second column (Quotes) */
+.requirements-table th:nth-child(2),
+.requirements-table td:nth-child(2) {
+  width: 65%;
+}
+
+.device-compare {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.device-compare th, .device-compare td {
+  border: 2px solid #000;
+  padding: 1rem;
+  vertical-align: top;
+  text-align: center;
+}
+
+.device-compare img {
+  max-width: 100%;      /* never wider than the cell */
+  max-height: 230px;    /* <<< control the height */
+  width: auto;          /* keep aspect ratio */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.img-caption {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+.rom-table {
+  width: 100%;
+  table-layout: fixed;        /* prevents overflow */
+  word-wrap: break-word;      /* forces long text to wrap */
+  white-space: normal;        /* allow multi-line text */
+}
+
+.rom-table th,
+.rom-table td {
+  padding: 0.6rem 0.5rem;     /* reduce padding */
+  vertical-align: top;
+}
+
+.large-imgs img {
+  width: 48% !important;  /* makes them MUCH larger */
+  height: auto;
 }
