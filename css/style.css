@@ -248,3 +248,19 @@ figcaption {
   width: 11rem;
 }
 
+/* Image side-by-side layout */
+.img-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;        /* spacing between images */
+  margin: 2rem 0;
+  flex-wrap: wrap;  /* allows wrapping on small screens */
+}
+
+.img-row img {
+  width: 40%;       /* adjust size */
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;  /* optional */
+}
