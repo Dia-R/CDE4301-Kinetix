@@ -337,3 +337,8 @@ figcaption {
   padding: 0.6rem 0.5rem;     /* reduce padding */
   vertical-align: top;
 }
+
+.large-imgs img {
+  width: 48% !important;  /* makes them MUCH larger */
+  height: auto;
+}
