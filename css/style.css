@@ -324,3 +324,16 @@ figcaption {
   color: #444;
   margin-top: 0.5rem;
 }
+
+.rom-table {
+  width: 100%;
+  table-layout: fixed;        /* prevents overflow */
+  word-wrap: break-word;      /* forces long text to wrap */
+  white-space: normal;        /* allow multi-line text */
+}
+
+.rom-table th,
+.rom-table td {
+  padding: 0.6rem 0.5rem;     /* reduce padding */
+  vertical-align: top;
+}
