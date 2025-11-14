@@ -61,55 +61,6 @@
               </tbody>
             </table>
           </figure>
-          <figure>
-            <table class="test-table">
-              <thead>
-                <tr>
-                  <th>Type of Test</th>
-                  <th>Purpose</th>
-                  <th>Pre-requisites</th>
-                  <th>Methodology</th>
-                  <th>User Needs Code</th>
-                  <th>Progress</th>
-                  <th>Component</th>
-                </tr>
-              </thead>
-            
-              <tbody>
-                <tr>
-                  <td>Calibration of Each Force Sensor</td>
-                  <td>For the calibration of each force sensor to map voltage readings to force applied</td>
-                  <td>A301 force sensor, known weights, Op-amp</td>
-                  <td>
-                    Relationship between force sensor and varying weights will be plotted.<br><br>
-                    Followed by setting voltage and resistance in the Op-amp circuit.<br><br>
-                    Finally, relationship between voltage output and weights will be plotted.
-                  </td>
-                  <td>R05, R06</td>
-                  <td>Completed</td>
-                  <td>Sub-system</td>
-                </tr>
-            
-                <tr>
-                  <td>Sensor Sub-group Testing</td>
-                  <td>For the testing of sensor sub-groups (e.g., plantar) to determine accurate readings</td>
-                  <td>
-                    Completed calibration for every force sensor.<br>
-                    Foot plate with force sensors placed at targeted locations.<br>
-                    Use of multiplexer to sample readings.
-                  </td>
-                  <td>
-                    By standing on the foot plate, a multiplexer will sample readings from all
-                    voltage outputs from thirteen force sensors.
-                  </td>
-                  <td>R05, R06</td>
-                  <td>Planned</td>
-                  <td>Sub-system</td>
-                </tr>
-              </tbody>
-            </table>
-            
-          </figure>
           <h4>6.1.1 Test Results and Evaluation</h4>
           <p> In the FEA simulation, the analysis was performed on the tube where the load is concentrated. Assuming the maximum leg weight of 20 kg, where the load is shared between two parallel tubes, therefore each tube supports 10 kg, corresponding to approximately 100N. 
             The results show a minimum factor of safety of 28, indicating that the tube would require 28 times the applied load before it begins to deform.</p>
@@ -333,7 +284,299 @@
           options: options
         });
       </script>
+      <p> An Op-Amp circuit was used for the calibration of each force sensor, as it was the recommended circuit by the manufacturer. The equations below are used to guide our chosen values for each component and the voltages.</p>
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      </head>
+      <body>
+      
+      <p>
+      \[
+      V_{\text{ref}} = \frac{R_2}{R_1 + R_2} \times V_{ss}
+      \]
+      </p>
+      
+      <p>
+      \[
+      V_{\text{out}} = \left( 1 + \frac{R_{\text{ref}}}{R_{\text{force sensor}}} \right) \times V_{\text{ref}}
+      \]
+      </p>
+      
+      </body>
+      </html>
+      <p>The voltage supply is set to 4.5 V, with the LM324N output kept below 3.3 V for microcontroller compatibility. A reference voltage of 0.5 V is generated using a 1:9 voltage divider (R1 = 40 kΩ, R2 = 5 kΩ). Because the force sensor’s resistance decreases with applied force, a low feedback resistor of 2 kΩ is used to maintain sensitivity. The LM324N is expected to produce an output range of about 0.5 V to 3.0 V, providing a 2.5 V span for force measurement.</p>
+      <p>Figure X shows the circuit diagram for the force sensor.</p>
+      <figure>
+        <img src = "images/Circuit Diagram.png" width ="80%">
+        <figcaption> Figure X </figcaption>
+      </figure>
+      <p>Figure X shows an example of how the force sensor voltage output is captured when different weights are being applied.</p>
+      <figure>
+        <figcaption> Figure X </figcaption>
+        <div class="img-row">
+          <img src="images/200.png" width = 80%>
+          <img src="images/500.png" width = 80%>
+        </div>
+      </figure>
+      <p> The Voltage outputs corresponding to the respective weights can be seen in the table below. A graph is plotted, and a linear relationship can be seen along with the equation of the function. </p>
+      <figure>
+        <figcaption> Table X </figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">Weight (g)</th>
+            <th colspan="4">Vout (V)</th>
+          </tr>
+          <tr>
+            <th>Reading 1</th>
+            <th>Reading 2</th>
+            <th>Reading 3</th>
+            <th>Average</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <tr>
+            <td>200</td>
+            <td>0.51</td>
+            <td>0.51</td>
+            <td>0.52</td>
+            <td>0.51</td>
+          </tr>
+      
+          <tr>
+            <td>250</td>
+            <td>0.52</td>
+            <td>0.52</td>
+            <td>0.52</td>
+            <td>0.52</td>
+          </tr>
+      
+          <tr>
+            <td>500</td>
+            <td>0.54</td>
+            <td>0.54</td>
+            <td>0.54</td>
+            <td>0.54</td>
+          </tr>
+      
+          <tr>
+            <td>2268</td>
+            <td>0.66</td>
+            <td>0.66</td>
+            <td>0.67</td>
+            <td>0.66</td>
+          </tr>
+        </tbody>
+      </table>
+      </figure>
+            <!-- Load Chart.js -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <!-- Canvas for Graph -->
+      <canvas id="voutChart" width="600" height="350"></canvas>
+      
+      <script>
+      // Data from your table
+      const weight = [200, 250, 500, 2268];
+      const vout = [0.51, 0.52, 0.54, 0.66];
+      
+      // ---- Linear Regression Calculation ----
+      function linearRegression(x, y) {
+          const n = x.length;
+          const sumX = x.reduce((a, b) => a + b);
+          const sumY = y.reduce((a, b) => a + b);
+          const sumXY = x.map((xi, i) => xi * y[i]).reduce((a, b) => a + b);
+          const sumXX = x.map(xi => xi * xi).reduce((a, b) => a + b);
+      
+          const m = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+          const c = (sumY - m * sumX) / n;
+      
+          return { m, c };
+      }
+      
+      const lr = linearRegression(weight, vout);
+      
+      // Generate regression line points
+      const regLineY = weight.map(x => lr.m * x + lr.c);
+      
+      // Format equation text
+      const equationText = `Vout = ${lr.m.toFixed(5)} × Weight + ${lr.c.toFixed(3)}`;
+      
+      // ---- Plot Graph ----
+      const ctx = document.getElementById('voutChart').getContext('2d');
+      
+      new Chart(ctx, {
+          type: 'scatter',
+          data: {
+              labels: weight,
+              datasets: [
+                  {
+                      label: 'Measured Data',
+                      data: vout,
+                      borderColor: '#1d6ae5',
+                      backgroundColor: '#1d6ae5',
+                      pointRadius: 5,
+                      showLine: false
+                  },
+                  {
+                      label: 'Linear Fit',
+                      data: regLineY,
+                      borderColor: '#d9534f',
+                      backgroundColor: '#d9534f',
+                      type: 'line',
+                      fill: false,
+                      tension: 0
+                  }
+              ]
+          },
+          options: {
+              plugins: {
+                  title: {
+                      display: true,
+                      text: 'Force Sensor Output vs Weight'
+                  },
+                  subtitle: {
+                      display: true,
+                      text: equationText,
+                      padding: 10
+                  }
+              },
+              scales: {
+                  x: {
+                      title: {
+                          display: true,
+                          text: 'Weight (g)'
+                      }
+                  },
+                  y: {
+                      title: {
+                          display: true,
+                          text: 'Vout (V)'
+                      },
+                      min: 0.45,
+                      max: 0.75
+                  }
+              }
+          }
+      });
+      </script>
+      <p>Upon knowing the equation of the linear function, we can extrapolate voltage readings for further weight values.</p>
+      <h4>6.2.2 Test Shortcomings and Proposals </h4>
+      <p>Because each A301 force sensor has a small sensing area, initial tests could only use limited weights, restricting the range of data for calibration. Future testing will involve the full set of plantar sensors on the foot plate, allowing a wider range of loads and improving accuracy. A planned test also includes simulating a stepping motion on the foot plate to better reflect real usage conditions.</p>
+      <h4>6.3 Electrical Sub-System</h4>
+      <p>Table X provides an overview of the testing plan for the electrical sub-system</p>
+      <figure>
+        <figcaption> Table X </figcaption>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+          <thead>
+            <tr style="background-color: #f2f2f2; text-align: left;">
+              <th>Name of Test</th>
+              <th>Purpose</th>
+              <th>Pre-requisites</th>
+              <th>Methodology</th>
+              <th>User Need Code Addressed</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+        
+            <tr>
+              <td><strong>1. Voltage Output Verification Test</strong></td>
+              <td>To verify that the voltage output of the DC power subsystem is within datasheet tolerance</td>
+              <td>Multimeter, DC power supply, DC–DC buck converter, low dropout regulator</td>
+              <td>
+                Perform 4-wire sensing using the multimeter. Take three readings, compute the mean value, and
+                compare it with the datasheet tolerance. Confirm that the measured voltage matches the
+                expected output.
+              </td>
+              <td>S01, R01–R07</td>
+              <td>In progress</td>
+            </tr>
+        
+            <tr>
+              <td><strong>2. Motor Functionality & Step-per-Revolution Test</strong></td>
+              <td>To validate Nema 23 stepper motor operation and determine step requirements for one complete revolution</td>
+              <td>DC power supply, ultrasonic sensor, MCU, motor driver, Nema 23 stepper motor</td>
+              <td>
+                Test multiple configurations for the motor. Use the serial monitor in Visual Studio Code to
+                observe live step updates during one full revolution. Evaluate feasibility of using the
+                ultrasonic sensor for positional control.
+              </td>
+              <td>S01, S04, R01–R05</td>
+              <td>In progress</td>
+            </tr>
+        
+            <tr>
+              <td><strong>3. Motor–Stage Angular Displacement Ratio Test</strong></td>
+              <td>To determine the angular displacement ratio between the motor and the moving stage</td>
+              <td>KINETIX mainframe, camera, Nema 23 stepper motor</td>
+              <td>
+                Place a marker on the gear and position the stage at one end of the arc rail. Record the
+                movement until the stage reaches the opposite end. Analyse video footage to trace the gear’s
+                angular displacement. Derive the ratio based on the fixed 40° stage displacement.
+              </td>
+              <td>S01, S04, R01–R05</td>
+              <td>Planned</td>
+            </tr>
+        
+            <tr>
+              <td><strong>4. I2C Multiplexer Functionality Test</strong></td>
+              <td>To verify correct switching and reading of IMU channels via the I2C multiplexer</td>
+              <td>I2C multiplexer, MCU, 2 IMU sensors</td>
+              <td>
+                Place two IMUs in different positions. Confirm readings from IMU1 using the Visual Studio
+                terminal. Send an I2C command to switch channels and check if IMU2 readings update
+                accordingly.
+              </td>
+              <td>R06, R07</td>
+              <td>Planned</td>
+            </tr>
+        
+            <tr>
+              <td><strong>5. Wi-Fi Connectivity Validation Test</strong></td>
+              <td>To confirm successful wireless communication with the MCU</td>
+              <td>MCU</td>
+              <td>
+                Using the MCU, send and receive messages from an external device over Wi-Fi to verify
+                connection stability.
+              </td>
+              <td>C01</td>
+              <td>Planned</td>
+            </tr>
+        
+            <tr>
+              <td><strong>6. Active & Passive Mode Performance Test</strong></td>
+              <td>To evaluate motion performance in both active and passive rehabilitation modes</td>
+              <td>Fully integrated KINETIX device</td>
+              <td>
+                Using both artificial and real legs, validate motion performance. In active mode, ensure
+                motion is triggered only when user force exceeds a threshold. Passive mode should allow full
+                ROM movement without user exertion.
+              </td>
+              <td>S01, S04, R01–R07</td>
+              <td>Planned</td>
+            </tr>
+        
+            <tr>
+              <td><strong>7. Safety Override Functionality Test</strong></td>
+              <td>To verify effectiveness of physical and software-based emergency stop functions</td>
+              <td>Fully integrated KINETIX device</td>
+              <td>
+                Run the device through a normal exercise cycle. Trigger the physical emergency stop button to
+                halt operation. Repeat using the on-screen emergency stop function in the tablet interface.
+              </td>
+              <td>S01, S02</td>
+              <td>Planned</td>
+            </tr>
+        
+          </tbody>
+        </table>
 
+      </figure>
       </section>
     </main>
 
