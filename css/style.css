@@ -310,11 +310,13 @@ figcaption {
 }
 
 .device-compare img {
-  width: 90%;           /* keeps image size consistent */
+  max-width: 100%;      /* never wider than the cell */
+  max-height: 230px;    /* <<< control the height */
+  width: auto;          /* keep aspect ratio */
   height: auto;
   object-fit: contain;
   display: block;
-  margin: 0 auto;        /* center image */
+  margin: 0 auto;
 }
 
 .img-caption {
