@@ -292,14 +292,20 @@
       </p>
 
       <!-- MathJax equations -->
-      <div style="text-align:left; margin-left:0;">
-        \[
-        V_{\text{ref}} = \frac{R_2}{R_1 + R_2} \times V_{ss} \tag{1}
-        \]
+<!-- Equation 1 -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+          <div>
+              $$V_{ref} = \frac{R_2}{R_1 + R_2} \times V_{ss}$$
+          </div>
+          <div>(1)</div>
+      </div>
       
-        \[
-        V_{\text{out}} = \left( 1 + \frac{R_{\text{ref}}}{R_{\text{force sensor}}} \right) \times V_{\text{ref}} \tag{2}
-        \]
+      <!-- Equation 2 -->
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+              $$V_{out} = \left(1 + \frac{R_{ref}}{R_{\text{force sensor}}}\right) \times V_{ref}$$
+          </div>
+          <div>(2)</div>
       </div>
 
       <p>
@@ -647,7 +653,7 @@
     <p>Overall, there were two main tests that were conducted, which were the voltage output verification of the low dropout regulator (LDO) 
       and the motor functionality test for the Nema 23 Stepper Motor.</p>
     <figure>
-      <img src = >
+      <img src = "images/Low dropout regulator.png" width="80%">
       <figcaption> Figure X </figcaption>
     </figure>
     <p>The first experiment was set up with the positive terminal connected to the LDO input pin and the ground pin connected to the negative terminal of the DC power supply, 
@@ -706,24 +712,99 @@
     <p>Figure X shows that the LDO performed as expected, consistently outputting approximately 3.3 V with a mean deviation of 3.17 mV (0.096%). This aligns well with the datasheet minimum of 3.267 V, confirming that the LDO is operating correctly and is suitable for integration. 
       Figure X illustrates the setup used for the second experiment, which tests motor functionality. </p>
     <figure>
-      <img src =>
+      <img src = "images/Motor Functionality.png" width="80%">
       <figcaption> Figure X </figcaption>
     </figure>
     <p>The DM556T motor driver was configured in a common-anode setup, with PUL+ and DIR+ connected to the MCU’s 3.3 V pin. 
       The PUL– and DIR– terminals were connected to GPIO pins 0 and 1, respectively, and the motor was powered using a 24 V DC supply.</p>
       
-    <div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start;">
-      <video width="45%" controls>
-        <source src="images/200 steps:rev.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
+    <div style="display:flex; gap:20px; justify-content:center;">
     
-      <video width="45%" controls>
-        <source src="images/1600 steps:rev.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
+        <!-- Video 1 -->
+        <figure style="width:45%; text-align:center; margin:0;">
+            <video width="100%" controls>
+                <source src="images/200 steps:rev.mp4" type="video/mp4">
+            </video>
+            <figcaption style="margin-top:8px; font-size:14px; color:#555;">
+                200 steps per revolution
+            </figcaption>
+        </figure>
+    
+        <!-- Video 2 -->
+        <figure style="width:45%; text-align:center; margin:0;">
+            <video width="100%" controls>
+                <source src="images/1600 steps:rev.mp4" type="video/mp4">
+            </video>
+            <figcaption style="margin-top:8px; font-size:14px; color:#555;">
+                1600 steps per revolution
+            </figcaption>
+        </figure>
+    
     </div>
-
+    <p>Figure 49 shows how changing the steps per revolution affects the motor speed, where we can conclude that a lower steps per revolution will allow for a faster motor speed. 
+      Thus, allowing us to adjust the horizontal and lateral speed of the device.</p>
+    <h4>6.3.2 Test Shortcomings and Proposals</h4>
+    <p>The initial round of testing revealed several limitations in both the circuit design and experimental setup, as summarised in Table X.</p>
+    <figure>
+      <figcaption>Table X </figcaption>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Issue Identified</th>
+            <th>Reason / Implication</th>
+            <th>Required Follow-Up Action</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+    
+          <!-- Voltage Output Experiment -->
+          <tr>
+            <td rowspan="2"><strong>Voltage Output<br>Experiment</strong></td>
+    
+            <td>Test not conducted using recommended datasheet circuit</td>
+            <td>Actual output voltage may differ from expected values; readings may be inaccurate</td>
+            <td>Re-run the test using the proper recommended circuit</td>
+          </tr>
+    
+          <tr>
+            <td>Test conducted in isolation (not integrated with the full system)</td>
+            <td>Integration with other components may affect the voltage output</td>
+            <td>Re-test after integrating the full electronic system</td>
+          </tr>
+    
+    
+          <!-- Motor Functionality Experiment -->
+          <tr>
+            <td rowspan="2"><strong>Motor Functionality<br>Experiment</strong></td>
+    
+            <td>The experiment was conducted for only a few minutes</td>
+            <td>Does not reflect long-term performance</td>
+            <td>Perform extended duration stress tests</td>
+          </tr>
+    
+          <tr>
+            <td>Experiment conducted without a load</td>
+            <td>Speed / torque may vary significantly under load</td>
+            <td>Test the motor under realistic load conditions</td>
+          </tr>
+    
+    
+          <!-- MCU Pin Limitation -->
+          <tr>
+            <td><strong>MCU Pin Limitation</strong></td>
+            <td>Insufficient number of pins on the MCU</td>
+            <td>Force sensors and motors require more pins than are available</td>
+            <td>Redesign the schematic or select a higher-pin-count MCU</td>
+          </tr>
+    
+        </tbody>
+      </table>
+    </figure>
+    <h4> UI Sub-System</h4>
+    
     </main>
 
     <footer class="site-footer">
