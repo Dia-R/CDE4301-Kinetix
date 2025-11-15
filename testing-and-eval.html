@@ -14,7 +14,19 @@
   </head>
 
   <body>
-
+    <nav class="top-nav">
+      <ul>
+       <li><a href="index.html">Home</a></li>
+        <li><a href="introduction.html">1. Introduction</a></li>
+        <li><a href="lit-review.html">2. Literature Review</a></li>
+        <li><a href="demo-and-anthro.html">3. Demographic & Anthropometric Data</a></li>
+        <li><a href="concept-development.html">4. Concept Development</a></li>
+        <li><a href="proposed-system.html">5. Proposed System Overview</a></li>
+        <li><a href="testing-and-eval.html">6. Testing & Evaluation</a></li>
+        <li><a href="references.html">7. References</a></li>
+        <li><a href="appendix.html">8. Appendix</a></li>
+      </ul>
+    </nav>
     <main>
       <header>
         <h2>CDE4301 – Kinetix</h2> <!-- DO NOT EDIT HEADER-->
@@ -29,10 +41,10 @@
       <hr class="section-divider">
       <!-- 6.1 Mechanical Sub-System -->
       <h4>6.1 Mechanical Sub-System</h4>
-      <p>Table X provides an overview of the testing plan for the mechanical sub-system.</p>
+      <p>Table 20 provides an overview of the testing plan for the mechanical sub-system.</p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 20</figcaption>
         <table>
           <thead>
             <tr>
@@ -96,7 +108,7 @@
 
       <figure>
         <img src="images/FEA.png" width="80%">
-        <figcaption>Figure X</figcaption>
+        <figcaption>Figure 35</figcaption>
       </figure>
 
       <p>
@@ -108,7 +120,7 @@
 
       <figure>
         <img src="images/Deformation.png" width="80%">
-        <figcaption>Figure X</figcaption>
+        <figcaption>Figure 36</figcaption>
       </figure>
 
       <h4>6.1.2 Shortcomings and Proposal</h4>
@@ -122,10 +134,10 @@
       <hr class="section-divider">
       <!-- 6.2 Sensing Sub-System -->
       <h4>6.2 Sensing Sub-System</h4>
-      <p>Table X provides an overview of the testing plan for the sensing sub-system.</p>
+      <p>Table 21 provides an overview of the testing plan for the sensing sub-system.</p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 21</figcaption>
         <table>
           <thead>
             <tr>
@@ -183,11 +195,11 @@
 
       <h4>6.2.1 Test Results and Evaluation</h4>
       <p>
-        Table X shows the critical and target force readings we require based on a 100 kg and 150 kg load.
+        Table 22 shows the critical and target force readings we require based on a 100 kg and 150 kg load.
       </p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 22</figcaption>
         <table>
           <thead>
             <tr>
@@ -244,12 +256,12 @@
       </figure>
 
       <p>
-        Using a range of known weights, resistance was recorded and tabulated in Table X. The data
-        indicate that resistance decreases exponentially as applied force increases, as shown in Figure X.
+        Using a range of known weights, resistance was recorded and tabulated in Table 23. The data
+        indicate that resistance decreases exponentially as applied force increases, as shown in Figure 23.
       </p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 23</figcaption>
         <table>
           <thead>
             <tr>
@@ -283,10 +295,14 @@
       </figure>
 
       <!-- Canvas for first graph -->
-      <div style="max-width: 700px; margin: 30px auto;">
-        <canvas id="weightResistanceChart"></canvas>
-      </div>
-
+       <figure>
+        <div style="max-width: 700px; margin: 30px auto;">
+          <canvas id="weightResistanceChart"></canvas>
+             </div>
+  
+        <figcaption>Figure 37. Weight Against Resistance</figcaption>  
+       </figure>
+     
       <p>
         An Op-Amp circuit was used for the calibration of each force sensor, as it was the recommended
         circuit by the manufacturer. The equations below are used to guide our chosen values for each
@@ -319,15 +335,15 @@
         range of about 0.5 V to 3.0 V, providing a 2.5 V span for force measurement.
       </p>
 
-      <p>Figure X shows the circuit diagram for the force sensor.</p>
+      <p>Figure 38 shows the circuit diagram for the force sensor.</p>
 
       <figure>
         <img src="images/Circuit Diagram.png" width="40%">
-        <figcaption>Figure X</figcaption>
+        <figcaption>Figure 38</figcaption>
       </figure>
 
       <p>
-        Figure X shows an example of how the force sensor voltage output is captured when different
+        Figure 38 shows an example of how the force sensor voltage output is captured when different
         weights are being applied.
       </p>
 
@@ -336,7 +352,7 @@
           <img src="images/200g.png" width="80%">
           <img src="images/500g.png" width="80%">
         </div>
-        <figcaption>Figure X</figcaption>
+        <figcaption>Figure 38</figcaption>
       </figure>
 
       <p>
@@ -345,7 +361,7 @@
       </p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 24</figcaption>
         <table>
           <thead>
             <tr>
@@ -397,10 +413,15 @@
       </figure>
 
       <!-- Canvas for second graph -->
-      <div style="max-width: 700px; margin: 30px auto;">
-        <canvas id="voutChart" width="600" height="350"></canvas>
-      </div>
-
+       <figure>
+        <div style="max-width: 700px; margin: 30px auto;">
+          <canvas id="voutChart" width="600" height="350"></canvas>
+        </div>
+<figcaption>
+  Figure. 39
+</figcaption>  
+       </figure>
+   
       <p>
         Upon knowing the equation of the linear function, we can extrapolate voltage readings for
         further weight values.
@@ -418,10 +439,10 @@
       <hr class="section-divider">
       <!-- 6.3 Electrical Sub-System -->
       <h4>6.3 Electrical Sub-System</h4>
-      <p>Table X provides an overview of the testing plan for the electrical sub-system.</p>
+      <p>Table 255 provides an overview of the testing plan for the electrical sub-system.</p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 25</figcaption>
         <table>
           <thead>
             <tr>
@@ -657,12 +678,12 @@
       and the motor functionality test for the Nema 23 Stepper Motor.</p>
     <figure>
       <img src = "images/Low dropout regulator.png" width="50%">
-      <figcaption> Figure X </figcaption>
+      <figcaption> Figure. 40 </figcaption>
     </figure>
     <p>The first experiment was set up with the positive terminal connected to the LDO input pin and the ground pin connected to the negative terminal of the DC power supply, 
       which was also tied to ground. A multimeter was then used to measure the voltage drop between the LDO output pin and ground.</p>
     <figure>
-      <figcaption>Table X</figcaption>
+      <figcaption>Table 28</figcaption>
       <table>
         <thead>
           <tr>
@@ -712,11 +733,11 @@
         </tbody>
       </table>
     </figure>
-    <p>Figure X shows that the LDO performed as expected, consistently outputting approximately 3.3 V with a mean deviation of 3.17 mV (0.096%). This aligns well with the datasheet minimum of 3.267 V, confirming that the LDO is operating correctly and is suitable for integration. 
-      Figure X illustrates the setup used for the second experiment, which tests motor functionality. </p>
+    <p>Figure 41 shows that the LDO performed as expected, consistently outputting approximately 3.3 V with a mean deviation of 3.17 mV (0.096%). This aligns well with the datasheet minimum of 3.267 V, confirming that the LDO is operating correctly and is suitable for integration. 
+      Figure 41 illustrates the setup used for the second experiment, which tests motor functionality. </p>
     <figure>
       <img src = "images/Motor Functionality.png" width="50%">
-      <figcaption> Figure X </figcaption>
+      <figcaption> Figure 41 </figcaption>
     </figure>
     <p>The DM556T motor driver was configured in a common-anode setup, with PUL+ and DIR+ connected to the MCU’s 3.3 V pin. 
       The PUL– and DIR– terminals were connected to GPIO pins 0 and 1, respectively, and the motor was powered using a 24 V DC supply.</p>
@@ -747,9 +768,9 @@
     <p>The videos show how changing the steps per revolution affects the motor speed. We can conclude that a lower steps per revolution will allow for a faster motor speed, 
       allowing us to adjust the horizontal and lateral speed of the device.</p>
     <h4>6.3.2 Test Shortcomings and Proposals</h4>
-    <p>The initial round of testing revealed several limitations in both the circuit design and experimental setup, as summarised in Table X.</p>
+    <p>The initial round of testing revealed several limitations in both the circuit design and experimental setup, as summarised in Table 29.</p>
     <figure>
-      <figcaption>Table X </figcaption>
+      <figcaption>Table 29 </figcaption>
     
       <table>
         <thead>
@@ -810,9 +831,9 @@
     <hr class="section-divider">
 
     <h4>6.4 UI Sub-System</h4>
-    <p>Table X provides an overview of the testing plan for the UI sub-system.</p>
+    <p>Table 30 provides an overview of the testing plan for the UI sub-system.</p>
     <figure>
-      <figcaption>Table X</figcaption>
+      <figcaption>Table 30</figcaption>
       <table>
         <thead>
           <tr>
@@ -877,7 +898,7 @@
     </figure>
     <h4>6.4.1 Test Results and Evaluation</h4>
     <figure>
-      <figcaption>Table X</figcaption>
+      <figcaption>Table 31</figcaption>
       <table>
         <thead>
           <tr>
