@@ -26,64 +26,15 @@
         we identified the shortcomings and how we plan to address them.
       </p>
       
-      <hr class="section-divider">
       <!-- 6.1 Mechanical Sub-System -->
       <h4>6.1 Mechanical Sub-System</h4>
       <p>Table X provides an overview of the testing plan for the mechanical sub-system.</p>
-
-      <figure>
-        <figcaption>Table X</figcaption>
-        <table>
-          <thead>
-            <tr>
-              <th>Name of Test</th>
-              <th>Purpose</th>
-              <th>Pre-requisites</th>
-              <th>Methodology</th>
-              <th>User need code addressed</th>
-              <th>Progress</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td><strong>1. Aluminium Tube Load Test</strong></td>
-              <td>To determine the load-bearing capability of the aluminium tube</td>
-              <td>Estimated lower limb segment weight</td>
-              <td>
-                Conduct a Finite Element Analysis (FEA) in SolidWorks to calculate stress distribution
-                and determine the Factor of Safety.
-              </td>
-              <td>D01</td>
-              <td>Completed</td>
-            </tr>
-
-            <tr>
-              <td><strong>2. Lateral Stability Test</strong></td>
-              <td>To assess the lateral stability of the device during side-to-side movement</td>
-              <td>Fully assembled UROP device</td>
-              <td>
-                Place an actual lower limb on the device and measure vertical displacement using a ruler
-                to evaluate structural stability.
-              </td>
-              <td>D01</td>
-              <td>Completed</td>
-            </tr>
-
-            <tr>
-              <td><strong>3. Range of Motion Verification Test</strong></td>
-              <td>To verify that the device can achieve the required full range of motion</td>
-              <td>Lower limb anthropometric dimensions to set supporting structure length</td>
-              <td>
-                Using the completed CAD model, place reference markers at the Hip, Knee and Ankle pivots
-                and simulate the achievable joint angles.
-              </td>
-              <td>D01</td>
-              <td>Planned</td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=0&single=true"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+      </iframe>
 
       <h4>6.1.1 Test Results and Evaluation</h4>
       <p>
@@ -110,76 +61,16 @@
         <img src="images/Deformation.png" width="80%">
         <figcaption>Figure X</figcaption>
       </figure>
-
-      <h4>6.1.2 Shortcomings and Proposal</h4>
-      <p>
-        For the FEA, additional simulations will be run at different pivot points to further assess stress
-        distribution and overall structural performance. After the initial lateral testing, we decided to
-        shift the arc rail underneath the linear actuator and structure sub-assembly so that it eliminates
-        the deformation.
-      </p>
       
-      <hr class="section-divider">
       <!-- 6.2 Sensing Sub-System -->
       <h4>6.2 Sensing Sub-System</h4>
       <p>Table X provides an overview of the testing plan for the sensing sub-system.</p>
-
-      <figure>
-        <figcaption>Table X</figcaption>
-        <table>
-          <thead>
-            <tr>
-              <th>Name of Test</th>
-              <th>Purpose</th>
-              <th>Pre-requisites</th>
-              <th>Methodology</th>
-              <th>User need code addressed</th>
-              <th>Progress</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td><strong>1. Force Sensor Calibration Test</strong></td>
-              <td>To calibrate each force sensor for mapping voltage readings to applied force</td>
-              <td>A301 force sensor, known weights, Op-amp</td>
-              <td>
-                Apply a series of known weights to the force sensor and record corresponding voltage
-                outputs. Plot the voltage–force relationship to derive calibration curves.
-              </td>
-              <td>R05, R06</td>
-              <td>Completed</td>
-            </tr>
-
-            <tr>
-              <td><strong>2. IMU Orientation Response Test</strong></td>
-              <td>To assess the IMU’s response to movement and changes in spatial orientation</td>
-              <td>IMU module, microcontroller</td>
-              <td>
-                Secure the IMU to a mobile device and rotate it into six orthogonal directions. Record
-                sensor outputs to evaluate accuracy and drift.
-              </td>
-              <td>R05, R06</td>
-              <td>Planned</td>
-            </tr>
-
-            <tr>
-              <td><strong>3. Plantar Sensor Sub-system Test</strong></td>
-              <td>To validate aggregate readings from grouped force sensors on the footplate</td>
-              <td>
-                Completed calibration for all sensors; footplate with force sensors arranged at targeted
-                positions; multiplexer
-              </td>
-              <td>
-                Apply load by standing or applying pressure on the footplate. The multiplexer samples
-                readings from all 13 sensors to evaluate collective plantar pressure output.
-              </td>
-              <td>R05, R06</td>
-              <td>Planned</td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=581449170&single=true"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+      </iframe>
 
       <h4>6.2.1 Test Results and Evaluation</h4>
       <p>
@@ -405,132 +296,17 @@
         Upon knowing the equation of the linear function, we can extrapolate voltage readings for
         further weight values.
       </p>
-
-      <h4>6.2.2 Test Shortcomings and Proposals</h4>
-      <p>
-        Because each A301 force sensor has a small sensing area, initial tests could only use limited
-        weights, restricting the range of data for calibration. Future testing will involve the full set
-        of plantar sensors on the foot plate, allowing a wider range of loads and improving accuracy.
-        A planned test also includes simulating a stepping motion on the foot plate to better reflect
-        real usage conditions.
-      </p>
-
-      <hr class="section-divider">
+      
       <!-- 6.3 Electrical Sub-System -->
       <h4>6.3 Electrical Sub-System</h4>
       <p>Table X provides an overview of the testing plan for the electrical sub-system.</p>
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=837486413&single=true"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+      </iframe>
 
-      <figure>
-        <figcaption>Table X</figcaption>
-        <table>
-          <thead>
-            <tr>
-              <th>Name of Test</th>
-              <th>Purpose</th>
-              <th>Pre-requisites</th>
-              <th>Methodology</th>
-              <th>User Need Code Addressed</th>
-              <th>Progress</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td><strong>1. Voltage Output Verification Test</strong></td>
-              <td>To verify that the voltage output of the DC power subsystem is within datasheet tolerance</td>
-              <td>Multimeter, DC power supply, DC–DC buck converter, low dropout regulator</td>
-              <td>
-                Perform 4-wire sensing using the multimeter. Take three readings, compute the mean value,
-                and compare it with the datasheet tolerance. Confirm that the measured voltage matches the
-                expected output.
-              </td>
-              <td>S01, R01–R07</td>
-              <td>In progress</td>
-            </tr>
-
-            <tr>
-              <td><strong>2. Motor Functionality & Step-per-Revolution Test</strong></td>
-              <td>
-                To validate Nema 23 stepper motor operation and determine step requirements for one complete
-                revolution
-              </td>
-              <td>DC power supply, ultrasonic sensor, MCU, motor driver, Nema 23 stepper motor</td>
-              <td>
-                Test multiple configurations for the motor. Use the serial monitor in Visual Studio Code to
-                observe live step updates during one full revolution. Evaluate feasibility of using the
-                ultrasonic sensor for positional control.
-              </td>
-              <td>S01, S04, R01–R05</td>
-              <td>In progress</td>
-            </tr>
-
-            <tr>
-              <td><strong>3. Motor–Stage Angular Displacement Ratio Test</strong></td>
-              <td>To determine the angular displacement ratio between the motor and the moving stage</td>
-              <td>KINETIX mainframe, camera, Nema 23 stepper motor</td>
-              <td>
-                Place a marker on the gear and position the stage at one end of the arc rail. Record the
-                movement until the stage reaches the opposite end. Analyse video footage to trace the gear’s
-                angular displacement. Derive the ratio based on the fixed 40° stage displacement.
-              </td>
-              <td>S01, S04, R01–R05</td>
-              <td>Planned</td>
-            </tr>
-
-            <tr>
-              <td><strong>4. I2C Multiplexer Functionality Test</strong></td>
-              <td>To verify correct switching and reading of IMU channels via the I2C multiplexer</td>
-              <td>I2C multiplexer, MCU, 2 IMU sensors</td>
-              <td>
-                Place two IMUs in different positions. Confirm readings from IMU1 using the Visual Studio
-                terminal. Send an I2C command to switch channels and check if IMU2 readings update
-                accordingly.
-              </td>
-              <td>R06, R07</td>
-              <td>Planned</td>
-            </tr>
-
-            <tr>
-              <td><strong>5. Wi-Fi Connectivity Validation Test</strong></td>
-              <td>To confirm successful wireless communication with the MCU</td>
-              <td>MCU</td>
-              <td>
-                Using the MCU, send and receive messages from an external device over Wi-Fi to verify
-                connection stability.
-              </td>
-              <td>C01</td>
-              <td>Planned</td>
-            </tr>
-
-            <tr>
-              <td><strong>6. Active & Passive Mode Performance Test</strong></td>
-              <td>To evaluate motion performance in both active and passive rehabilitation modes</td>
-              <td>Fully integrated KINETIX device</td>
-              <td>
-                Using both artificial and real legs, validate motion performance. In active mode, ensure
-                motion is triggered only when user force exceeds a threshold. Passive mode should allow full
-                ROM movement without user exertion.
-              </td>
-              <td>S01, S04, R01–R07</td>
-              <td>Planned</td>
-            </tr>
-
-            <tr>
-              <td><strong>7. Safety Override Functionality Test</strong></td>
-              <td>To verify effectiveness of physical and software-based emergency stop functions</td>
-              <td>Fully integrated KINETIX device</td>
-              <td>
-                Run the device through a normal exercise cycle. Trigger the physical emergency stop button to
-                halt operation. Repeat using the on-screen emergency stop function in the tablet interface.
-              </td>
-              <td>S01, S02</td>
-              <td>Planned</td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
-
-      <!-- Charts script (after canvases; Chart.js already loaded) -->
       <script>
         // -------- First chart: Weight vs Resistance --------
         const ctx1 = document.getElementById('weightResistanceChart');
@@ -746,204 +522,31 @@
     </div>
     <p>The videos show how changing the steps per revolution affects the motor speed. We can conclude that a lower steps per revolution will allow for a faster motor speed, 
       allowing us to adjust the horizontal and lateral speed of the device.</p>
-    <h4>6.3.2 Test Shortcomings and Proposals</h4>
-    <p>The initial round of testing revealed several limitations in both the circuit design and experimental setup, as summarised in Table X.</p>
-    <figure>
-      <figcaption>Table X </figcaption>
-    
-      <table>
-        <thead>
-          <tr>
-            <th>Area</th>
-            <th>Issue Identified</th>
-            <th>Reason / Implication</th>
-            <th>Required Follow-Up Action</th>
-          </tr>
-        </thead>
-    
-        <tbody>
-    
-          <!-- Voltage Output Experiment -->
-          <tr>
-            <td rowspan="2"><strong>Voltage Output<br>Experiment</strong></td>
-    
-            <td>Test not conducted using recommended datasheet circuit</td>
-            <td>Actual output voltage may differ from expected values; readings may be inaccurate</td>
-            <td>Re-run the test using the proper recommended circuit</td>
-          </tr>
-    
-          <tr>
-            <td>Test conducted in isolation (not integrated with the full system)</td>
-            <td>Integration with other components may affect the voltage output</td>
-            <td>Re-test after integrating the full electronic system</td>
-          </tr>
-    
-    
-          <!-- Motor Functionality Experiment -->
-          <tr>
-            <td rowspan="2"><strong>Motor Functionality<br>Experiment</strong></td>
-    
-            <td>The experiment was conducted for only a few minutes</td>
-            <td>Does not reflect long-term performance</td>
-            <td>Perform extended duration stress tests</td>
-          </tr>
-    
-          <tr>
-            <td>Experiment conducted without a load</td>
-            <td>Speed / torque may vary significantly under load</td>
-            <td>Test the motor under realistic load conditions</td>
-          </tr>
-    
-    
-          <!-- MCU Pin Limitation -->
-          <tr>
-            <td><strong>MCU Pin Limitation</strong></td>
-            <td>Insufficient number of pins on the MCU</td>
-            <td>Force sensors and motors require more pins than are available</td>
-            <td>Redesign the schematic or select a higher-pin-count MCU</td>
-          </tr>
-    
-        </tbody>
-      </table>
-    </figure>
-      
-    <hr class="section-divider">
 
     <h4>6.4 UI Sub-System</h4>
     <p>Table X provides an overview of the testing plan for the UI sub-system.</p>
-    <figure>
-      <figcaption>Table X</figcaption>
-      <table>
-        <thead>
-          <tr>
-            <th>Name of Test</th>
-            <th>Purpose</th>
-            <th>Pre-requisites</th>
-            <th>Methodology</th>
-            <th>User need code addressed</th>
-            <th>Progress</th>
-          </tr>
-        </thead>
-      
-        <tbody>
-      
-          <tr>
-            <td><strong>1. UI Core Functionality Test</strong></td>
-            <td>To verify basic UI operability including buttons, navigation, and screen transitions</td>
-            <td>Prototype UI build; Firebase connected; checklist of UI states</td>
-            <td>Perform manual click-through of all buttons and navigation paths. Check screen transitions, error states, and data retrieval from Firebase.</td>
-            <td>UI01, UI02</td>
-            <td>Completed</td>
-          </tr>
-      
-          <tr>
-            <td><strong>2. Therapist Workflow Validation Test</strong></td>
-            <td>To validate the therapist-facing workflow across the five colour-coded stages</td>
-            <td>Full workflow prototype; mock session data; access to therapist dashboard</td>
-            <td>Conduct scenario-based walkthrough: set goals, configure session, monitor progress, and review summary. Record friction points at each stage.</td>
-            <td>UI01, UI03</td>
-            <td>Completed</td>
-          </tr>
-      
-          <tr>
-            <td><strong>3. Client-Facing Gamified Screen Test</strong></td>
-            <td>To assess clarity and engagement of the “During Session” gamified feedback view</td>
-            <td>Tablet running client view; mock repetition data</td>
-            <td>Rotate tablet to client view and observe visibility of targets, progress visuals, and feedback responsiveness during mock exercise repetitions.</td>
-            <td>UI02, UI04</td>
-            <td>Completed</td>
-          </tr>
-      
-          <tr>
-            <td><strong>4. Physiotherapist Usability Feedback Test</strong></td>
-            <td>To collect qualitative feedback on usability, relevance of features, and visual hierarchy</td>
-            <td>Physiotherapist A & B; semi-structured interview guide; prototype UI</td>
-            <td>Conduct think-aloud and semi-structured interviews. Gather suggestions on simplification, gamification, and readability of data displays.</td>
-            <td>UI01–UI04</td>
-            <td>Completed</td>
-          </tr>
-      
-          <tr>
-            <td><strong>5. System Integration Test</strong></td>
-            <td>To verify end-to-end integration of UI with Kinetix hardware and sensors</td>
-            <td>Functional linear + lateral motion modules; synced sensor outputs; mock therapy script</td>
-            <td>Run a full mock therapy session and evaluate real-time data display, rep logging, and accuracy of the progress summary.</td>
-            <td>UI01–UI05</td>
-            <td>Planned</td>
-          </tr>
-      
-        </tbody>
-      </table>
-    </figure>
+    <iframe
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=571322792&single=true"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+    </iframe>
     <h4>6.4.1 Test Results and Evaluation</h4>
-    <figure>
-      <figcaption>Table X</figcaption>
-      <table>
-        <thead>
-          <tr>
-            <th>Aspect Evaluated</th>
-            <th>Feedback from Iteration 1</th>
-            <th>Changes Implemented in Iteration 2</th>
-            <th>Outcome / Evaluation</th>
-          </tr>
-        </thead>
-      
-        <tbody>
-      
-          <tr>
-            <td><strong>Interface Complexity</strong></td>
-            <td>Too many features; cluttered; not physiotherapist-friendly</td>
-            <td>Simplified layout; reduced menu depth; therapist-driven flow emphasised</td>
-            <td>Therapists reported clearer navigation and lower cognitive load</td>
-          </tr>
-      
-          <tr>
-            <td><strong>Gamification</strong></td>
-            <td>Suggested to improve client engagement</td>
-            <td>Added target-based animations, rep progress cues, and simple point system</td>
-            <td>Increased engagement and perceived motivation; animations understood easily</td>
-          </tr>
-      
-          <tr>
-            <td><strong>Session Logging/Calendar</strong></td>
-            <td>Unnecessary for clinical use</td>
-            <td>Removed; replaced with a goals/progress dashboard</td>
-            <td>Dashboard considered more relevant and clinically meaningful</td>
-          </tr>
-      
-          <tr>
-            <td><strong>User Journey Flow</strong></td>
-            <td>Lacked clarity on therapist–client role transitions</td>
-            <td>Created structured, color-coded 5-stage journey (Start / Decision / Pre / During / Post)</td>
-            <td>Improved consistency in operation</td>
-          </tr>
-      
-          <tr>
-            <td><strong>During-Session Interaction</strong></td>
-            <td>Clients not adequately considered in UI flow</td>
-            <td>Added tablet rotation during “During Session” phase + real-time visual cues</td>
-            <td>Clients found visuals intuitive; therapists liked dual-orientation design</td>
-          </tr>
-      
-          <tr>
-            <td><strong>Motivational Feedback</strong></td>
-            <td>Needed movement reinforcement mechanisms</td>
-            <td>Integrated point-based effort scoring and corrective cues</td>
-            <td>Encouraged effort-based participation, aligned with motor-learning studies</td>
-          </tr>
-      
-        </tbody>
-      </table>
-    </figure>
-    <h4>6.4.2 Test Shortcomings and Proposals</h4>
-    <p>Testing revealed several limitations in the current UI evaluation process. First, feedback was gathered using early prototypes and relied on a small number of physiotherapists, 
-      reducing the diversity of perspectives. Additionally, client-side interactions such as engagement with gamified elements and clarity of visual cues were tested in isolation rather 
-      than within a full session flow. To address these gaps, future testing should involve a larger pool of physiotherapists and clients together, incorporate real sensor data, and 
-      include full therapist–client mock sessions.</p>
-      
-    <hr class="section-divider">
-
-    <h4>6.5 Conclusion</h4>
+    <iframe
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSANSyUARUDhW_u0tENr2--nONoJhsV2Y2QYZx7ttyFQCrarVLSy1NbfqJWmH9KAT7ix8WPwe8I0slb/pubhtml?gid=0&single=true"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+    </iframe>
+    <h4>6.5 Overall Shortcomings and Proposals for tests</h4>
+      <iframe>
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSP5r-7iZ6NPYTN0pfl1yttecPYg2Whwh3QxSmSkSdBujD1-XrvnsyMMG8Vi5mDvumc8_99s-0UXEm9/pubhtml?gid=0&single=true"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+      </iframe>
+    </section>
+    <h4>6.6 Conclusion</h4>
     <p>Overall, testing across all sub-systems has validated core functionality and revealed clear directions for improvement. The key outcomes achieved are:</p>
     
     <ul>
