@@ -29,10 +29,10 @@
       <hr class="section-divider">
       <!-- 6.1 Mechanical Sub-System -->
       <h4>6.1 Mechanical Sub-System</h4>
-      <p>Table X provides an overview of the testing plan for the mechanical sub-system.</p>
+      <p>Table 20 provides an overview of the testing plan for the mechanical sub-system.</p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 20</figcaption>
         <table>
           <thead>
             <tr>
@@ -96,7 +96,7 @@
 
       <figure>
         <img src="images/FEA.png" width="80%">
-        <figcaption>Figure X</figcaption>
+        <figcaption>Figure 35. FEA Analysis</figcaption>
       </figure>
 
       <p>
@@ -108,7 +108,7 @@
 
       <figure>
         <img src="images/Deformation.png" width="80%">
-        <figcaption>Figure X</figcaption>
+        <figcaption>Figure 36. Lateral Deformation</figcaption>
       </figure>
 
       <h4>6.1.2 Shortcomings and Proposal</h4>
@@ -122,10 +122,10 @@
       <hr class="section-divider">
       <!-- 6.2 Sensing Sub-System -->
       <h4>6.2 Sensing Sub-System</h4>
-      <p>Table X provides an overview of the testing plan for the sensing sub-system.</p>
+      <p>Table 21 provides an overview of the testing plan for the sensing sub-system.</p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 21</figcaption>
         <table>
           <thead>
             <tr>
@@ -183,11 +183,11 @@
 
       <h4>6.2.1 Test Results and Evaluation</h4>
       <p>
-        Table X shows the critical and target force readings we require based on a 100 kg and 150 kg load.
+        Table 22 shows the critical and target force readings we require based on a 100 kg and 150 kg load.
       </p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 22</figcaption>
         <table>
           <thead>
             <tr>
@@ -249,7 +249,7 @@
       </p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 23</figcaption>
         <table>
           <thead>
             <tr>
@@ -283,9 +283,12 @@
       </figure>
 
       <!-- Canvas for first graph -->
-      <div style="max-width: 700px; margin: 30px auto;">
+      <figure style="max-width: 700px; margin: 30px auto; text-align: center;">
         <canvas id="weightResistanceChart"></canvas>
-      </div>
+        <figcaption style="margin-top: 10px;">
+        Figure 37. Weight-Resistance Graph
+        </figcaption>
+      </figure>
 
       <p>
         An Op-Amp circuit was used for the calibration of each force sensor, as it was the recommended
@@ -294,21 +297,30 @@
       </p>
 
       <!-- MathJax equations -->
-<!-- Equation 1 -->
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
-          <div>
-              $$V_{ref} = \frac{R_2}{R_1 + R_2} \times V_{ss}$$
+      <figure style="text-align: center; margin-bottom: 30px;">
+          <!-- Equation 1 -->
+          <div style="display:flex; justify-content:center; align-items:center; margin-bottom:10px;">
+              <div>
+                  $$V_{ref} = \frac{R_2}{R_1 + R_2} \times V_{ss}$$
+              </div>
+              <div>(1)</div>
           </div>
-          <div>(1)</div>
-      </div>
-      
-      <!-- Equation 2 -->
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-          <div>
-              $$V_{out} = \left(1 + \frac{R_{ref}}{R_{\text{force sensor}}}\right) \times V_{ref}$$
+
+          <!-- Equation 2 -->
+          <div style="display:flex; justify-content:center; align-items:center;">
+              <div>
+                  $$V_{out} = \left(1 + \frac{R_{ref}}{R_{\text{force sensor}}}\right) \times V_{ref}$$
+              </div>
+              <div>(2)</div>
           </div>
-          <div>(2)</div>
-      </div>
+
+          <!-- Caption -->
+          <figcaption style="margin-top: 10px;">
+              Figure 38. Voltage Equations for Force Sensors
+          </figcaption>
+      </figure>
+
+
 
       <p>
         The voltage supply is set to 4.5 V, with the LM324N output kept below 3.3 V for microcontroller
@@ -319,15 +331,15 @@
         range of about 0.5 V to 3.0 V, providing a 2.5 V span for force measurement.
       </p>
 
-      <p>Figure X shows the circuit diagram for the force sensor.</p>
+      <p>Figure 39 shows the circuit diagram for the force sensor.</p>
 
       <figure>
         <img src="images/Circuit Diagram.png" width="40%">
-        <figcaption>Figure X</figcaption>
+        <figcaption>Figure 39. Force Sensor Circuit Diagram</figcaption>
       </figure>
 
       <p>
-        Figure X shows an example of how the force sensor voltage output is captured when different
+        Figure 40 shows an example of how the force sensor voltage output is captured when different
         weights are being applied.
       </p>
 
@@ -336,7 +348,7 @@
           <img src="images/200g.png" width="80%">
           <img src="images/500g.png" width="80%">
         </div>
-        <figcaption>Figure X</figcaption>
+        <figcaption>Figure 40</figcaption>
       </figure>
 
       <p>
@@ -345,7 +357,7 @@
       </p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 24</figcaption>
         <table>
           <thead>
             <tr>
@@ -397,9 +409,10 @@
       </figure>
 
       <!-- Canvas for second graph -->
-      <div style="max-width: 700px; margin: 30px auto;">
+      <figure style="max-width: 700px; margin: 30px auto;">
         <canvas id="voutChart" width="600" height="350"></canvas>
-      </div>
+        <figcaption>Figure 41. V_out-Weight Graph</figcaption>
+      </figure>
 
       <p>
         Upon knowing the equation of the linear function, we can extrapolate voltage readings for
@@ -421,7 +434,7 @@
       <p>Table X provides an overview of the testing plan for the electrical sub-system.</p>
 
       <figure>
-        <figcaption>Table X</figcaption>
+        <figcaption>Table 25</figcaption>
         <table>
           <thead>
             <tr>
@@ -657,12 +670,12 @@
       and the motor functionality test for the Nema 23 Stepper Motor.</p>
     <figure>
       <img src = "images/Low dropout regulator.png" width="50%">
-      <figcaption> Figure X </figcaption>
+      <figcaption> Figure 42. LDO Experimental Set-Up</figcaption>
     </figure>
     <p>The first experiment was set up with the positive terminal connected to the LDO input pin and the ground pin connected to the negative terminal of the DC power supply, 
       which was also tied to ground. A multimeter was then used to measure the voltage drop between the LDO output pin and ground.</p>
     <figure>
-      <figcaption>Table X</figcaption>
+      <figcaption>Table 26</figcaption>
       <table>
         <thead>
           <tr>
@@ -716,7 +729,7 @@
       Figure X illustrates the setup used for the second experiment, which tests motor functionality. </p>
     <figure>
       <img src = "images/Motor Functionality.png" width="50%">
-      <figcaption> Figure X </figcaption>
+      <figcaption> Figure 43. Motor Test Experimental Set-Up</figcaption>
     </figure>
     <p>The DM556T motor driver was configured in a common-anode setup, with PUL+ and DIR+ connected to the MCU’s 3.3 V pin. 
       The PUL– and DIR– terminals were connected to GPIO pins 0 and 1, respectively, and the motor was powered using a 24 V DC supply.</p>
@@ -749,7 +762,7 @@
     <h4>6.3.2 Test Shortcomings and Proposals</h4>
     <p>The initial round of testing revealed several limitations in both the circuit design and experimental setup, as summarised in Table X.</p>
     <figure>
-      <figcaption>Table X </figcaption>
+      <figcaption>Table 27</figcaption>
     
       <table>
         <thead>
@@ -812,7 +825,7 @@
     <h4>6.4 UI Sub-System</h4>
     <p>Table X provides an overview of the testing plan for the UI sub-system.</p>
     <figure>
-      <figcaption>Table X</figcaption>
+      <figcaption>Table 28</figcaption>
       <table>
         <thead>
           <tr>
@@ -877,7 +890,7 @@
     </figure>
     <h4>6.4.1 Test Results and Evaluation</h4>
     <figure>
-      <figcaption>Table X</figcaption>
+      <figcaption>Table 29</figcaption>
       <table>
         <thead>
           <tr>
