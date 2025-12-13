@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Plan – Kinetix</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- IF WE MESS WITH THIS LINE, THE REPORT WILL LOOK UGLY -->
+  </head>
+
+  <body>
+    <nav class="top-nav">
+      <ul>
+       <li><a href="index.html">Home</a></li>
+        <li><a href="introduction.html">1. Introduction</a></li>
+        <li><a href="lit-review.html">2. Literature Review</a></li>
+        <li><a href="demo-and-anthro.html">3. Demographic & Anthropometric Data</a></li>
+        <li><a href="concept-development.html">4. Concept Development</a></li>
+        <li><a href="proposed-system.html">5. Proposed System Overview</a></li>
+        <li><a href="testing-and-eval.html">6. Testing & Evaluation</a></li>
+        <li><a href="references.html">7. References</a></li>
+        <li><a href="appendix.html">8. Appendix</a></li>
+      </ul>
+    </nav>
+    
+
+    <main>
+
+      <header>
+        <h2>CDE4301 – Kinetix</h2> <!-- DO NOT EDIT HEADER-->
+      </header>
+
+      <h3>4. Concept Development</h3> <!-- REPLACE WITH CORRECT TITLE -->
+      <h4>4.1 User Needs and Proposed Features</h4>
+
+      <p>This section outlines the user needs for a lower limb rehabilitation device, where each feature directly addresses a specific user requirement in order of priority to ensure the device is clinically effective, user-friendly, and compliant with medical regulations.</p><!-- USE PARAGRAPH TAG FOR TEXT -->
+     
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <figcaption>Table 11</figcaption>
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoOGk-ZgMup-HMfKLz2bK3KI8WmFCx9K8IbFBXWhRMq31Ukz1cFFHBNBnd5q6wrI0TTZdqI4TMfCQX/pubhtml"
+          width="100%"
+          height="400"
+          style="border:1px solid #ccc; border-radius:6px;">
+        </iframe>
+        <figcaption>
+          <a 
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoOGk-ZgMup-HMfKLz2bK3KI8WmFCx9K8IbFBXWhRMq31Ukz1cFFHBNBnd5q6wrI0TTZdqI4TMfCQX/pubhtml"
+          target="_blank"
+          class="fullscreen-link">
+          Open New Tab
+        </a>
+        </figcaption>
+      </figure>
+
+      <h4>4.2 Design Specifications</h4> <!-- USE h4 FOR SUBHEADERS -->
+      <p>Based on the user needs, we designed our specifications according to relevant variables.</p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <figcaption>Table 12</figcaption>
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSOARTwZDNPkOiX-7oohV39bHPjyaOCqqQ5K7hkHzx2aBmeerM8qXvF0sfh2vbqOBQcwz8BQHtMqPDs/pubhtml?widget=true&amp;headers=false"
+          width="100%"
+          height="400"
+          style="border:1px solid #ccc; border-radius:6px;">
+        </iframe>
+        <figcaption>
+          <a 
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSOARTwZDNPkOiX-7oohV39bHPjyaOCqqQ5K7hkHzx2aBmeerM8qXvF0sfh2vbqOBQcwz8BQHtMqPDs/pubhtml?widget=true&amp;headers=false"
+          target="_blank"
+          class="fullscreen-link">
+          Open New Tab
+        </a>
+        </figcaption>
+      </figure>
+
+      <h4>4.3 User Journey</h4> <!-- USE h4 FOR SUBHEADERS -->
+      <p>
+        Following an in-person interview with a physiotherapist from the stroke support station (S3) we mapped out a user journey documenting actions done by both the client and physiotherapist at every stage of the rehabilitation session. The purpose of this user journey is to educate us on how we can design for the context of usage, promoting better user experience through purposeful designing. 
+
+      </p>
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/Persona.png" width="100%" alt="">
+        <figcaption>Figure 9. User Journey for Kinetix</figcaption>
+      </figure>
+          
+      <h4>4.4 Mechanical Design</h4> <!-- USE h4 FOR SUBHEADERS -->
+<p>
+  The mechanical design aspects encompass the earlier designs' inspiration, initial sketches, and the sub assemblies of the device. Mechanism comparisons also present as a helping guide to find the suitable mechanism in respect to the design specification.
+</p>
+      <h4><i>4.4.1 Design Inspiration</i></h4>
+<p>
+  The device uses a motor-driven ball screw to create linear motion along an aluminum profile, which is transferred through a linkage system to produce controlled angular movement of the footrest for simulating lower-limb flexion and extension. However, several issues were identified: many components are difficult to fabricate, custom rod assemblies limit part interchangeability, the frame lacks structural rigidity, and the CPM-based design only supports passive motion, preventing active or resistive rehabilitation.
+
+</p>
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/figure 13.png" width="80%" alt="">
+        <figcaption>Figure 10. Initial Design Concept</figcaption>
+      </figure>
+
+
+  
+      <h4><i>4.4.2 Design Concepts</i></h4>
+      <p>
+        Based on preliminary research from an SGH exercise video, we initially proposed three passive exercises shown below, covering a range of movements including hamstring stretches and medial-lateral rotations along the knee [14].
+
+      </p>
+  
+      <!-- Embed YouTube video -->
+<figure>
+  <iframe width="80%" height="450"
+          src="https://www.youtube.com/embed/BM0P-iLSlbs"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+  </iframe>
+  <figcaption>Video: Testing & Evaluation Overview</figcaption>
+</figure>
+<p>
+  However, after consulting with our industrial partner, we narrowed the exercise capabilities to focus on the 6 key movements that comprise the exercises in the SGH video, as shown below. This led to the development of an early conceptual design to visualise the device.
+</p>
+<div class="video-grid">
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1byuo8lR9mXkiXXoIuC-X1omv0CygJyMr/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Ankle Dorsiflexion</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1HjSYautXTm792hii8S8ZEc92CGySrwDT/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Ankle Plantarflexion</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1EDfMgtKVUvcwpJ6y0ox2jDtWXXHiSG9v/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Hip Abduction</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1tdzHYgM8UGj1qep8YmaXPybycXgtRXOi/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Hip Adduction</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1wGX1jGR2e_aYSfKhMKdYEPD3bRL2cI_k/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Hip and Knee Extension</figcaption>
+  </figure>
+
+  <figure>
+    <iframe src="https://drive.google.com/file/d/1TyieozSRi17GLyK6htss4pB_8h6AHOm9/preview"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    <figcaption>Hip and Knee Flexion</figcaption>
+  </figure>
+
+</div>
+
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/figure 15.png" width="80%" alt="">
+        <figcaption>Figure 11. 2nd Iteration of Prototype</figcaption>
+      </figure>
+
+
+         
+      <p>With a clear concept of the device, we developed Version 0 of the prototype using OEM standard parts to support six exercise types. This design features a lower-limb actuation system driven by a linear actuator on a ball screw, where the moving carriage converts rotational motion into linear displacement. A parallel multi-link mechanism with rods and rotary joints transfers this motion to the foot interface, producing coordinated, smooth angular movement that mimics natural leg flexion and extension.</p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/figure 16.png" width="80%" alt="">
+        <figcaption>Figure 12. Version 0 of Prototype</figcaption>
+      </figure>
+
+      <h4><i>4.4.2.1 Folding Concept</i></h4>
+      <p>For the second prototype in Semester 2, interviews with physiotherapists indicated that the device should support both sitting and lying positions. Based on this, the team developed three design concepts reflecting these two modes of use.</p>
+      <p><u>Concept 1 - Stand Design</u></p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/Stand Design.png" width="80%" alt="">
+        <figcaption>Figure 13. Stand Variant</figcaption>
+      </figure>
+      <p><u>Concept 2 - Scissors Design</u></p>
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/Scissors Design.png" width="80%" alt="">
+        <figcaption>Figure 14. Scissor Variant</figcaption>
+      </figure>
+      <p><u>Concept 3 - Foldable Design</u></p>
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/Foldable Design.png" width="80%" alt="">
+        <figcaption>Figure 15. Foldable Variant</figcaption>
+      </figure>
+      <p>After comparing all design concepts using multiple evaluation matrices, we determined that the foldable concept is the most suitable. This design will guide our group’s development work in the next semester.</p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <figcaption>Table 13</figcaption>
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Stand design</th>
+              <th>Scissors design</th>
+              <th>Foldable design</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Usability</td>
+              <td>-</td>
+              <td>+</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Portability</td>
+              <td>-</td>
+              <td>-</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Stability</td>
+              <td>-</td>
+              <td>-</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Adjustability</td>
+              <td>+</td>
+              <td>+</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Manufacturability</td>
+              <td>+</td>
+              <td>-</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Safety</td>
+              <td>-</td>
+              <td>-</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Net score</td>
+              <td>-2</td>
+              <td>-1</td>
+              <td>6</td>
+            </tr>
+          </tbody>
+        </table>       
+      </figure>
+        
+      <h4><i>4.4.3 Linear Movement</i></h4>
+         
+      <p>Several mechanisms could provide linear motion, including rack-and-pinion systems, ball screw actuators, and pneumatic actuators. We selected a ball screw linear actuator due to its relative simplicity. A comparison table was created to evaluate each option in terms of reliability, maintenance, mechanical complexity, and user ergonomics.</p>
+            
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <figcaption>Table 14</figcaption>
+        <table style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>Passive Mode</th>
+              <th>Reliability</th>
+              <th>Maintenance</th>
+              <th>Mechanical Complexity</th>
+              <th>User Ergonomics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Linear Actuator</td>
+              <td>High (proven tech)</td>
+              <td>Low (minimal upkeep)</td>
+              <td>Low</td>
+              <td>High (easy to use)</td>
+            </tr>
+            <tr>
+              <td>Hydraulic Resistance (motor pump)</td>
+              <td>High (precise control)</td>
+              <td>High (oil changes, pump maintenance)</td>
+              <td>High</td>
+              <td>Medium (effective but noisy, heavy)</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <h4><i>4.4.4 Lateral Movement</i></h4>
+      <p>Based on our specification requirement, the device has to be able to move 40° in both left and right direction. We evaluate the criteria requirement of our system based on matrices mentioned below.</p>
+
+      <figure>
+        <figcaption>Table 15</figcaption>         
+        <table style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>Mechanism</th>
+              <th>Linear Rail (2 linear rails)</th>
+              <th>Arc Rail (Rotating Base)</th>
+              <th>Pivot (Motorised Slider)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reliability</td>
+              <td>+</td>
+              <td>+</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Maintenance</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Mechanical Complexity</td>
+              <td>-</td>
+              <td>+</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>User Ergonomics</td>
+              <td>+</td>
+              <td>+</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Net score</td>
+              <td>0</td>
+              <td>3</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>           
+      </figure>
+
+      <p>We adopted an arc rail mechanism to meet our design requirements, building on the initial concept developed by our UROP predecessor. To address shortcomings in their design, we repositioned the arc rail from above the linear nut to beneath the linear sub-assembly.</p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/arcrail.png" width="80%" alt="">
+        <figcaption>Figure 16. Arc-Rail Design</figcaption>
+      </figure>
+
+      <h4><i>4.4.4.1 Lateral Frame Mechanism</i></h4>
+      <p>The lateral movement is driven by a Nema 23 motor mounted at the rear of the assembly, with a swappable placement for easy maintenance. Power is transmitted through a belt-and-pulley system, chosen for its light weight and ease of installation compared to gear or chain mechanisms.</p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/lateralmove.png" width="80%" alt="">
+        <figcaption>Figure 17. Lateral Movement Components</figcaption>
+      </figure>
+
+      <h4>4.5 Sensing Design Concepts</h4>
+      <p>
+        This section explains three different design concepts for the sensing subsystem in terms of their working principle and evaluation through a comparison matrix.
+
+      </p>
+      <h4><i>4.5.1 FIMU Design Concept</i></h4>
+      <p>The IMU subsystem combines an accelerometer, gyroscope, and optionally a magnetometer to measure motion and angular velocity across three axes, enabling analysis of hip, knee, and ankle joint kinematics. This concept employs a four-IMU setup (lower back, thigh, shank, and foot).</p>
+          
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/forcesensorplacement.png" width="80%" alt="">
+        <figcaption>Figure 18. FIMU Sensor Placement</figcaption>
+      </figure>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/PlantarForcePlacement.png" width="80%" alt="">
+        <figcaption>Figure 19. Foot Force Sensor Placement</figcaption>
+      </figure>
+
+      <p>The force sensor setup targets key pressure points on the foot: hallux, metatarsals, midfoot, and heels [26]. For medial-lateral force sensing, additional sensors are placed near the medial and lateral malleoli to measure forces during hip adduction and abduction, following hip dynamometry assessment protocols [27].</p>
+
+      <h4><i>4.5.2 Hall-Force-Flex (HFF) Design Concept</i></h4>
+      <p>The HFF subsystem combines Hall-effect sensors, force sensors, and flex sensors to capture biomechanical data during lower-limb rehabilitation exercises for stroke clients. These sensors are positioned at key regions of the lower limb to track motion and loading across multiple planes of movement. Force sensor placement in the HFF is similar to that of the FIMU design concept.</p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        
+        <img src="images/HFF.png" width="80%" alt="">
+        <figcaption>Figure 20. HFF Sensor Placement</figcaption>
+      </figure>
+
+      <h4><i>4.5.3 Computer Vision Design Concept</i></h4>
+      <p>A computer vision sensor uses an RGB camera and pose-estimation algorithms to track 3D joint positions (e.g., hip, knee, ankle) and compute joint angles from relative body segment orientations. Markers are placed on key joints (torso, hip, knee, ankle, and foot tip), and the client’s movements. The video is then processed using Tracker Software to determine marker positions and calculate joint angles.</p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <img src="images/computervision.png" width="80%" alt="">
+        <figcaption>Figure 21. Computer Vision Sensing</figcaption>
+      </figure> 
+
+      <h4><i>4.5.4 Concept Evaluation</i></h4>
+      <p>The concepts were evaluated according to the criteria below.</p>
+
+      <figure>
+        <figcaption>Table 16</figcaption> 
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>FIMU (IMU + Force)</th>
+              <th>HFF (Hall, Force, Flex)</th>
+              <th>Computer Vision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Force Sensing Placement (Plantar)</td>
+              <td>+</td>
+              <td>+</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Force Sensing Placement (Lateral)</td>
+              <td>+</td>
+              <td>+</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Positional Sensing</td>
+              <td>+</td>
+              <td>-</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Metrics (ROM, Strength, Reps, Jerk)</td>
+              <td>+</td>
+              <td>+</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Processing Time</td>
+              <td>-</td>
+              <td>+</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Ease of Set-up</td>
+              <td>+</td>
+              <td>+</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Output Quality</td>
+              <td>+</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Cost</td>
+              <td>-</td>
+              <td>-</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Feasibility for Stroke Rehab</td>
+              <td>+</td>
+              <td>-</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Net Score</td>
+              <td>6</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Final Choice</td>
+              <td colspan="3">
+                Selected – FIMU balances cost, usability, and clinical relevance. 
+                It captures both kinematics and kinetics while remaining wearable and lightweight. 
+                Drift can be corrected algorithmically.
+              </td>
+            </tr>
+          </tbody>
+        </table>           
+      </figure>
+
+      <h4><i>4.5.5 Component Table</i></h4>
+      <p>The following table compares components according to the design specifications for Kinetix.</p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <figcaption>Table 17</figcaption>
+        <table style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>FlexiForce A401</th>
+              <th>FlexiForce A502</th>
+              <th>FlexiForce A301</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cost (USD)</td>
+              <td>$22.56</td>
+              <td>$27.61</td>
+              <td>$14.58</td>
+            </tr>
+            <tr>
+              <td>Sensing Width/Diameter</td>
+              <td>56.9 mm (Diameter)</td>
+              <td>50.8 mm × 50.8 mm (Width)</td>
+              <td>9.53 mm (Diameter)</td>
+            </tr>
+            <tr>
+              <td>Shape</td>
+              <td>Circle</td>
+              <td>Rectangle</td>
+              <td>Circle</td>
+            </tr>
+            <tr>
+              <td>Maximum Force Range</td>
+              <td>31137 N</td>
+              <td>44482 N</td>
+              <td>4448 N</td>
+            </tr>
+            <tr>
+              <td>Linearity Error</td>
+              <td>&lt; ±3% of Full Scale</td>
+              <td>±3% of Full Scale</td>
+              <td>±3% of Full Scale</td>
+            </tr>
+            <tr>
+              <td>Selection</td>
+              <td colspan="3">
+                The FlexiForce A301 was selected for the plantar force sensing subsystem due to its 
+                lower cost, shorter lead time, and ability to meet the required 0–1000 N (plantar) 
+                and 0–200 N (lateral) force ranges. Although it has a smaller sensing area (9.53 mm), 
+                this is compensated by load-concentrating pucks for accurate readings at key foot 
+                regions. Its circular shape also conforms better to anatomical surfaces than 
+                rectangular alternatives, making it a cost-effective and anatomically compatible choice.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <figcaption>Table 18</figcaption>        
+        <table style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>GY-85</th>
+              <th>GY-91</th>
+              <th>LSM9DS1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cost (USD)</td>
+              <td>$27.61</td>
+              <td>$29.00</td>
+              <td>$15–20</td>
+            </tr>
+            <tr>
+              <td>Gyroscope</td>
+              <td>ITG3205</td>
+              <td>MPU9250</td>
+              <td>LSM9DS1</td>
+            </tr>
+            <tr>
+              <td>Accelerometer</td>
+              <td>ADXL345</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Magnetometer</td>
+              <td>HMC5883L</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Voltage Requirement</td>
+              <td>3.3–5V</td>
+              <td>3.3–5V</td>
+              <td>2.5–3.6V</td>
+            </tr>
+            <tr>
+              <td>Sampling Rate</td>
+              <td>100–1000 Hz</td>
+              <td>100–1000 Hz</td>
+              <td>95–952 Hz</td>
+            </tr>
+            <tr>
+              <td>Length</td>
+              <td>35 mm</td>
+              <td>40 mm</td>
+              <td>22 mm</td>
+            </tr>
+            <tr>
+              <td>Width</td>
+              <td>28 mm</td>
+              <td>28 mm</td>
+              <td>22 mm</td>
+            </tr>
+            <tr>
+              <td>Thickness</td>
+              <td>8 mm</td>
+              <td>7 mm</td>
+              <td>3 mm</td>
+            </tr>
+            <tr>
+              <td>Selection</td>
+              <td colspan="3">
+                The GY-85 IMU was chosen for its reliable 9-DOF setup (gyro, accelerometer, and 
+                magnetometer as separate sensors), compact size, and moderate cost, making it 
+                suitable for a four-IMU lower-limb configuration. The GY-91 adds unnecessary 
+                sensors and cost, while the LSM9DS1 sacrifices voltage flexibility. Validated 
+                against the Motive-OptiTrack system, the GY-85 shows joint-angle errors under 6° 
+                (max 12°) across a 0°–150° ROM, providing clinically acceptable accuracy 
+                [28].
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <h4>4.6 Electrical Design      </h4>
+      <p>With mechanical subsystems finalised, the electrical design phase can begin. For motor selection, the maximum torque that the screw bar can resist before backdriving must be determined to guide motor choice [29]. Using a 150 kg load and a 10 mm screw lead, the calculated backdriving torque is 2.15 Nm. Hence, the selected motors must have a holding torque ≥ 2.15 Nm to ensure reliable operation.</p>
+
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <div class="equation">
+          <span class="symbol">T<sub>b</sub></span>
+          <span class="equals">=</span>
+          <span class="fraction">
+            <span class="numerator">(F · P · η<sub>2</sub>)</span>
+            <span class="denominator">2π</span>
+          </span>
+        </div>
+        <figcaption>Figure 22. Backdriving Torque Formula for Screwbar</figcaption>
+      </figure>
+
+      <h4>4.6.1 Motor Evaluation</h4>
+      <p>Table 19 outlines the key characteristics of several motor types considered for our device.</p>
+
+      <figure>
+        <figcaption>Table 19</figcaption>
+        <table style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>Motor Types</th>
+              <th>Components</th>
+              <th>Mechanism</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Brushed DC Motor</td>
+              <td>Stator: Permanent Magnet<br>Rotor: Wound Coils</td>
+              <td>
+                Current flows through the commutator into the coils, creating a magnetic field 
+                that turns the rotor. The commutator maintains continuous motion by reversing 
+                current direction and switching coil polarity.
+              </td>
+            </tr>
+            <tr>
+              <td>Brushless DC Motor (BLDC)</td>
+              <td>Stator: Wound Coils<br>Rotor: Permanent Magnet</td>
+              <td>
+                Similar to a Brushed DC Motor, but uses electronic switching to reverse 
+                current direction and magnetic polarity.
+              </td>
+            </tr>
+            <tr>
+              <td>Servo Motor</td>
+              <td>
+                Same as Brushless DC Motor, but with gearbox and encoder included.
+              </td>
+              <td>
+                Operates like a BLDC motor, with added gearbox and encoder for higher torque 
+                and smooth motion control.
+              </td>
+            </tr>
+            <tr>
+              <td>Stepper Motor</td>
+              <td>
+                Same as DC Motors, but with multiple poles.
+              </td>
+              <td>
+                Operates similarly to DC motors but with multiple poles to enable precise 
+                positional control.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p>The stepper motor was selected for its high torque at low speeds and ability to maintain stable fixed positions, ideal for active mode, where users must overcome a preset force threshold to move the motor without backdriving. Its simple open-loop control avoids issues like jitter found in closed-loop systems under static loads. The chosen motor, a Nema 23 Bipolar Stepper Motor, provides a holding torque of 3.0 Nm, exceeding the 2.15 Nm backdriving torque requirement.</p>
+
+      <figure>
+        <figcaption>Table 20</figcaption>   
+        <table >
+          <thead>
+            <tr>
+              <th colspan="5">Motor Concept – Score Comparison</th>
+            </tr>
+            <tr>
+              <th>Criteria</th>
+              <th>Brushed DC</th>
+              <th>Brushless DC</th>
+              <th>Stepper</th>
+              <th>Servo</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <tr><td>Efficiency</td><td>0</td><td>+</td><td>0</td><td>0</td></tr>
+            <tr><td>Torque Characteristics</td><td>0</td><td>+</td><td>+</td><td>0</td></tr>
+            <tr><td>Torque/Weight Ratio</td><td>0</td><td>0</td><td>0</td><td>+</td></tr>
+            <tr><td>Control Type</td><td>0</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>Control Complexity</td><td>0</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>Applications</td><td>0</td><td>+</td><td>+</td><td>0</td></tr>
+        
+            <tr style="font-weight: bold; background-color: #f2f2f2;">
+              <td>Total Grade</td>
+              <td>-5</td>
+              <td>0</td>
+              <td>4</td>
+              <td>-2</td>
+            </tr>
+          </tbody>
+        </table>         
+      </figure>
+
+
+      <h4>4.6.2 Microcontroller Selection</h4>
+      <p>The Raspberry Pi Pico W2 was chosen as the device’s microcontroller unit (MCU) for its strong price-to-performance ratio, compact size, and built-in Wi-Fi and Bluetooth. Despite costing only S$9.62, it offers processing speed and memory comparable to higher-end options like the Teensy 4.1 (S$50–58). Its small footprint minimizes device size and leaves room for other components, while integrated wireless connectivity reduces costs and wiring complexity.</p>
+    
+      <figure> <!-- USE FIGURE TAG BEFORE ADDING IMAGES -->
+        <figcaption>Table 21</figcaption>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="5">MCU – Score Comparison</th>
+            </tr>
+            <tr>
+              <th>Criteria</th>
+              <th>Teensy 4.1</th>
+              <th>Arduino UNO R4 Wi-Fi</th>
+              <th>Raspberry Pi Pico W2</th>
+              <th>STM32F103RCT6</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <tr><td>Supply Voltage</td><td>0</td><td>0</td><td>+</td><td>+</td></tr>
+            <tr><td>Architecture</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>Clock Speed</td><td>+</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>Flash Memory Size</td><td>+</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>RAM Size</td><td>+</td><td>0</td><td>+</td><td>0</td></tr>
+            <tr><td>Network Protocol</td><td>0</td><td>+</td><td>+</td><td>0</td></tr>
+            <tr><td>Dimensions</td><td>0</td><td>0</td><td>+</td><td>+</td></tr>
+            <tr><td>Peripherals</td><td>+</td><td>0</td><td>0</td><td>+</td></tr>
+            <tr><td>Cost</td><td>0</td><td>0</td><td>+</td><td>+</td></tr>
+        
+            <tr style="font-weight: bold; background-color: #f2f2f2;">
+              <td>Total Grade</td>
+              <td>2</td>
+              <td>0</td>
+              <td>7</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </figure>
+
+      <h4>4.6.3 Simplified Electrical Schematic</h4>
+      <p>With the motor type and MCU selected, we can now create a simplified electrical schematic for the whole device.
+      </p>
+      <figure>
+        <img src="images/ElecScheP1.png" width="80%" alt="">
+
+        <figcaption>Figure 23. Power Management Sub-System</figcaption>
+      </figure>
+      <figure>
+        <img src="images/ElecScheP2.png" width="80%" alt="">
+  
+        <figcaption>Figure 24. Actuator Sub-System</figcaption>
+      </figure>
+      <figure>
+        <img src="images/ElecScheP3.png" width="80%" alt="">
+  
+        <figcaption>Figure 25. Sensor and Emergency Override Sub-System</figcaption>
+      </figure>
+      <p>
+        Figure 23 shows the first part of the simplified electrical schematic where the power source of the device originates from the wall plug with a 230 V and 50 Hz power rating. An AC to DC power adapter cable would then be used to rectify the power to DC for the motor in Figure 24. Meanwhile, for the other components, it will need to be stepped down to 5 V using a DC-DC Buck Converter for the MCU, and further stepped down to 3.3 V for the sensors as seen in Figure 25. In terms of communication protocol, only the IMU will utilise I2C, while the other peripherals will use the standard GPIO and analog-to-digital communication protocol.
+
+      </p>
+      <figure>
+        <img src="images/ElecScheP4.png" width="80%" alt="">
+  
+        <figcaption>Figure 26. Wi-Fi Sub-System</figcaption>
+      </figure> 
+      <p>Lastly, Figure 26 displays how the application in either the tablet or smartphone would be communicating to the KINETIX device via Wi-Fi, given that the MCU has an internal Wi-Fi component for easier interaction. This will be the main user interface that the physiotherapist will use to configure the patient’s exercise.
+      </p>
+
+   
+
+      <h4>4.7 UI Design Concepts</h4>
+      <p>
+        The first design concepts featured a two-view approach such that both physiotherapists and clients can use the User Interface, according to the first iteration of user flow diagram below. The aim was to be a central platform for configuration of the Kinetix device, tracking of patient recovery, and a companion ‘instructor’ for patients during rehabilitation.
+      </p>
+      <figure>
+        <img src="images/userflow1.png" width="40%" alt="">
+        <iframe 
+          src="https://drive.google.com/file/d/1CKNBzNZAG9j2k3KxoJ1JziohyvHkjHg0/preview" 
+          width="100%" 
+          height="600" 
+          allow="autoplay">
+        </iframe>
+        <figcaption>Figure 27. UI Initial Flowchart and Video Preview</figcaption>
+      </figure>
+    
+      <p>Feedback on the first UI showed the need for a therapist-focused interface, removal of unnecessary calendar/logging features, and inclusion of gamification to motivate clients. These insights informed a revised user flow with five clear stages and a rotated “During Session” display for client feedback and gamified elements.</p>
+
+      <figure>
+        <img src="images/Software User Flow 2.drawio.png" width="80%" alt="">
+        <iframe 
+          src="https://drive.google.com/file/d/1mKcFLMCLsUiTbPxcxz52mV0kf3QrGRXd/preview" 
+          width="100%" 
+          height="600" 
+          allow="autoplay">
+        </iframe>
+        <figcaption>Figure 28. UI Flowchart and Updated Video Preview</figcaption>
+      </figure>
+      
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-nav">
+        <a href="index.html"><b>Back to Main Report</b></a>
+        <a href="demo-and-anthro.html">← Previous Chapter</a>
+        <a href="proposed-system.html">Next Chapter →</a>
+      </div>
+      <p>&copy; 2025 NUS CDE4301 – Kinetix</p>
+    </footer>
+    
+  </body>
+</html>

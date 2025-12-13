@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Plan – Kinetix</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- IF WE MESS WITH THIS LINE, THE REPORT WILL LOOK UGLY -->
+
+    <!-- Load Chart.js ONCE (no defer so Chart is ready before inline script) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Load MathJax once -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="top-nav">
+      <ul>
+       <li><a href="index.html">Home</a></li>
+        <li><a href="introduction.html">1. Introduction</a></li>
+        <li><a href="lit-review.html">2. Literature Review</a></li>
+        <li><a href="demo-and-anthro.html">3. Demographic & Anthropometric Data</a></li>
+        <li><a href="concept-development.html">4. Concept Development</a></li>
+        <li><a href="proposed-system.html">5. Proposed System Overview</a></li>
+        <li><a href="testing-and-eval.html">6. Testing & Evaluation</a></li>
+        <li><a href="references.html">7. References</a></li>
+        <li><a href="appendix.html">8. Appendix</a></li>
+      </ul>
+    </nav>
+    <main>
+      <header>
+        <h2>CDE4301 – Kinetix</h2> <!-- DO NOT EDIT HEADER-->
+      </header>
+
+      <h3>6.Testing & Evaluation</h3> <!-- REPLACE WITH CORRECT TITLE -->
+      <p>
+        This section documents the conducted tests as well as any planned test. Through these tests,
+        we identified the shortcomings and how we plan to address them.
+      </p>
+      
+      <!-- 6.1 Mechanical Sub-System -->
+      <h4>6.1 Mechanical Sub-System</h4>
+      <p><p>Table 22 provides an overview of the testing plan for the mechanical sub-system.</p></p>
+      <figure>
+        <figcaption>Table 22</figcaption>      
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=0&single=true"
+          width="100%"
+          height="400"
+          style="border:1px solid #ccc; border-radius:6px;">
+        </iframe>
+        <figcaption>
+          <a 
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=0&single=true"
+          target="_blank"
+          class="fullscreen-link">
+          Open New Tab
+        </a>
+      </figcaption>
+      </figure>
+
+
+      <h4>6.1.1 Test Results and Evaluation</h4>
+      <p>
+        In the FEA simulation, the analysis was performed on the tube where the load is concentrated.
+        Assuming the maximum leg weight of 20 kg, where the load is shared between two parallel tubes,
+        each tube supports 10 kg, corresponding to approximately 100 N. The results show a minimum factor
+        of safety of 28, indicating that the tube would require 28 times the applied load before it begins
+        to deform.
+      </p>
+
+      <figure>
+        <img src="images/FEA.png" width="80%">
+        <figcaption>Figure 35. FEA Analysis</figcaption>
+      </figure>
+
+      <p>
+        The arc rail test assessed structural stability under a 9.6 kg load and showed a displacement of
+        0.4 mm, indicating potential long-term deformation. The structure connected to the arc rail slider
+        was also observed to be slanted, likely due to insufficient support or too small a contact surface,
+        which may compromise stability.
+      </p>
+
+      <figure>
+        <img src="images/Deformation.png" width="80%">
+        <figcaption>Figure 36. Lateral Deformation</figcaption>
+      </figure>
+      
+      <!-- 6.2 Sensing Sub-System -->
+      <h4>6.2 Sensing Sub-System</h4>
+      <p>Table 23 provides an overview of the testing plan for the sensing sub-system.</p>
+      <figure>
+        <figcaption>Table 23</figcaption>  
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=581449170&single=true"
+          width="100%"
+          height="400"
+          style="border:1px solid #ccc; border-radius:6px;">
+        </iframe>
+        <figcaption>
+          <a 
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=581449170&single=true"
+          target="_blank"
+          class="fullscreen-link">
+          Open New Tab
+        </a>
+      </figcaption>
+      </figure>
+
+
+      <h4>6.2.1 Test Results and Evaluation</h4>
+      <p>
+        Table 24 shows the critical and target force readings we require based on a 100 kg and 150 kg load.
+      </p>
+
+      <figure>
+        <figcaption>Table 24</figcaption>
+        <table>
+          <thead>
+            <tr>
+              <th>Sensors used</th>
+              <th>Nested Subsystem</th>
+              <th>Critical Weight (kg)</th>
+              <th>Maximum Critical Force Per Sensor (N)</th>
+              <th>Target Weight (kg)</th>
+              <th>Maximum Target Force Per Sensor (N)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>13</td>
+              <td>
+                Plantar<br>
+                Force<br>
+                Sensing
+              </td>
+              <td>100</td>
+              <td>75.4</td>
+              <td>150</td>
+              <td>113.2</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>
+                Medial–Lateral<br>
+                Force<br>
+                Sensing
+              </td>
+              <td>20</td>
+              <td>98.1</td>
+              <td>35</td>
+              <td>147.2</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>
+                Thigh<br>
+                Force<br>
+                Sensing
+              </td>
+              <td>30</td>
+              <td>147.2</td>
+              <td>45</td>
+              <td>220.7</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>
+        Using a range of known weights, resistance was recorded and tabulated in Table 25. The data
+        indicate that resistance decreases exponentially as applied force increases, as shown in Figure 37.
+      </p>
+
+      <figure>
+        <figcaption>Table 25</figcaption>
+        <table>
+          <thead>
+            <tr>
+              <th>Weight (g)</th>
+              <th>Resistance Force Sensor (Ω)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>341</td>
+              <td>53000</td>
+            </tr>
+
+            <tr>
+              <td>682</td>
+              <td>25000</td>
+            </tr>
+
+            <tr>
+              <td>1023</td>
+              <td>16000</td>
+            </tr>
+
+            <tr>
+              <td>1364</td>
+              <td>9000</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <!-- Canvas for first graph -->
+      <figure style="max-width: 700px; margin: 30px auto; text-align: center;">
+        <canvas id="weightResistanceChart"></canvas>
+        <figcaption style="margin-top: 10px;">
+        Figure 37. Weight-Resistance Graph
+        </figcaption>
+      </figure>
+
+      <p>
+        An Op-Amp circuit was used for the calibration of each force sensor, as it was the recommended
+        circuit by the manufacturer. The equations below are used to guide our chosen values for each
+        component and the voltages.
+      </p>
+
+      <!-- MathJax equations -->
+      <figure style="text-align: center; margin-bottom: 30px;">
+          <!-- Equation 1 -->
+          <div style="display:flex; justify-content:center; align-items:center; margin-bottom:10px;">
+              <div>
+                  $$V_{ref} = \frac{R_2}{R_1 + R_2} \times V_{ss}$$
+              </div>
+              <div>(1)</div>
+          </div>
+
+          <!-- Equation 2 -->
+          <div style="display:flex; justify-content:center; align-items:center;">
+              <div>
+                  $$V_{out} = \left(1 + \frac{R_{ref}}{R_{\text{force sensor}}}\right) \times V_{ref}$$
+              </div>
+              <div>(2)</div>
+          </div>
+
+          <!-- Caption -->
+          <figcaption style="margin-top: 10px;">
+              Figure 38. Voltage Equations for Force Sensors
+          </figcaption>
+      </figure>
+
+
+
+      <p>
+        The voltage supply is set to 4.5 V, with the LM324N output kept below 3.3 V for microcontroller
+        compatibility. A reference voltage of 0.5 V is generated using a 1:9 voltage divider (R1 = 40 kΩ,
+        R2 = 5 kΩ). <br>
+        Because the force sensor’s resistance decreases with applied force, a low feedback
+        resistor of 2 kΩ is used to maintain sensitivity. The LM324N is expected to produce an output
+        range of about 0.5 V to 3.0 V, providing a 2.5 V span for force measurement.
+      </p>
+
+      <p>Figure 39 shows the circuit diagram for the force sensor.</p>
+
+      <figure>
+        <img src="images/Circuit Diagram.png" width="40%">
+        <figcaption>Figure 39. Force Sensor Circuit Diagram</figcaption>
+      </figure>
+
+      <p>
+        Figure 40 shows an example of how the force sensor voltage output is captured when different
+        weights are being applied.
+      </p>
+
+      <figure>
+        <div class="img-row">
+          <img src="images/200g.png" width="80%">
+          <img src="images/500g.png" width="80%">
+        </div>
+        <figcaption>Figure 40</figcaption>
+      </figure>
+
+      <p>
+        The voltage outputs corresponding to the respective weights can be seen in the table below. A
+        graph is plotted, and a linear relationship can be seen along with the equation of the function.
+      </p>
+
+      <figure>
+        <figcaption>Table 26</figcaption>
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2">Weight (g)</th>
+              <th colspan="4">Vout (V)</th>
+            </tr>
+            <tr>
+              <th>Reading 1</th>
+              <th>Reading 2</th>
+              <th>Reading 3</th>
+              <th>Average</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>200</td>
+              <td>0.51</td>
+              <td>0.51</td>
+              <td>0.52</td>
+              <td>0.51</td>
+            </tr>
+
+            <tr>
+              <td>250</td>
+              <td>0.52</td>
+              <td>0.52</td>
+              <td>0.52</td>
+              <td>0.52</td>
+            </tr>
+
+            <tr>
+              <td>500</td>
+              <td>0.54</td>
+              <td>0.54</td>
+              <td>0.54</td>
+              <td>0.54</td>
+            </tr>
+
+            <tr>
+              <td>2268</td>
+              <td>0.66</td>
+              <td>0.66</td>
+              <td>0.67</td>
+              <td>0.66</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <!-- Canvas for second graph -->
+      <figure style="max-width: 700px; margin: 30px auto;">
+        <canvas id="voutChart" width="600" height="350"></canvas>
+        <figcaption>Figure 41. V_out-Weight Graph</figcaption>
+      </figure>
+
+      <p>
+        Upon knowing the equation of the linear function, we can extrapolate voltage readings for
+        further weight values.
+      </p>
+      
+      <!-- 6.3 Electrical Sub-System -->
+      <h4>6.3 Electrical Sub-System</h4>
+      <p>Table 27 provides an overview of the testing plan for the electrical sub-system.</p>
+      <figure>
+        <figcaption>Table 27</figcaption>
+        <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=837486413&single=true"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+        </iframe>
+        <figcaption>
+          <a 
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=837486413&single=true"
+          target="_blank"
+          class="fullscreen-link">
+          Open New Tab
+        </a>
+      </figcaption>
+      </figure>
+      
+
+      <script>
+        // -------- First chart: Weight vs Resistance --------
+        const ctx1 = document.getElementById('weightResistanceChart');
+        if (ctx1) {
+          const weight1 = [341, 682, 1023, 1364];
+          const resistance = [53000, 25000, 16000, 9000];
+
+          new Chart(ctx1, {
+            type: 'line',
+            data: {
+              labels: weight1,
+              datasets: [{
+                label: 'Resistance (Ω)',
+                data: resistance,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: false
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Weight vs Resistance'
+                }
+              },
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Weight (g)'
+                  }
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: 'Resistance (Ω)'
+                  }
+                }
+              }
+            }
+          });
+        }
+
+        // -------- Second chart: Vout vs Weight with linear regression --------
+        const ctx2 = document.getElementById('voutChart');
+        if (ctx2) {
+          const weight2 = [200, 250, 500, 2268];
+          const vout = [0.51, 0.52, 0.54, 0.66];
+
+          function linearRegression(x, y) {
+            const n = x.length;
+            const sumX = x.reduce((a, b) => a + b, 0);
+            const sumY = y.reduce((a, b) => a + b, 0);
+            const sumXY = x.map((xi, i) => xi * y[i]).reduce((a, b) => a + b, 0);
+            const sumXX = x.map(xi => xi * xi).reduce((a, b) => a + b, 0);
+
+            const m = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+            const c = (sumY - m * sumX) / n;
+            return { m, c };
+          }
+
+          const lr = linearRegression(weight2, vout);
+          const regLineY = weight2.map(x => lr.m * x + lr.c);
+          const equationText = `Vout = ${lr.m.toFixed(5)} × Weight + ${lr.c.toFixed(3)}`;
+
+          new Chart(ctx2, {
+            data: {
+              datasets: [
+                {
+                  label: 'Measured Data',
+                  data: weight2.map((w, i) => ({ x: w, y: vout[i] })),
+                  pointRadius: 5,
+                  showLine: false,
+                  type: 'scatter'
+                },
+                {
+                  label: 'Linear Fit',
+                  data: weight2.map((w, i) => ({ x: w, y: regLineY[i] })),
+                  type: 'line',
+                  fill: false,
+                  tension: 0
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Force Sensor Output vs Weight'
+                },
+                subtitle: {
+                  display: true,
+                  text: equationText,
+                  padding: 10
+                }
+              },
+              scales: {
+                x: {
+                  type: 'linear',
+                  position: 'bottom',
+                  title: {
+                    display: true,
+                    text: 'Weight (g)'
+                  }
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: 'Vout (V)'
+                  },
+                  min: 0.45,
+                  max: 0.75
+                }
+              }
+            }
+          });
+        }
+      </script>
+    <h4>6.3.1 Test Results and Evaluation </h4>
+    <p>Overall, there were two main tests that were conducted, which were the voltage output verification of the low dropout regulator (LDO) 
+      and the motor functionality test for the Nema 23 Stepper Motor.</p>
+    <figure>
+      <img src = "images/Low dropout regulator.png" width="50%">
+      <figcaption> Figure 42. LDO Experimental Set-Up</figcaption>
+    </figure>
+    <p>The first experiment was set up with the positive terminal connected to the LDO input pin and the ground pin connected to the negative terminal of the DC power supply, 
+      which was also tied to ground. A multimeter was then used to measure the voltage drop between the LDO output pin and ground.</p>
+    <figure>
+      <figcaption>Table 28</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Component ID</th>
+            <th>V<sub>out</sub> (V)</th>
+            <th>V<sub>sd</sub> (V)</th>
+            <th>Expected V<sub>out</sub> (V)</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+          <tr>
+            <td rowspan="6">
+              LM1117T-3.3/NOPB-ND IC Regulator<br>
+              <em>(without capacitor)</em>
+            </td>
+            <td>3.293</td>
+            <td>0.0035</td>
+            <td rowspan="6">3.3</td>
+          </tr>
+    
+          <tr>
+            <td>3.294</td>
+            <td>0.0030</td>
+          </tr>
+    
+          <tr>
+            <td>3.294</td>
+            <td>0.0030</td>
+          </tr>
+    
+          <!-- Summary rows -->
+          <tr style="background:#f8f8f8;">
+            <td><strong>Mean V<sub>out</sub> (V)</strong></td>
+            <td><strong>3.2937</strong></td>
+          </tr>
+    
+          <tr style="background:#f8f8f8;">
+            <td><strong>Mean V<sub>sd</sub> (V)</strong></td>
+            <td><strong>0.00317</strong></td>
+          </tr>
+    
+          <tr style="background:#f8f8f8;">
+            <td><strong>% Deviation</strong></td>
+            <td><strong>0.096%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+    <p>Table 28 shows that the LDO performed as expected, consistently outputting approximately 3.3 V with a mean deviation of 3.17 mV (0.096%). This aligns well with the datasheet minimum of 3.267 V, confirming that the LDO is operating correctly and is suitable for integration. 
+      Figure 43 illustrates the setup used for the second experiment, which tests motor functionality. </p>
+    <figure>
+      <img src = "images/Motor Functionality.png" width="50%">
+      <figcaption> Figure 43. Motor Test Experimental Set-Up</figcaption>
+    </figure>
+    <p>The DM556T motor driver was configured in a common-anode setup, with PUL+ and DIR+ connected to the MCU’s 3.3 V pin. 
+      The PUL– and DIR– terminals were connected to GPIO pins 0 and 1, respectively, and the motor was powered using a 24 V DC supply.</p>
+      
+    <div style="display:flex; gap:20px; justify-content:center;">
+    
+        <!-- Video 1 -->
+        <figure style="width:45%; text-align:center; margin:0;">
+            <video width="100%" controls>
+                <source src="images/200_steps_rev.mp4" type="video/mp4">
+            </video>
+            <figcaption style="margin-top:8px; font-size:14px; color:#555;">
+                200 steps per revolution
+            </figcaption>
+        </figure>
+    
+        <!-- Video 2 -->
+        <figure style="width:45%; text-align:center; margin:0;">
+            <video width="100%" controls>
+                <source src="images/1600_steps_rev.mp4" type="video/mp4">
+            </video>
+            <figcaption style="margin-top:8px; font-size:14px; color:#555;">
+                1600 steps per revolution
+            </figcaption>
+        </figure>
+    
+    </div>
+    <p>The videos show how changing the steps per revolution affects the motor speed. We can conclude that a lower steps per revolution will allow for a faster motor speed, 
+      allowing us to adjust the horizontal and lateral speed of the device.</p>
+
+    <h4>6.4 UI Sub-System</h4>
+    <p>Table 29 provides an overview of the testing plan for the UI sub-system.</p>
+    <figure>
+      <figcaption>Table 29</figcaption>
+      <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=571322792&single=true"
+          width="100%"
+          height="400"
+          style="border:1px solid #ccc; border-radius:6px;">
+      </iframe>
+      <figcaption>
+          <a 
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZqfOq3RSoU3klc3afmbESviOGsI6qj8yz0uwiBLhwq7ixrwIS1R1uTqBYR1EyMS2YXvg4IaWDq4pF/pubhtml?gid=571322792&single=true"
+          target="_blank"
+          class="fullscreen-link">
+          Open New Tab
+        </a>
+      </figcaption>
+    </figure>
+
+    <h4>6.4.1 Test Results and Evaluation</h4>
+    <figure>
+      <figure>Table 30</figure>
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSANSyUARUDhW_u0tENr2--nONoJhsV2Y2QYZx7ttyFQCrarVLSy1NbfqJWmH9KAT7ix8WPwe8I0slb/pubhtml?gid=0&single=true"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+      </iframe>
+      <figcaption>
+          <a 
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSANSyUARUDhW_u0tENr2--nONoJhsV2Y2QYZx7ttyFQCrarVLSy1NbfqJWmH9KAT7ix8WPwe8I0slb/pubhtml?gid=0&single=true"
+          target="_blank"
+          class="fullscreen-link">
+          Open New Tab
+        </a>
+      </figcaption>
+    </figure>
+
+    <h4>6.5 Overall Shortcomings and Proposals for tests</h4>
+    <figure>
+      <figcaption>Table 31</figcaption>
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSP5r-7iZ6NPYTN0pfl1yttecPYg2Whwh3QxSmSkSdBujD1-XrvnsyMMG8Vi5mDvumc8_99s-0UXEm9/pubhtml?gid=0&single=true"
+        width="100%"
+        height="400"
+        style="border:1px solid #ccc; border-radius:6px;">
+      </iframe>
+      <figcaption>
+          <a 
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSP5r-7iZ6NPYTN0pfl1yttecPYg2Whwh3QxSmSkSdBujD1-XrvnsyMMG8Vi5mDvumc8_99s-0UXEm9/pubhtml?gid=0&single=true"
+          target="_blank"
+          class="fullscreen-link">
+          Open New Tab
+        </a>
+      </figcaption>
+    </figure>
+
+    <h4>6.6 Conclusion</h4>
+    <p>Overall, testing across all sub-systems has validated core functionality and revealed clear directions for improvement. The key outcomes achieved are:</p>
+    
+    <ul>
+      <li><strong>Mechanical Sub-System</strong>
+        <ul>
+          <li>FEA shows a high factor of safety (28) for load-bearing components.</li>
+          <li>Lateral testing confirms minimal displacement but indicates potential long-term deformation.</li>
+          <li>Design improvement identified: repositioning the arc rail to eliminate deformation.</li>
+        </ul>
+      </li>
+    
+      <li><strong>Sensing Sub-System</strong>
+        <ul>
+          <li>Force sensor calibration was successful</li>
+          <li>Voltage–weight testing establishes a clear linear model for force estimation.</li>
+          <li>Future tests will involve higher loads and dynamic stepping motions.</li>
+        </ul>
+      </li>
+    
+      <li><strong>Electrical Sub-System</strong>
+        <ul>
+          <li>LDO outputs within expected tolerance (0.096% deviation).</li>
+          <li>Nema 23 motor demonstrates stable operation and tunable speed.</li>
+          <li>Limitations identified: short test durations, no-load conditions, and non-recommended circuit setup.</li>
+          <li>Next steps include extended-duration tests, load testing, and proper datasheet-based circuits.</li>
+        </ul>
+      </li>
+    
+      <li><strong>UI Sub-System</strong>
+        <ul>
+          <li>Interface streamlined based on therapist feedback (reduced clutter, clearer flow).</li>
+          <li>Gamified client view improved engagement and visibility.</li>
+          <li>New 5-stage colour-coded workflow improves clarity and consistency.</li>
+          <li>Further testing to involve more therapists and clients with real sensor data.</li>
+        </ul>
+      </li>
+    </ul>
+    
+    <p><strong>Summary:</strong> Core component functionality across mechanical, sensing, electrical, and UI systems has been validated. Risks have been identified and reduced, and the next phase aims for an integration of the sub-systems, as well as the device.</p>
+
+    
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-nav">
+        <a href="index.html"><b>Back to Main Report</b></a>
+        <a href="proposed-system.html">← Previous Chapter</a>
+        <a href="references.html">Next Chapter →</a>
+      </div>
+      <p>&copy; 2025 NUS CDE4301 – Kinetix</p>
+    </footer>
+
+  </body>
+</html>

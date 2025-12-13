@@ -135,7 +135,7 @@ int main()
 
         sleep_ms(500);
 
-        // Switch IMU every 5 seconds
+        // Switch IMU every 5 secondsc
         if (to_ms_since_boot(get_absolute_time()) - last_swap >= 5000) {
             curr_imu = (curr_imu == 6) ? 7 : 6; // toggle channel
             last_swap = to_ms_since_boot(get_absolute_time());
